@@ -275,6 +275,53 @@ Paraben forensic hardware, Digital Intelligence forensic hardware, Tableau Hardw
 Accelerator, WiebeTech forensic hardware tools, Logicube forensic hardware tools
 
 
+SANS Forensics Methodology:
+The SANS (SysAdmin, Audit, Network, and Security) Institute provides a comprehensive digital forensics methodology, emphasizing a systematic approach to investigations. The SANS methodology typically involves the following key stages:
+Identification:
+Recognizing and understanding the incident or security event that triggers the need for a forensic investigation.
+Preservation:
+Implementing measures to preserve the integrity of the digital evidence, ensuring that it remains unaltered during the investigation.
+Collection:
+Gathering relevant data and evidence from various sources, considering both volatile and non-volatile data.
+Examination:
+Analyzing the collected data thoroughly to identify artifacts, patterns, and anomalies that may be crucial to the investigation.
+Analysis:
+Delving deeper into the discovered artifacts and evidence, connecting the dots to reconstruct events and understand the scope of the incident.
+Documentation:
+Creating detailed documentation of the investigation process, findings, and the analysis performed, ensuring a clear and comprehensive record.
+Presentation:
+Effectively communicating the findings to stakeholders, often including technical and non-technical audiences, providing insights into the incident.
+Review:
+Conducting a thorough review of the entire investigation process, ensuring that all steps were followed correctly and that the conclusions are well-supported.
+
+
+Use of BitLocker During Forensics Investigation:
+BitLocker is a full-disk encryption feature in Windows that can be employed during forensics investigations. Its use involves:
+Encryption and Decryption:
+BitLocker encrypts the entire disk, rendering the data unreadable without the appropriate decryption key.
+Key Management:
+Investigating authorities need to manage and secure BitLocker recovery keys to access encrypted data. Recovery keys may be stored in Active Directory or backed up separately.
+Data Recovery:
+If a suspect's device is encrypted with BitLocker, investigators may need to obtain the recovery key to access the data for analysis.
+Forensic Tools:
+Specialized forensic tools may be employed to work with BitLocker-encrypted drives, allowing investigators to analyze the encrypted data without altering its integrity.
+
+
+Preservation of Evidence:
+Preserving evidence is a critical aspect of digital forensics to maintain its integrity and admissibility in court. Key practices include:
+Chain of Custody:
+Maintaining a detailed and unbroken record of the evidence's handling, transfer, and storage to ensure accountability.
+Write Protection:
+Implementing write protection measures to prevent any unintentional modifications to the original evidence during analysis.
+Hashing:
+Generating cryptographic hashes (MD5, SHA-256) of the original evidence to verify its integrity throughout the investigation.
+Documentation:
+Thoroughly documenting the condition of the evidence, the methods used for preservation, and any changes made during the investigation.
+Secure Storage:
+Storing physical evidence securely in controlled environments to prevent tampering or unauthorized access.
+Legal Admissibility:
+Ensuring that evidence preservation practices align with legal requirements and standards to maintain its admissibility in court.
+
 
 Evidence Preservation
 • Document every action taken and record every possible change observed during the
