@@ -938,7 +938,7 @@ Advantages of Cyber Law:
 -Cyber Law provides both hardware and software security.
 
 
-SECTION & PUNISHMENT:
+Cyber law - SECTION & PUNISHMENT:
 -Section 43	This section of IT Act, 2000 states that any act of destroying, altering or stealing computer system/network or deleting data with malicious intentions without authorization from owner of the computer is liable for the payment to be made to owner as compensation for damages.
 -Section 43A	This section of IT Act, 2000 states that any corporate body dealing with sensitive information that fails to implement reasonable security practices causing loss of other person will also liable as convict for compensation to the affected party.
 -Section 66	Hacking of a Computer System with malicious intentions like fraud will be punished with 3 years imprisonment or the fine of Rs.5,00,000 or both.
@@ -1092,6 +1092,8 @@ contains metadata about files stored on the system drive. This includes, but is 
 • Names of each files and folders
 • Physical address (bytes and sector on the drive) where the file is stored.
 
+
+Full forms:
 • AFF: Advanced Forensics Format
 • FTK: Forensic Tool Kit
 • FAT: File Allocation Table
