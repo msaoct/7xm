@@ -936,16 +936,16 @@ An IP address range in CIDR is specified using a combination of an IP address an
 For example: 194.300.0.0/11.
 The IP network prefix specifies how many addresses are covered by the CIDR address, with lower numbers covering more addresses. An IP network prefix of /11, for example, can be used to address 1,048,576 former Class C addresses.
 
-Classful Addressing	vs Classless Addressing:
-1.  In Classful addressing IP addresses are allocated according to the classes- A to E.	Classless addressing came to replace the classful addressing and to handle the issue of rapid exhaustion of IP addresses.
-2.	Classful Addressing	is less practical.	Classless Addressing is more practical.
-3.  In Classful addressing, The changes in the Network ID and Host ID depend on the class. In Classless addressing, There is no such restriction of class in classless addressing.
-4.	Classful addressing does not support the Variable Length Subnet Mask (VLSM). Classless addressing supports the Variable Length Subnet Mask (VLSM).
-5.	Classful addressing requires more bandwidth. As a result, it becomes slower and more expensive as compared to classless addressing. Classless addressing requires less bandwidth. Thus, fast and less expensive as compared to classful addressing.
-6.	It does not support Classless Inter-Domain Routing (CIDR). Classless addressing supports Classless Inter-Domain Routing (CIDR).
-7.	In Classful addressing, Regular or periodic updates. In Classless addressing, Triggered Updates
-8.	In Classful addressing, Troubleshooting and problem detection are easy than classless addressing because of the division of network, host and subnet parts in the address. In Classless addressing, It is not as easy compared to classful addressing.
-9.	Division of Address in Classful - Network, Host, Subnet. Division of Address in Classless - Host, Subnet
+Classful Addressing vs Classless Addressing:
+1. In Classful addressing IP addresses are allocated according to the classes- A to E.	Classless addressing came to replace the classful addressing and to handle the issue of rapid exhaustion of IP addresses.
+2. Classful Addressing	is less practical.	Classless Addressing is more practical.
+3. In Classful addressing, The changes in the Network ID and Host ID depend on the class. In Classless addressing, There is no such restriction of class in classless addressing.
+4. Classful addressing does not support the Variable Length Subnet Mask (VLSM). Classless addressing supports the Variable Length Subnet Mask (VLSM).
+5. Classful addressing requires more bandwidth. As a result, it becomes slower and more expensive as compared to classless addressing. Classless addressing requires less bandwidth. Thus, fast and less expensive as compared to classful addressing.
+6. It does not support Classless Inter-Domain Routing (CIDR). Classless addressing supports Classless Inter-Domain Routing (CIDR).
+7. In Classful addressing, Regular or periodic updates. In Classless addressing, Triggered Updates
+8. In Classful addressing, Troubleshooting and problem detection are easy than classless addressing because of the division of network, host and subnet parts in the address. In Classless addressing, It is not as easy compared to classful addressing.
+9. Division of Address in Classful - Network, Host, Subnet. Division of Address in Classless - Host, Subnet
 
 Classless Routing vs Classful Routing:
 In Classless Routing, Protocols include the subnet masks in the updates.In Classful Routing, Protocols do not include the subnet mask in the updates and cannot support variable-length subnet mask.
@@ -1015,6 +1015,19 @@ Subnetting is necessary to efficiently manage and organize IP networks. It allow
 - Reduction of network traffic and broadcast volume, leading to improved performance.
 - Enhanced security by isolating groups of hosts within specific subnets.
 - Facilitates remote access and connectivity to specific network segments rather than the entire network.
+
+Advantages of Subnetting:
+-Subnetting is used to decrease the presence of Internet Protocol (IP) range.
+-Subnets helps in stopping the devices or gadgets from occupying the whole network, only allowing the hosts to control which kind of user can have access to the important information. Simply, we can tell that network is safe just because of the subnetting concept.
+-Subnetting concept increases the performance of the total network by deleting the repeated traffic causing errors.
+-We can convert the whole big network into smaller networks by using the concept of subnetting as discussed earlier.
+
+Disadvantages of Subnetting:
+- If the number of subnets increases, then the number of routers must also increase along with the subnet increase number. This happens because each subnet has its own subnet mask, broadcast address and network address.
+- As told earlier, if we create many subnets many IP Addresses are wasted because of the wastage of Host ID Bits
+- The cost of the entire network is increased by subnetting, which calls for the acquisition of pricey internal routers, switches, hubs, and bridges, among other things.
+- The complexity of the network is increased through subnetting. The subnet network must be managed by a skilled network administrator.
+
 
 IPv4 Header:
 An IP header is bits of information attached to each data packet that is transported in the computer network. This information usually includes addressing and routing details which makes it possible to reassemble the packets and have the original data at the destination.
