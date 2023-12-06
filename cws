@@ -1,1 +1,641 @@
+Cloud Computing:
+Cloud computing is a virtualization-based technology that allows us to create, configure, and customize applications via an internet connection. The cloud technology includes a development platform, hard disk, software application, and database.
+It is a technology that uses remote servers on the internet to store, manage, and access data online rather than local drives. The data can be anything such as files, images, documents, audio, video, and more.
+
+Uses of Cloud Computing:
+There are the following operations that we can do using cloud computing:
+-Developing new applications and services.
+-Storage, back up, and recovery of data.
+-Hosting blogs and websites.
+-Delivery of software on demand.
+-Analysis of data.
+-Streaming videos and audios.
+-Social networking, email, hosting services & backup
+
+Some well-known uses of cloud-computing are:
+• Social Networking: Usually people do not realise that it is a use case of cloud computing but it is one of the most widely used example of cloud computing.
+Facebook, Twitter, LinkedIn and MySpace are some such examples. Social networking can be used not only for connecting with people online, but also for public relations (PR), business purposes and marketing. For example, a fan page is a popular PR practice these days.
+• E-Mail: One of the prevalent cloud computing services is the Web-based e-mail. The cloud computing based e-mail service is useful in hosting an e-mail server and managing it. It also safeguards the e-mail server from being hacked. It also implies that your e-mail can be accessed from any place. Popular example of cloud computing based e-mail solution is Hotmail.
+• Hosting Services: Cloud hosting services offer hosting for Websites on virtual servers that derive their computing resources from widespread underlying networks of physical Web servers. It is available as a service and not as a product. Therefore, the clients can utilise as much of the service as they need, based on the requirements of their Website and need to only pay for how much they use. Services such as online creation and storage of documents, spreadsheets, photographs and videos are examples of cloud based hosting services. Google docs, Onit, Google's Picasa, Yahoo's Flicker, YouTube, MetCafe and Vimeo offer such hosting and sharing services.
+• Backup: A major issue with personal computing is the tendency of losing the data in case your computer is crashed, stolen, or the storage device is damaged. Therefore, the backup becomes essential. However, creating backups on media like CDs, Hard disk, etc. is not very effective. You should store the data off-site to have more comprehensive protection. Services such as, Mozy, Carbonite and JungleDisk, help in automatically backing up all the data to servers spread across the globe at a very low cost. Services such as, Google Drive, OneDrive, Dropbox and Syncplicity allow you to maintain local copies of data on multiple machines. All these files and data are synchronized and a copy is maintained in the cloud.
+
+Characteristics of Cloud Computing
+The characteristics of cloud computing are given below:
+1) Agility: The cloud works in a distributed computing environment. It shares resources among users and works very fast.
+2) High availability and reliability: The availability of servers is high and more reliable because the chances of infrastructure failure are minimum.
+3) High Scalability: Cloud offers "on-demand" provisioning of resources on a large scale, without having engineers for peak loads.
+4) Multi-Sharing: With the help of cloud computing, multiple users and applications can work more efficiently with cost reductions by sharing common infrastructure.
+5) Device and Location Independence: Cloud computing enables the users to access systems using a web browser regardless of their location or what device they use e.g. PC, mobile phone, etc. As infrastructure is off-site (typically provided by a third-party) and accessed via the Internet, users can connect from anywhere.
+6) Maintenance: Maintenance of cloud computing applications is easier, since they do not need to be installed on each user's computer and can be accessed from different places. So, it reduces the cost also.
+7) Low Cost: By using cloud computing, the cost will be reduced because to take the services of cloud computing, IT company need not to set its own infrastructure and pay-as-per usage of resources.
+8) Services in the pay-per-use mode: Application Programming Interfaces (APIs) are provided to the users so that they can access services on the cloud by using these APIs and pay the charges as per the usage of services.
+
+Advantages of Cloud Computing:
+1) Back-up and restore data: Once the data is stored in the cloud, it is easier to get back-up and restore that data using the cloud.
+2) Improved collaboration: Cloud applications improve collaboration by allowing groups of people to quickly and easily share information in the cloud via shared storage.
+3) Excellent accessibility: Cloud allows us to quickly and easily access store information anywhere, anytime in the whole world, using an internet connection. An internet cloud infrastructure increases organization productivity and efficiency by ensuring that our data is always accessible.
+4) Low maintenance cost: Cloud computing reduces both hardware and software maintenance costs for organizations.
+5) Mobility: Cloud computing allows us to easily access all cloud data via mobile.
+6) IServices in the pay-per-use model: Cloud computing offers Application Programming Interfaces (APIs) to the users for access services on the cloud and pays the charges as per the usage of service.
+7) Unlimited storage capacity: Cloud offers us a huge amount of storing capacity for storing our important data such as documents, images, audio, video, etc. in one place.
+8) Data security: Data security is one of the biggest advantages of cloud computing. Cloud offers many advanced features related to security and ensures that data is securely stored and handled.
+
+Disadvantages of Cloud Computing
+A list of the disadvantage of cloud computing is given below -
+1) Internet Connectivity: As you know, in cloud computing, every data (image, audio, video, etc.) is stored on the cloud, and we access these data through the cloud by using the internet connection. If you do not have good internet connectivity, you cannot access these data. However, we have no any other way to access data from the cloud.
+2) Vendor lock-in: Vendor lock-in is the biggest disadvantage of cloud computing. Organizations may face problems when transferring their services from one vendor to another. As different vendors provide different platforms, that can cause difficulty moving from one cloud to another.
+3) Limited Control: As we know, cloud infrastructure is completely owned, managed, and monitored by the service provider, so the cloud users have less control over the function and execution of services within a cloud infrastructure.
+4) Security: Although cloud service providers implement the best security standards to store important information. But, before adopting cloud technology, you should be aware that you will be sending all your organization's sensitive information to a third party, i.e., a cloud computing service provider. While sending the data on the cloud, there may be a chance that your organization's information is hacked by Hackers.
+
+Cloud Computing Architecture:
+Cloud computing architecture is a combination of service-oriented architecture and event-driven architecture.
+Cloud computing architecture is divided into the following two parts -
+1)Front End: The front end is used by the client. It contains client-side interfaces and applications that are required to access the cloud computing platforms. The front end includes web servers (including Chrome, Firefox, internet explorer, etc.), thin & fat clients, tablets, and mobile devices.
+2)Back End: The back end is used by the service provider. It manages all the resources that are required to provide cloud computing services. It includes a huge amount of data storage, security mechanism, virtual machines, deploying models, servers, traffic control mechanisms, etc.
+Components of Cloud Computing Architecture
+There are the following components of cloud computing architecture -
+1. Client Infrastructure: Client Infrastructure is a Front end component. It provides GUI (Graphical User Interface)  to interact with the cloud.
+2. Application: The application may be any software or platform that a client wants to access.
+3. Service: A Cloud Services manages that which type of service you access according to the client’s requirement.
+Cloud computing offers the following three type of services:
+i. Software as a Service (SaaS) – It is also known as cloud application services. Mostly, SaaS applications run directly through the web browser means we do not require to download and install these applications. Some important example of SaaS is given below –
+Example: Google Apps, Salesforce Dropbox, Slack, Hubspot, Cisco WebEx.
+ii. Platform as a Service (PaaS) – It is also known as cloud platform services. It is quite similar to SaaS, but the difference is that PaaS provides a platform for software creation, but using SaaS, we can access software over the internet without the need of any platform.
+Example: Windows Azure, Force.com, Magento Commerce Cloud, OpenShift.
+iii. Infrastructure as a Service (IaaS) – It is also known as cloud infrastructure services. It is responsible for managing applications data, middleware, and runtime environments.
+Example: Amazon Web Services (AWS) EC2, Google Compute Engine (GCE), Cisco Metapod.
+4. Runtime Cloud: Runtime Cloud provides the execution and runtime environment to the virtual machines.
+5. Storage: Storage is one of the most important components of cloud computing. It provides a huge amount of storage capacity in the cloud to store and manage data.
+6. Infrastructure: It provides services on the host level, application level, and network level. Cloud infrastructure includes hardware and software components such as servers, storage, network devices, virtualization software, and other storage resources that are needed to support the cloud computing model.
+7. Management: Management is used to manage components such as application, service, runtime cloud, storage, infrastructure, and other security issues in the backend and establish coordination between them.
+8. Security: Security is an in-built back end component of cloud computing. It implements a security mechanism in the back end.
+9. Internet: The Internet is medium through which front end and back end can interact and communicate with each other.
+
+Cloud Computing Technologies:
+A list of cloud computing technologies are given below -
+1) Virtualization: Virtualization is the process of creating a virtual environment to run multiple applications and operating systems on the same server. The virtual environment can be anything, such as a single instance or a combination of many operating systems, storage devices, network application servers, and other environments.
+The concept of Virtualization in cloud computing increases the use of virtual machines. A virtual machine is a software computer or software program that not only works as a physical computer but can also function as a physical machine and perform tasks such as running applications or programs as per the user's demand.
+Types of Virtualization:
+A list of types of Virtualization is given below -
+-Hardware virtualization
+-Server virtualization
+-Storage virtualization
+-Operating system virtualization
+-Data Virtualization
+2) Service-Oriented Architecture (SOA): Service-Oriented Architecture (SOA) allows organizations to access on-demand cloud-based computing solutions according to the change of business needs. It can work without or with cloud computing. The advantages of using SOA is that it is easy to maintain, platform independent, and highly scalable.
+Service Provider and Service consumer are the two major roles within SOA.
+Applications of Service-Oriented Architecture:
+There are the following applications of Service-Oriented Architecture -
+-It is used in the healthcare industry.
+-It is used to create many mobile applications and games.
+-In the air force, SOA infrastructure is used to deploy situational awareness systems.
+3) Grid Computing: Grid computing is also known as distributed computing. It is a processor architecture that combines various different computing resources from multiple locations to achieve a common goal. In grid computing, the grid is connected by parallel nodes to form a computer cluster. These computer clusters are in different sizes and can run on any operating system.
+Grid computing contains the following three types of machines -
+-Control Node: It is a group of server which administrates the whole network.
+-Provider: It is a computer which contributes its resources in the network resource pool.
+-User: It is a computer which uses the resources on the network.
+4) Utility Computing: Utility computing is the most trending IT service model. It provides on-demand computing resources (computation, storage, and programming services via API) and infrastructure based on the pay per use method. It minimizes the associated costs and maximizes the efficient use of resources. The advantage of utility computing is that it reduced the IT cost, provides greater flexibility, and easier to manage.
+Large organizations such as Google and Amazon established their own utility services for computing storage and application.
+
+Working of cloud computing:
+Assume that you are an executive at a very big corporation. Your particular responsibilities include to make sure that all of your employees have the right hardware and software they need to do their jobs. To buy computers for everyone is not enough. You also have to purchase software as well as software licenses and then provide these softwares to your employees as they require. Whenever you hire a new employee, you need to buy more software or make sure your current software license allows another user. It is so stressful that you have to spend lots of money.
+But, there may be an alternative for executives like you. So, instead of installing a suite of software for each computer, you just need to load one application. That application will allow the employees to log-in into a Web-based service which hosts all the programs for the user that is required for his/her job. Remote servers owned by another company and that will run everything from e-mail to word processing to complex data analysis programs. It is called cloud computing, and it could change the entire computer industry.
+
+Platforms are used for large scale cloud computing?
+The following platforms are used for large scale cloud computing:
+-Apache Hadoop.
+-MapReduce.
+
+There are 3 layers in the hierarchy of cloud computing:
+Infrastructure as a service (IaaS):It provides cloud infrastructure in terms of hardware as like memory, processor, speed etc.
+Platform as a service (PaaS):It provides cloud application platform for the developer.
+Software as a service (SaaS)::It provides the cloud applications to users directly without installing anything on the system. These applications remains on cloud.
+
+Xaas in Cloud Computing:
+"Anything as a service" (XaaS) describes a general category of cloud computing and remote access services. It recognizes the vast number of products, tools, and technologies now delivered to users as a service over the Internet.
+Benefits of XaaS:
+XaaS has many benefits: improving spending models, speeding up new apps and business processes, and shifting IT resources to high-value projects.
+1) Expenditure model improvements. With XaaS, businesses can cut costs by purchasing services from providers on a subscription basis. Before XaaS and cloud services, businesses had to buy separate products-software, hardware, servers, security, infrastructure-install them on-site, and then link everything together to form a network. With XaaS, businesses buy what they need and pay on the go. The previous capital expenditure now becomes an operating expense.
+2) Speed up new apps and business processes. This model allows businesses to adopt new apps or solutions to changing market conditions. Using multi-tenant approaches, cloud services can provide much-needed flexibility. Resource pooling and rapid elasticity support mean that business leaders can add or subtract services. When users need innovative resources, a company can use new technologies, automatically scaling up the infrastructure.
+3) Transferring IT resources to high-value projects. Increasingly, IT organizations are turning to a XaaS delivery model to streamline operations and free up resources for innovation. They are also harnessing the benefits of XaaS to transform digitally and become more agile. XaaS gives more users access to cutting-edge technology, democratizing innovation. In a recent survey by Deloitte, 71% of companies report that XaaS now constitutes more than half of their company's enterprise IT.
+
+
+Obstacles to cloud computing, including: 
+- Security and privacy: Users may not know where their data is located, and they may not trust cloud service providers.
+- Data security: Users are responsible for their data, but not all cloud providers can guarantee data security.
+- Interoperability: It can be challenging to move applications between multiple cloud ecosystems.
+- Compliance: It can be difficult to find a cloud provider that complies with public data policies.
+- Lack of expertise: Organizations may not have the knowledge or tools to use cloud technology.
+- Cloud management: Cloud architecture can be complex and challenging to maintain.
+
+
+Traditional Computing : 
+Traditional Computing, as name suggests, is a possess of using physical data centers for storing digital assets and running complete networking system for daily operations. In this, access to data, or software, or storage by users is limited to device or official network they are connected with. In this computing, user can have access to data only on system in which data is stored.
+
+Advantages of Traditional Computing :
+Control: With traditional computing, an organization has full control over the hardware and software it uses, allowing for customization and optimization of the computing environment.
+Security: Traditional computing offers a high level of data security, as sensitive data can be stored on-premises and protected by firewalls, encryption, and other security measures.
+Reliability: Traditional computing is not dependent on internet connectivity, making it less vulnerable to service disruptions or data loss.
+Compatibility: Traditional computing environments can be tailored to meet the specific needs of an organization, ensuring compatibility with existing software and systems.
+Data Ownership: With traditional computing, an organization owns and controls all of its data, reducing concerns about data privacy and regulatory compliance.
+
+Disadvantages of Traditional Computing :
+Cost: Traditional computing can be more expensive than cloud computing, as it requires significant capital expenditures for hardware and software, as well as ongoing maintenance and support expenses.
+Scalability: Traditional computing can be difficult to scale up or down to meet changing needs, as it requires additional hardware or software to be added to the environment.
+Accessibility: Traditional computing may not allow for remote access to applications and data, limiting the ability of users to work from anywhere.
+Maintenance: Traditional computing environments require ongoing maintenance and upgrades to ensure security and performance, which can be time-consuming and expensive.
+Limited Storage Capacity: Traditional computing environments may have limited storage capacity, requiring organizations to periodically purchase additional hardware to accommodate growing data volumes.
+
+Cloud Computing vs Traditional Computing:
+1)CC:It refers to delivery of different services such as data and programs through internet on different servers. TC:It refers to delivery of different services on local server. 
+2)CC:It takes place on third-party servers that is hosted by third-party hosting companies. TC:It takes place on physical hard drives and website servers.  
+3)CC:It is ability to access data anywhere at any time by user. TC:User can access data only on system in which data is stored.  
+4)CC:It is more cost effective as compared to tradition computing as operation and maintenance of server is shared among several parties that in turn reduce cost of public services. TC:It is less cost effective as compared to cloud computing because one has to buy expensive equipment’s to operate and maintain server.  
+5)CC:It is more user-friendly as compared to traditional computing because user can have access to data anytime anywhere using internet. TC:It is less user-friendly as compared to cloud computing because data cannot be accessed anywhere and if user has to access data in another system, then he need to save it in external storage medium.  
+6)CC:It requires fast, reliable and stable internet connection to access information anywhere at any time. TC:It does not require any internet connection to access data or information.  
+7)CC:It provides more storage space and servers as well as more computing power so that applications and software run must faster and effectively. TC:It provides less storage as compared to cloud computing.  
+8)CC:It also provides scalability and elasticity i.e., one can increase or decrease storage capacity, server resources, etc., according to business needs. TC:It does not provide any scalability and elasticity.  
+9)CC:Cloud service is served by provider’s support team. TC:It requires own team to maintain and monitor system that will need a lot of time and efforts.  
+10)CC:Software is offered as an on-demand service (SaaS) that can be accessed through subscription service. TC:Software in purchased individually for every user and requires to be updated periodically.
+
+Distributed Computing:
+Distributed computing refers to a system where processing and data storage is distributed across multiple devices or systems, rather than being handled by a single central device. In a distributed system, each device or system has its own processing capabilities and may also store and manage its own data. These devices or systems work together to perform tasks and share resources, with no single device serving as the central hub.
+One example of a distributed computing system is a cloud computing system, where resources such as computing power, storage, and networking are delivered over the Internet and accessed on demand. In this type of system, users can access and use shared resources through a web browser or other client software.
+Components of Distributed Computing:
+There are several key components of a Distributed Computing System-
+-Devices or Systems: The devices or systems in a distributed system have their own processing capabilities and may also store and manage their own data.
+-Network: The network connects the devices or systems in the distributed system, allowing them to communicate and exchange data.
+-Resource Management: Distributed systems often have some type of resource management system in place to allocate and manage shared resources such as computing power, storage, and networking.
+The architecture of a Distributed Computing System is typically a Peer-to-Peer Architecture, where devices or systems can act as both clients and servers and communicate directly with each other.
+Characteristics:
+There are several characteristics that define a Distributed Computing System-
+-Multiple Devices or Systems: Processing and data storage is distributed across multiple devices or systems.
+-Peer-to-Peer Architecture: Devices or systems in a distributed system can act as both clients and servers, as they can both request and provide services to other devices or systems in the network.
+-Shared Resources: Resources such as computing power, storage, and networking are shared among the devices or systems in the network.
+-Horizontal Scaling: Scaling a distributed computing system typically involves adding more devices or systems to the network to increase processing and storage capacity. This can be done through hardware upgrades or by adding additional devices or systems to the network.
+Advantages and Disadvantages Distributed Computing:
+Advantages of the Distributed Computing System are-
+-Scalability: Distributed systems are generally more scalable than centralized systems, as they can easily add new devices or systems to the network to increase processing and storage capacity.
+-Reliability: Distributed systems are often more reliable than centralized systems, as they can continue to operate even if one device or system fails.
+-Flexibility: Distributed systems are generally more flexible than centralized systems, as they can be configured and reconfigured more easily to meet changing computing needs.
+There are a few limitations to Distributed Computing System-
+-Complexity: Distributed systems can be more complex than centralized systems, as they involve multiple devices or systems that need to be coordinated and managed.
+-Security: It can be more challenging to secure a distributed system, as security measures must be implemented on each device or system to ensure the security of the entire system.
+-Performance: Distributed systems may not offer the same level of performance as centralized systems, as processing and data storage is distributed across multiple devices or systems.
+
+DISTRIBUTED COMPUTING vs CLOUD COMPUTING:
+1)Distributed computing is solving a difficulty using distributed autonomous machines and communicating with each other over a network.	In cloud computing, IT resources and services like servers, storage, databases, networks, analytics, software, etc. are provided over the Internet.
+2)In basic distributed computing, a computing method may be used to communicate and solve one single problem by numerous machines. A basic cloud computing technology may provide host services to your users/customers over the Internet.	
+3)It is divided into three main types: distributed computing systems, distributed systems, and distributed power systems.	CC is divided into 4 kinds – Public, Private, Hybrid, and Community Cloud. It has a varied ranking.
+4)Distributed computers have numerous advantages, such as flexibility, dependability, increased performance, etc.	Cloud computing has numerous advantages, including cost efficiency, flexibility, and reliability, scaling economies, world market access, etc.
+5)Distributed computing helps more quickly than utilizing a single computer when it takes much time to complete the computing activities.	Cloud computing delivers services, including hardware, software, and Internet networking resources.
+6)The objective of distributed computing is to distribute and complete a single job amongst several computers fast through cooperation between machines.	Internet Pay-per-Use Computing Services are available on request from the cloud computing service providers.
+7)Some distributed computing features spread a single job amongst the machines to simultaneously advance the work, remote procedure calls, and the remote method invocation for distributed calculations.	Some of the features of cloud computing include pooled computer resources, on-demand service, pay-per-usage, service providers, etc.
+8)Some cloud computing disadvantages include the possibility of a node failure, and sluggish connectivity might lead to problems.	Some cloud computing disadvantages may include less control, particularly public clouds, limitations on existing services, and cloud security.
+
+Advantages of distributed computing over traditional computing
+1)Scalability:
+Traditional Computing: Upgrading hardware for scaling.
+Distributed Computing: Horizontal scaling for cost-effective expansion.
+2)Fault Tolerance:
+Traditional Computing: Single point failure risks.
+Distributed Computing: Redundancy minimizes downtime and data loss.
+3)Performance Optimization:
+Traditional Computing: Limited by single machine capacity.
+Distributed Computing: Parallel processing enhances speed.
+4)Resource Utilization:
+Traditional Computing: Centralized resources may be underutilized.
+Distributed Computing: Dynamic allocation improves efficiency.
+5)Geographical Distribution:
+Traditional Computing: Limited to a single location.
+Distributed Computing: Enables global resource distribution.
+
+Grid Computing: 
+Grid computing is a distributed structure of huge number of machines situated in multiple locations, connected to solve a complex problem. In the grid computing paradigm, personal computers or servers run independent tasks and are loosely connected by the Internet or low- speed networks.
+It is a Distributed computing architecture. In this computing, resources are used in collaborative pattern, and also in grid computing, the users do not pay for use.
+Applications of Grid Computing:
+One of the prime grid computing strategies is to utilize middleware to divide and allocate chunks of a program among several machines, at times, up to several thousands. Being a distributed computation technique, grid computing involves the aggregation of the large- scale clusters. However, the size of a grid may vary from small to large.
+1)Partitioning an application where it is required to further break a problem into discrete chunks
+2)Identifying and scheduling tasks
+3)Distributing problem data as and when it is needed
+4)Distributing application codes to specific machine nodes
+5)Assisting in result management and decision making processes
+6)Facilitating self-optimization, self-configuration, self-management and self-recovery
+
+Cloud Computing vs Grid Computing:
+1. Cloud computing is a Client-server computing architecture.	While Grid computing is a Distributed computing architecture.
+2. Cloud computing is a centralized executive. While grid computing is a decentralized executive.
+3. In cloud computing, resources are used in centralized pattern. While in grid computing, resources are used in collaborative pattern.
+4. It is more flexible than grid computing.	While Grid computing is less flexible than cloud computing.
+5. In cloud computing, the users pay for the use. While in grid computing, the users do not pay for use.
+6. Cloud computing is a high accessible service. While grid computing is a low accessible service.
+7. It is highly scalable as compared to grid computing. While grid computing is low scalable in comparison to cloud computing.
+8. It can be accessed through standard web protocols.	While it is accessible through grid middleware.
+9. Cloud computing is based on service-oriented. Grid computing is based on application-oriented.
+10. Cloud computing uses service like IAAS, PAAS, SAAS. Grid computing uses service like distributed computing, distributed pervasive, distributed information.
+
+
+Service models in Cloud computing:
+1)SaaS:
+Defination: 
+Examples:
+Advantages:
+Disadvantages:
+Architecture:
+
+2)PaaS:
+Defination: 
+Examples:
+Advantages:
+Disadvantages:
+Architecture:
+
+3)IaaS:
+Defination: 
+Examples:
+Advantages:
+Disadvantages:
+Architecture:
+
+4)HaaS:
+SaaS:
+Defination: 
+Examples:
+Advantages:
+Disadvantages:
+Architecture:
+
+
+Types of Cloud/deployment models:
+1) Public cloud: 
+2) Private cloud:
+3) Hybrid cloud
+4) Community cloud:
+
+
+Google Cloud Platform / Infrastructure:
+Today, Google is one of the prime cloud service platforms in close competition with Microsoft Azure and AWS. In the year 2008 Google initiated Google App engine i.e. its first cloud tool; and henceforth continued adding more services and tools that collectively shaped into Google Cloud Platform.
+Google’s cloud computing platform provides a competent infrastructure product-and-service suite offering cloud computing solutions, cloud storage, application hosting, database services, data storage, prediction APIs, translations APIs and much more.
+This also adds to the benefits of the Google cloud infrastructure:
+1. Compute: App Engine, Cloud functions, Container registry, Compute engine and container engine
+2. Storage: Cloud Bigtable, Cloud SQL, Cloud Storage, Cloud Datastore
+3. Networking: Cloud Virtual networking, Cloud CDN(Content Delivery network), Cloud Load Balancing, DNS and Interconnect
+4. Big Data: BigQuery, Datalab, Dataproc, Dataflow, Pub/Sub and Genomics
+5. Machine learning: ML Platform, Speech API, Vision API and the Translate API
+6. Management tools: Monitoring, Stackdriver Overview, error Reporting, Logging, Trace, Debugger, Cloud console, Cloud mobile app, Deployment Manager, Cloud shell, Billing API.
+7. Developer tools: Cloud SDK, Cloud Source Repositories, Cloud Tests Lab, Deployment Manager, Endpoints, IntelliJ, Tools for android studio, Google plug-in for Eclipse,.
+8. Identity and Security: Cloud IAM, Security Scanner, Resource Manager, Platform Security overview.
+
+Google File System (GFS or Google FS):
+Google File System is a type of distributed file system created by Google to meet the company’s fast growing data processing demands. Also known as Google FS or GFS, it is Google’s proprietary product and provides the benefits of availability, scalability, performance and reliability. It is used to efficiently manage massively big amounts of data. It also supports the developers to research and access the desired resources in creating the apps.
+
+GFS – Features:
+1) High availability.
+2) Fault tolerance.
+3) Automatic and efficient data recovery High aggregate throughput.
+4) High aggregate throughput.
+5) Critical data replication.
+6) Namespace management and locking.
+7) Minimal client-master interaction because of large chunk server size.
+
+Composition of GFS:
+GFS is composed of numerous storage systems built from low-priced commodity hardware components. Files on GFS are very heavy, usually in multi-gigabyte (GB) range. Accessing such large-sized files for processing require a huge network bandwidth (i.e. the capability of a system to move data between different locations). GFS easily sorts out this problem. It breaks the huge files into small chunks of 64 megabytes (MB) each. Each chunk is given a distinct 64-bit identification number which is known as a chunk handle.
+The task of balancing the workload among the systems is simplified through easy porting of file chunks from one resource to another.
+
+Working of GFS:
+• Initially a client sends a request to the Master to search the location of the chunk server which is acting as the primary duplicate.
+• The Master identifies the primary duplicate and sends the location of all the chunk server duplicates to the client.
+• The client stacks the data and allocates the write data task to the chunk server duplicates, beginning with the nearest.
+• After the duplicates obtain the data, the client communicates with the primary duplicate to begin the write function.
+• The primary duplicate writes the data to the appropriate chunk and signals the secondary duplicates to do the same.
+• The secondary duplicates execute the write data task and address back to the primary duplicate.
+• Finally, the primary duplicate sends a confirmation message regarding the completion of the write data task to the client.
+
+Advantages of GFS:
+-High Availability: GFS ensures data remains accessible despite server failures.
+-Fault Tolerance: It tolerates faults with automatic and efficient data recovery.
+-Scalability: Efficiently manages massive amounts of data, meeting growing demands.
+-High Aggregate Throughput: Optimized for fast access to large files and datasets.
+-Critical Data Replication: Supports duplication of critical data for fault tolerance.
+-Performance: GFS delivers high performance, especially in handling large-scale data processing tasks.
+
+Disadvantages of GFS:
+-Proprietary Nature: GFS is proprietary, limiting transparency and customization.
+-Complexity: Setting up and managing GFS may be challenging due to its complexity.
+-Large Chunk Server Size Interaction: Challenges in efficiently managing large chunks, especially with varying file sizes.
+-Limited Interoperability: Optimized for Google's needs, may not seamlessly integrate with other systems.
+-Bandwidth Requirements: Accessing large files may demand significant network bandwidth.
+
+Google Search Engine:
+With the acquisition of major market share, Google search engine places itself as world’s most widely accepted and powerful search engine. Google makes use of a special trade marked algorithm known as PageRank to find the search results. The algorithm’s generics are transparent to the world but the specifics are undisclosed and remain a secret. This maintains the company’s competitive edge.
+Google makes use of robotic programs in the search result generation process. These are known as spiders or crawlers. A spider crawls up the web and builds a list based upon the content to be searched. This process is known as Spidering or Web crawling. The spiders record the words entered in the search engine and then create a search keyword to find the related web pages. This makes Google possess a huge index of search keywords and their location.
+Google’s algorithm assigns each web page a relevancy score or a rank. The way Google ranks the search results makes it distinct from other search engines. The rank in turn determines the sequence in which Google displays the results on its search engine results page (SERP).
+
+Web Page ranking Factors:
+1) The location and frequency of keywords on a webpage.
+2) The duration a web page exists.
+3) The number of other linked web pages.
+4) Backlinks: The number and quality of external websites linking to a particular webpage.
+5) Content Quality: Relevance, uniqueness, and overall quality of the content on a webpage.
+6) User Engagement Metrics: Factors such as click-through rate, bounce rate, and dwell time contribute to page ranking.
+7) Mobile Friendliness: How well a webpage performs and is designed for mobile devices.
+8) Page Loading Speed: The time it takes for a webpage to load, as it affects user experience and SEO.
+9) Social Signals: The presence and impact of social media shares, likes, and comments related to a webpage.
+10) Domain Authority: The overall authority and credibility of the domain hosting the webpage, as determined by various factors.
+
+Map Reduce and Map Reduce framework:
+This is the digital era and data’s growth is massively speedy. This brings in the requirement for a highly efficient mechanism to manipulate such huge amounts of data. However, this entire task can be extremely tedious demanding numerous amount of time spent over solving recurring problems.
+Problems such as processing in parallel, data distribution and majorly handling errors during processing need meticulous execution. Therefore, MapReduce framework was introduced by Google to make the developers get rid of such recurring and time-consuming tasks.
+As the name suggests, MapReduce is a programming paradigm based on the principle of functional programming. Excessive amount of computations can be executed in parallel over multiple systems (collectively known as a cluster) to process massive amount of data sets.
+The user has to specify a map function and a reduce function. Map function is used to process a key/value pair for generating a set of intermediate key/value pairs. Reduce function is used to merge all the intermediate values that are associated with the same intermediate key.
+
+Execution of MapReduce / Phases of MapReduce:
+Google created a layer of abstraction to split the flowing data into 2 major phases:
+1) The Map Phase–The Map phase may include many map functions. A map function
+refers to a high-order function that applies a given function to each element of a list.
+2) The Reduce Phase–The Reduce phase may include many reduce functions. A reduce function refers to a high-order function that processes the result from the map phase by combining it into a consolidated form. This consolidated result is actually the final output.
+
+
+Components of MapReduce Framework:
+The MapReduce framework consists of several basic components that work together to process and analyze large-scale data in a distributed computing environment:
+1. Mapper:
+Functionality: Processes input data and generates a set of intermediate key/value pairs.
+Responsibility: Distributes the workload across multiple nodes in the cluster.
+2. Reducer:
+Functionality: Aggregates and consolidates the intermediate key/value pairs produced by the mappers to generate the final output.
+Responsibility: Performs the reduction and combines results.
+3. InputFormat:
+Functionality: Specifies how input data is divided and processed by the mappers.
+Responsibility: Defines the structure and organization of the input data.
+4. OutputFormat:
+Functionality: Specifies the format of the final output generated by the reducers.
+Responsibility: Defines how the results are formatted and presented.
+5. Shuffle and Sort:
+Functionality: The process of redistributing and sorting the intermediate key/value pairs before they are sent to the reducers.
+Responsibility: Ensures that all values associated with a particular key are sent to the same reducer.
+6. Partitioner:
+Functionality: Determines how the intermediate key/value pairs are distributed to different reducers.
+Responsibility: Ensures an even distribution of data and workload among reducers.
+7. JobTracker:
+Functionality: Manages and coordinates the execution of MapReduce jobs.
+Responsibility: Schedules tasks, monitors progress, and handles job failures.
+8. TaskTracker:
+Functionality: Executes individual tasks (map or reduce) on a specific node in the cluster.
+Responsibility: Reports task progress and status to the JobTracker.
+9. Combiner:
+Functionality: An optional function that performs a local reduction on the output of each mapper before it is sent to the reducers.
+Responsibility: Reduces the amount of data transferred over the network during the shuffle and sort phase.
+
+A real world analogy of MapReduce: 
+You have 50 bags full of assorted chocolates of different brands. You want to count the total number of chocolates of each brand. If you start counting serially and follow the conventional method, it is going to be extremely complex and frustrating.
+The MapReduce method suggests the following:
+• Communicate with 50 friends
+• Allocate 1 bag to each friend
+• Tell each friend to count the total number of chocolates of different brand names
+• Receive the resultant information from each friend
+• Record and aggregate the total count received
+Your friends acted as map function and you acted as reduce function.
+In case, any of the friends leave, you can re-assign the task to a new friend. This is one major benefits of the MapReduce framework, known as fault tolerance. A task can be easily transferred from one node to another.
+
+Amazon Web Services (AWS):
+Amazon Web Services (AWS) is a popular example of IaaS model. It was designed as an extended service of Amazon.com a few decades ago. At present, AWS is a rapidly growing organization with an extraordinary turnover of $10 billion. This turnover is above 30% of the market share and more than its competitors – Google, IBM and Microsoft.
+According to Amazon, AWS is a secure cloud services platform that helps businesses scale and grow.
+AWS cloud offers several benefits of infrastructure-as-a-service:
+• Database storage
+• Computing power
+• Content delivery
+• Networking and databases delivered as a utility: this is available on-demand, in seconds, with pay-as-you-go pricing
+Following are the chief Amazon web services components:
+• Amazon EC2
+• Amazon RDS
+• AWS Direct Connect
+• Amazon EBS
+• Amazon S3
+• Elastic Load Balancing
+• Amazon Route 53
+• Amazon VPC
+• Elastic IP
+A huge number of clients utilize AWS cloud products and solutions to develop refined applications with enhanced reliability, flexibility and scalability. AWS provides a complete cloud infrastructure ready to be used for any workload. 
+
+Different types of APIs-
+API refers to Application Programming Interface. It is a set of protocols or standards that are used in developing a software application. There exist different types of APIs that are used to build web applications, operating systems and even websites.
+(i) Rest API: REST refers to Representational State Transfer. It is a type of Web service API. It utilizes standards like URL, JSON, XML and HTTP for transmitting messages. REST is an architectural technique and does not follow any specific official standard. It promotes the ease of use, visibility, reliability, scalability, performance and modifiability. REST is utilized by the World Wide Web.
+(ii) Soap API: SOAP refers to Simple Object Access Protocol. It is also a type of web service API that utilizes standards like SMTP, XML, HTTP, TCP, JMS and UDP for message transmission. SOAP is used to exchange structured information during the implementation of web services. The characteristics of SOAP are neutrality, independence and extensibility. Unlike Rest API, SOAP API follows official standards.
+(iii) Query API: Query API refers to querying a data source for information about its entities. For example, if the data source contains university entities, you can query for university offering various courses nearby or may be for a particular location. Each query response returns corresponding results including various values.
+
+User Authentication:
+User authentication is a mechanism that allows a machine to validate the identity of whosoever connects to the network. It is very essential that a network remains safe and secure to majorly avoid the loss of confidential data. Therefore, it is essential to perform user authentication process.
+To enable the access of only authorized users, there are various authentication methods:
+• Biometrics
+• Computer recognition software
+• One Time Password (OTP) token
+• SMS or e-mail one-time password (OTP)
+• Peripheral device recognition
+• Out of band
+• Scratch-off card
+One real time example of user authentication is the case of accessing your Google mail account. It is mandatory for you to enter your correct user name and password. When the username and password provided by you matches with the registered credentials in the Google database, the system accepts you as an authentic user.
+
+Connecting to the Cloud:
+Connecting to the cloud is a general term used to denote the instance when you are connected to a network that has multiple of shared resources to offer. A real time example is connecting to the Wi-Fi (Wireless Fidelity) network or to the network provided by an internet service provider (ISP).
+Cloud is the group of shared resources available to the user. They may be software such as mobile apps or hardware devices such as a digital camera or an I-pad.
+In case of a Wi-Fi network, search for the available networks. Once you find an open and secure network, click to connect to the network. Provide the required password and a successful connection can be established over the cloud.
+In case of a network provided by an Internet service provider, search for the specific icon or switch to be turned on. Once it is on, you will be able to connect to your registered network and access the Internet.
+
+OpenSSH Keys:
+Secure Shell (SSH) protocol suite offers OpenSSH as a free tool to remotely monitor and transfer files between computers in a secured manner. RCP or Telnet are conventional techniques that are used for the same purpose but they are insecure because they transfer the confidential information such as user’s password in clear text format. OpenSSH is used to efficiently enforce secure, encrypted file transfer and remote monitoring functions thereby replacing the conventional tools.
+
+Set Up OpenSSH Keys:
+OpenSSH keys are set up by using public-private key-pairs. This method is safe and secure as there is no need of typing the password each time. The keys-pairs can be generated by using either of the algorithms, i.e. DSA or RSA.
+The following command is used to generate public/private dsa key pair:
+% ssh-keygen -t dsa
+The following command is used to generate public/private dsa key pair:
+% ssh-keygen -t rsa
+
+Benefits of using OpenSSH:
+- Encrypted Communication: OpenSSH ensures secure, encrypted data transfer and remote monitoring.
+- Passwordless Authentication: OpenSSH keys enable secure logins without typing passwords each time.
+- Key-Pair Security: Public-private key-pairs add an extra layer of authentication and protection.
+- Versatile Protocols: OpenSSH supports secure protocols for diverse operating systems and network environments.
+- Replace Insecure Protocols: OpenSSH replaces insecure methods like RCP and Telnet, offering a more robust and secure alternative.
+
+Tunneling / Port Forwarding:
+Tunneling or port forwarding is a process of data transmission that is carried out within a private network, majorly business network using a public network. In this process, the public network routing nodes do not come to know that the ongoing data transmission is an action of a private network.
+-Point-to-Point Tunneling Protocol (PPTP) is a widely used tunneling mechanism which is built by Microsoft. Authorized users can log into a virtual private network (VPN) by using the support of PPTP.
+-Another popular tunneling protocol is generic routing encapsulation (GRE) which is built by Cisco Systems.
+
+The Working of Tunneling:
+The task of Tunneling is carried out by encapsulating the protocol data of the public network transmission and the private network data. This makes private network protocol data appears to be data in general for the public network.
+The main purpose of port forwarding is to retain the confidentiality of the private network data thereby making the information secure. However, it does not serve as a substitute for high level security measures related to encryption or decryption.
+
+Benefits of Tunneling:
+- Secure Data Transmission: Tunneling ensures secure data transmission within private networks over a public network.
+- VPN Access: Allows authorized users to log into a virtual private network (VPN) using protocols like PPTP.
+- Network Privacy: Maintains the confidentiality of private network data by encapsulating it within the public network.
+- Protocol Agnosticism: Supports various tunneling protocols like PPTP and GRE for flexible and efficient data transmission.
+- Enhanced Confidentiality: Port forwarding helps in retaining the confidentiality of private network data, adding an extra layer of security.
+
+
+Three Ways to control access to Google cloud storage and objects:
+Here are some ways to control access to Google Cloud Storage and objects -
+1) IAM permissions: Grant permissions to users or groups to view or create objects in a bucket.
+2) Access Control Lists (ACLs): Use Google accounts to provide longer term access.
+3) Signed URLs: Generate a URL to give time-limited read or write access to an object.
+In addition to IAM and ACLs, the following tools are available to help you control access to your resources-
+-Signed URLs (query string authentication).
+-Signed Policy Documents.
+-Firebase Security Rules.
+-Public access prevention.
+-Credential Access Boundaries.
+
+Machine image is different from an instance
+Yes, a machine image is different from an instance in the context of cloud computing. Here's an explanation to support this argument:
+- Machine Image: A machine image, often referred to as an "image" or "AMI" (Amazon Machine Image) in the context of Amazon Web Services (AWS), is a pre-configured virtual machine template. It includes the operating system, software applications, and any other configurations needed for the virtual machine to function. Machine images serve as a blueprint for creating instances. They are essentially a snapshot or template used to replicate a specific system configuration.
+- Instance: An instance is a running virtual machine created from a machine image. It represents a live and operational computing environment within the cloud infrastructure. Instances are dynamic and can be started, stopped, and terminated as needed. They use the resources defined by the machine image but are distinct entities with their own state, such as IP addresses, storage, and runtime data.
+In summary, a machine image is a static, pre-configured template or snapshot used to create virtual machines, while an instance is a live, running virtual machine created from a machine image. The machine image is the blueprint, and the instance is the active instantiation of that blueprint in the cloud environment.
+
+
+Simple Storage Service – S3:
+(i) S3 - Overview: S3 is the popular web storage service offered by Amazon. Developers are provided with excellent benefits of simple, reliable, majorly-scalable, cost-effective and low-latency data storage platforms.
+(ii) Buckets: A bucket is a type of data structure that is created in an Amazon Web Service (AWS) section to store multiple objects. These objects refer to the uploaded data in the format of documents, videos, images, etc. A bucket name is a globally unique name given at the time of bucket creation.
+(iii) Objects: Objects can be stored in as many buckets as possible.
+An object is composed of the following information:
+• Key: Name given to the object.
+• Version ID: Unique identification version number associated to the object when it is stored in a bucket.
+• Value: Content stored in a bucket.
+• Metadata: Set of name-value pairs supporting the information of the stored object.
+• Sub-resources: Additional information related to the object.
+• Access Control Information: Information related to the access control of the stored object (this information can be resource-based or user-based).
+(iv) Logging: With respect to Amazon S3, Logging refers to the process of API call logging triggered from your AWS account to the specified bucket on S3. This call logging service is known as CloudTrail. Another logging service for server access is performed to track complete details of the requests made for accessing a bucket. The access log information is helpful in access audits and security.
+(v) ACL: Access control lists (ACLs) refers to the resource-based access policy. It can be used to control access of your stored objects and the buckets. ACLs allow you to permit basic read/write operations for other AWS accounts. However, managing permissions using ACLs has certain limits.
+(vi) Signed URL: A signed URL contains extra information. For instance, mentioned expiration time and date allows you to monitor your content at a more high level. A signed URL can be created using either a custom policy or a canned policy.
+(vii) S3 Applications:
+• Data Storage
+• Data Transfer (Download/Upload)
+• Files Back Up (Computer and online)
+• Website hosting
+
+Elastic Cloud Compute – EC2:
+Elastic cloud compute refers to the processing of a computing system in which the machines are highly elastic or adaptable to accommodate the workload changes by allocating or de- allocating the available resources at each point in time to meet the active request in the cloud, in the best possible manner.
+Amazon offers EC2 as a web service tool to provide high-end computation benefits to the developers:
+• The EC2 interface provides minimized friction in the configuration capabilities.
+• You can completely control your computing resources.
+• Time is greatly minimized while starting new server instances.
+• The elasticity feature allows you to effortlessly scale up or down your computing capacity as per the changing computing needs.
+• EC2 is a cost-effective measure that makes you avoid the investment in hardware.
+• The development and deployment of applications become fast and efficient.
+• EC2 makes you work hassle-free without bothering the need to predict network traffic, app popularity spikes, etc.
+
+
+Computer Network:
+A computer network is a group of computers, two or more, connected to each other through a wire or a cable or even wireless.
+
+Advantages of Network:
+- It is easy to share data and files between users.
+- Sharing resources, such as printers and fax machines helps reduce the cost and saves money.
+- Communication has become a lot easier as network users can communicate with each other using e-mails and messengers.
+- You get the freedom to remotely access your data on the network from anywhere.
+
+Disadvantages of Network:
+- There is always a chance of the files getting corrupted due to viruses, which can spread over a network.
+- Hacking is also a major concern when it comes to the safety of data and information lying on the network. The network users are always advised to use security measures, such as Firewall on their computers.
+- As easy as it seems from outside, the management of network cables and wires is equally complicated. It requires training and in case of organizations, they need to hire a set of trained staff and network managers for this job.
+
+
+Types of Networking:
+Networks are classified on the basis of scale. The area a network covers determines the type of network it is.
+Originally, there were only two types of networks:
+1. LAN (Local Area Network), and
+2. WAN (Wide Area Network)
+But, over the years, other types of networks have evolved, such as:
+• VPN (Virtual Private Network)
+• MAN (Metropolitan Area Network)
+• CAN (Campus Area Network)
+• PAN (Personal Area Network)
+• DAN (Diverse Alert Network)
+• EPN (Electronic Payments Network)
+
+******Topics to be covered: IP, Subnet, fields of ipv4, classes of ip, host & net calculation, ipv6, network devices
+
+Gateways:
+A gateway is a network point or node that acts as an entrance to another network. With the help of gateway data can be sent back and forth and the communication is made possible between the Internet users.
+The default Internet gateways are typically one of the two types:
+• At home or small business networks, with a broadband router to share the Internet connection, the home router serves as the default gateway.
+• At home or small business networks without a router, such as for residences with dial-up Internet access, a router at the ISP location serves as the default gateway.
+
+Node:
+A node is simply a physical place where the data stops for either transporting or reading or using.
+• On the Internet, the node that is a stopping point can be a gateway or a host or end- point node.
+• A computer that controls the traffic received by your Internet Service Provider (ISP) is a node.
+
+Routers:
+They are small electronic devices that join different computer networks together. Routers can use either wired or wireless connections.
+These are hardware devices specially designed to receive, analyse and forward incoming data packets along the connected network. The other functions of routers can be to convert the packets to another network interface, drop them and perform other actions related to a network.
+It contains a processor (CPU), several kinds of digital memory and input-output (I/O) interfaces.
+A router commonly connects either two LANs or WANs or it may connect a LAN along with its ISP network. Routers are placed at gateways, which is the meeting point of two or more networks.
+
+There are following types of Routers:
+• Bridge router (Brouter) – It is networking device that serves as both a bridge and a router.
+• Core router – It routes data within a network, but not between networks.
+• Edge router – It routes data packets between one or more LANs.
+• Virtual router – It is a backup router in a Virtual Router Redundancy Protocol (VRRP) setup. A virtual router is a software-based system that does everything a hardware router can do.
+• Wireless router – A wireless router functions both as a router and a wireless access pointin wireless local area network (WLAN). It determines the next available network point towards which the data should be forwarded on the way to its destination.
+
+
+Amazon SDB:
+Amazon SDB is a scalable and flexible non-relational data store that offloads the work of database administration. It provides the essential database functions of data indexing and querying in the cloud. SDB provides a simple interface that enables users to create and store multiple data sets. It also allows users to query their data and return the results. The service manages hardware and software maintenance, infrastructure provisioning, performance tuning and replication and indexing of data items. This enables users to focus on application development and just pay for the resources they actually consume storing data and issuing requests.
+Amazon SDB also allows users to partition their workload across multiple domains, thereby enabling scalability. If your workload exceeds the storage and request quantity provided by a single domain, you can create additional domains. This will help you obtain higher throughput. For instance, if you use 10 domains for your data and execute 10 queries in parallel, your throughput will be much higher.
+SDB’s flexibility allows users to change their data models on the fly. This means that users can add or remove attributes without breaking a schema. As a result, the changes to the application and business are reflected quickly without expensive refactoring or tedious schema updates.
+Another benefit of Amazon SDB is that it offers automatic, geo-redundant replication. Every time a data item is stored, multiple replicas are created in various data centres within the selected region. This enables data durability and availability in the event of a data centre outage. SDB also automatically indexes data to facilitate efficient queries. In addition, it provides a simple API for storage and access.
+
+Amazon SNS:
+Amazon SNS is flexible, fast and a fully managed push notification service that allows users to send individual or bulk messages to any number of recipients. SNS makes it easy and cost- effective to send push notifications to email recipients, mobile device users and even to other distributed services.
+SNS has a distributed publish-subscribe system. This means that messages are pushed to subscribers as and when they are sent by publishers. The service supports various end points such as sms, email, http and SQS.
+With SNS, you can send push notifications to Google, Apple, Fire OS and Windows devices. With Baidu Cloud Push, you can send messages to Android devices in China.
+SNS features the following capabilities:
+• Users can create topics and publish messages to these topics.
+• Subscribers to these topics will get messages pushed to them.
+• Messages can be pushed over SMTP (email) or HTTP.
+• Access control policies allow users to control subscribers to a topic.
+• If message delivery fails, the SNS system retries sending it.
+
+Amazon RDS
+Setting up and operating a relational database in the cloud is fairly simple and trouble-free with Amazon RDS. It provides resizable capacity and cost-efficient solutions to managing time-consuming database administration tasks. RDS allows users to choose from six familiar database engines - Oracle, Amazon Aurora, Microsoft SQL Server, MySQL, PostgreSQL and MariaDB. This means that applications, codes and tools that you are using with existing databases can be used with Amazon RDS. The service automatically patches the database software and backs up your database. It stores the backups for a user-defined retention period and enables point-in-time recovery. It is possible to scale the storage capacity of a database instance via a single API call.
+Amazon RDS also enables replication. This works to enhance the availability and reliability for production workloads. In case of a failure, you can run mission-critical workloads with high availability and built-in automated failover from your primary database to the replicated secondary database. For read-heavy database workloads, it is possible to scale out beyond the capacity of a single database deployment with Amazon RDS for MySQL.
+
+Programming:
+Programming and controls are complementary to each other. Programming helps to find out the solution of any problem in any software. Amazon CloudFront acts as a content delivery network and helps to improve the downloading speed of the content. If no local file is available, CloudFront provides the copy of that file. It lowers the cost to deliver content online.
+The available and supported programming languages that can be used with CloudFront include:
+• Java: Developed by James Gosling at Sun Microsystems, this programming language was released in 1995. At present, it is owned and maintained by Oracle. Java is widely used to create software programs and Internet applications.
+• Ruby: It is an open source object-oriented programming language which was first released in 1995. In this programming language, even the most basic data types, such as integers, have instance variables and methods.
+• Python: It is an interactive and object-oriented programming language developed by Guido van Rossum and released in 1991.
+• PHP: Developed by Rasmus Lerdorf and released in 1995, PHP is short for PHP: Hypertext Preprocessor. It is a server-side interpreted scripting language that is widely used for creating web pages which work effectively with databases.
+• Windows: This is an operating environment created by Microsoft. Users can navigate through menus, buttons, tabs, dialog boxes and icons and this eliminates the need to memorise commands for the command line.
+• .Net: This is a programming model that enables software developers to bundle a collection of software in one package. This, in turn, facilitates rapid application development.
+Amazon Web Services (AWS) has libraries and resources that are available for these languages. These libraries and resources provide some basic functions such as accepting requests, checking the authenticity of the user and handling errors.
+
+Control Structures:
+Control structures enable users to determine the order in which program statements are executed. A language is made up of statements that are connected together by simple and powerful control structures. If statements are written for a logical use, the starting point is known as the entry point and the last statement is written as the exit point.
+These control structures allow users to do two things:
+1. Skip some statements while executing others.
+2. Repeat one or more statements if some condition is true.
+
+Types of Control Structures:
+The three basic types of control structures are sequential, iteration and selection. They can be used together in any way to solve a specified problem. Implementing these control structures influences the flow of control through any given function. Within these control structures, minor variations may arise from the interaction of or the restrictions on the given control capabilities.
+1) Sequential: This is the default control structure where statements are executed line by line in the order in which they occur. A sequence of statements is executed depending on whether the condition is true or false. Simply put, this means that the program chooses between two or more alternative paths. Condition refers to any value or expression that returns a Boolean value, meaning either true or false. 
+2) Iteration: This is used for repeating or looping a piece of code multiple times in a row. The iteration or repetition structure repeatedly executes a series of statements as long as the condition is true. The condition may be open-ended or predefined. “While”, “do/while” and “for” loops are the three types of iteration statements. A loop can either be counter controlled or event controlled. A counter-controlled loop executes the statements a predetermined number of times while an event-controlled loop executes a sequence of statements till the event occurs.
+3) Selection: This is used for decisions or branching where it is necessary to choose between two or more alternative paths. The three main types of selection statements are “if”, “if/else” and “switch” statements. The “if” statement is the most basic and common selection statement. The “if” and “if/else” statements can be nested. “Switch” statements are ideally used when there are multiple cases from which a selection can be made. In the case of selection control, if there is a problem, there can be two opinions - the problem may be either true or false. If it is true, there are some steps to follow but if the problem is false, it follows a different route. In this case, the selection box works to determine whether to proceed or not.
+
+Apache Instances in EC2:
+We can install the Apache web server on your Amazon Linux instance with PHP and MySQL support. This server can then be used to host a static website. You can also deploy a dynamic PHP application that reads and writes information to a database.
+Setting up an Ubuntu Amazon EC2 instance with Apache, PHP and MySQL (also known as LAMP) to host a simple dynamic web site involves the following steps:
+1. Creating a Security Group for web access.
+2. Creating a LAMP-friendly instance.
+3. Creating an Elastic IP.
+4. Installing LAMP via SSH.
+
+To configure Apache, we need to follow the steps:
+1. Create and test an Amazon EFS file system.
+2. Create a load balancer in your Amazon VPC.
+3. Create an Auto Scaling group with two EC2 instances.
+4. Create a sample page.
 
