@@ -118,7 +118,6 @@ XaaS has many benefits: improving spending models, speeding up new apps and busi
 2) Speed up new apps and business processes. This model allows businesses to adopt new apps or solutions to changing market conditions. Using multi-tenant approaches, cloud services can provide much-needed flexibility. Resource pooling and rapid elasticity support mean that business leaders can add or subtract services. When users need innovative resources, a company can use new technologies, automatically scaling up the infrastructure.
 3) Transferring IT resources to high-value projects. Increasingly, IT organizations are turning to a XaaS delivery model to streamline operations and free up resources for innovation. They are also harnessing the benefits of XaaS to transform digitally and become more agile. XaaS gives more users access to cutting-edge technology, democratizing innovation. In a recent survey by Deloitte, 71% of companies report that XaaS now constitutes more than half of their company's enterprise IT.
 
-
 Obstacles to cloud computing, including: 
 - Security and privacy: Users may not know where their data is located, and they may not trust cloud service providers.
 - Data security: Users are responsible for their data, but not all cloud providers can guarantee data security.
@@ -126,7 +125,6 @@ Obstacles to cloud computing, including:
 - Compliance: It can be difficult to find a cloud provider that complies with public data policies.
 - Lack of expertise: Organizations may not have the knowledge or tools to use cloud technology.
 - Cloud management: Cloud architecture can be complex and challenging to maintain.
-
 
 Traditional Computing : 
 Traditional Computing, as name suggests, is a possess of using physical data centers for storing digital assets and running complete networking system for daily operations. In this, access to data, or software, or storage by users is limited to device or official network they are connected with. In this computing, user can have access to data only on system in which data is stored.
@@ -400,6 +398,36 @@ Advantages:
 Disadvantages:
 -Limited Scope: May not be suitable for organizations with diverse needs.
 -Dependency: Relies on effective collaboration and agreement among community members.
+
+
+Public Cloud vs	Private Cloud:
+1) A public cloud is a computing environment in which computing infrastructure and resources are shared with the public over the Internet. A private cloud is a computing infrastructure and resource-sharing network that is connected via the Internet to a private network.
+2) Public cloud functions on the principle of storage demand scalability.	Private cloud can only be shared among users of an organization.
+3) Public cloud deployment control over infrastructure is limited. Private cloud environment provides complete control.
+4) Public cloud is connected to the public Internet.	Private cloud only provides connectivity over the private network.
+5) Public cloud is hosted at the Service Provider site.	Private cloud is hosted at the Service Provider site or enterprise.
+6) Public cloud is an affordable solution that provides room for growth. Private cloud Provides	high performance, security, customization, and control options.
+7) Public cloud is widely used to provide web-based email, online storage, application testing, and development environments. Private cloud	uses widely in the application to protect our most sensitive data and applications.
+8) Public cloud is managed by Cloud Service Provider’s technical team. Private cloud is managed by In-house technical administrators.
+9) A public cloud is a multi-tenant in which your service provider manages the network.	A private cloud is like a single tenant in which the in-house team handles the network.
+10) Public cloud is an affordable option offering a pay-as-you-go service fee. Private cloud requires large upfront costs for implementing the hardware, software, staff, and other resources.
+11) Users have to pay a monthly bill for public cloud services.	In the Public cloud, money is charged based on usage GB and bandwidth transfer fees.
+12) In Public cloud, reliability is moderate here. Private infrastructure offers a high level of reliability.
+13) In-house software not needed in Public cloud computing model. Very high in-house software requirement in Private cloud computing model.
+14) In Public cloud, Only offers essential security compliance. In Private cloud, Enhanced security to meet data protection legislation.
+15) In the public cloud, the performance is low to medium.	The performance is high in a private cloud.
+16) It covers the shared servers.	It covers the devoted servers.
+17) A public cloud is comparable to renting a truck from a large company that is available to everyone.	The concept of a private cloud can be compared to owning and managing a fleet of trucks.
+18) Public cloud Providers- Amazon web service (AWS) and Google AppEngine, etc. Private cloud Providers- Microsoft KVM, HP, Red Hat & VMWare, etc.
+
+
+Middleware:
+Middleware acts as a bridge between diverse technologies, tools, and databases so that you can integrate them seamlessly into a single system. The single system then provides a unified service to its users.
+Middleware is software that lies between an operating system and the applications running on it. Essentially functioning as hidden translation layer, middleware enables communication and data management for distributed applications.
+In cloud computing, middleware refers to the software layer that facilitates communication and interaction between different applications, services, and components within a cloud environment. It acts as an intermediary layer, connecting and enabling seamless communication between various software applications and the underlying infrastructure. Middleware plays a crucial role in integrating, managing, and coordinating distributed systems and services in a cloud-based architecture.
+Middleware is software and cloud services that provide common services and capabilities to applications and help developers and operators build and deploy applications more efficiently. Middleware acts like the connective tissue between applications, data, and users.
+Middleware has been part of software engineering terminology since the late 1960s, and as a category can apply to a wide range of modern software components. Middleware can include application runtimes, enterprise application integration and various kinds of cloud services. Data management, application services, messaging, authentication, and application programming interface (API) management are all commonly handled by middleware.
+Examples include message-oriented middleware, enterprise service bus, and application servers. Middleware is crucial for building and managing robust cloud-based systems.
 
 
 Google Cloud Platform / Infrastructure:
@@ -681,7 +709,28 @@ But, over the years, other types of networks have evolved, such as:
 • DAN (Diverse Alert Network)
 • EPN (Electronic Payments Network)
 
-******Topics to be covered: IP, Subnet, fields of ipv4, classes of ip, host & net calculation, ipv6, network devices
+**********************
+
+IP addressing:
+
+Subnetting:
+
+Need for Subnetting:
+
+Classes of IP
+
+Types of IP
+
+Fields of IPv4:
+
+IPv6:
+
+Host and Net Calculation
+
+Network Devices:
+
+************************
+
 
 Gateways:
 A gateway is a network point or node that acts as an entrance to another network. With the help of gateway data can be sent back and forth and the communication is made possible between the Internet users.
