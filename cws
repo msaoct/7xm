@@ -709,28 +709,358 @@ But, over the years, other types of networks have evolved, such as:
 • DAN (Diverse Alert Network)
 • EPN (Electronic Payments Network)
 
-**********************
+Local Area Network (LAN):
+Definition: A LAN is a network that is limited to a small geographic area, such as a single building or a campus.
+Examples: Office network, school network.
+Characteristics:
+High data transfer rates.
+Limited geographical scope.
+Private ownership and control.
+Common communication protocols.
+Advantages:
+Fast data transfer within the network.
+Easy resource sharing.
+Cost-effective to set up and maintain.
+High level of security and control.
+Disadvantages:
+Limited geographical coverage.
+Potential for network congestion with increased users.
+Requires additional hardware for expansion.
+Relatively higher installation costs for high-speed LANs.
 
-IP addressing:
+Wide Area Network (WAN):
+Definition: A WAN covers a broad geographical area, often connecting LANs across cities or even countries.
+Examples: Internet, global corporate networks.
+Characteristics:
+Extensive geographical coverage.
+Relies on public and private telecommunication networks.
+Slower data transfer rates compared to LANs.
+Interconnected LANs.
+Advantages:
+Enables communication over long distances.
+Centralized data management.
+Shared resources among geographically dispersed locations.
+Wide accessibility.
+Disadvantages:
+Slower data transfer rates than LANs.
+Higher infrastructure costs.
+Vulnerable to security threats.
+Dependency on telecommunication providers.
+
+Virtual Private Network (VPN):
+Definition: A VPN is a secure network that uses the public internet to connect remote users or networks while maintaining privacy.
+Examples: Remote work connections, business branch offices.
+Characteristics:
+Secure data encryption.
+Cost-effective compared to private networks.
+Enables remote access securely.
+Supports various network protocols.
+Advantages:
+Secure communication over the internet.
+Cost-effective alternative to private networks.
+Remote access to the organization's network.
+Scalability and flexibility.
+Disadvantages:
+Requires internet connectivity.
+Performance may be affected by internet speed.
+Potential security risks if not properly configured.
+Dependence on third-party VPN providers.
+
+Metropolitan Area Network (MAN):
+Definition: A MAN spans a larger geographical area than a LAN but is smaller than a WAN, typically covering a city.
+Examples: City-wide Wi-Fi networks, cable television networks.
+Characteristics:
+Geographical coverage between LAN and WAN.
+High data transfer rates.
+Used for connecting multiple LANs within a city.
+Advantages:
+Faster data transfer rates than WANs.
+Suitable for connecting multiple LANs within a city.
+Allows efficient resource sharing.
+Lower infrastructure costs compared to WANs.
+Disadvantages:
+Limited coverage compared to WANs.
+Requires significant initial setup costs.
+Vulnerable to security threats.
+Dependent on local infrastructure.
+
+Campus Area Network (CAN):
+Definition: A CAN connects multiple LANs within a specific geographic area, such as a university campus.
+Examples: University campus network, corporate campuses.
+Characteristics:
+Intermediate geographical coverage between LAN and MAN.
+High data transfer rates.
+Typically owned and operated by a single organization.
+Advantages:
+Efficient communication within a specific campus.
+Centralized resource management.
+High-speed data transfer.
+Lower infrastructure costs compared to WANs.
+Disadvantages:
+Limited coverage compared to WANs.
+Initial setup costs can be high.
+Requires maintenance and management.
+Vulnerable to security threats.
+
+Personal Area Network (PAN):
+Definition: A PAN is a small network for personal devices, typically within the range of an individual person, such as smartphones and laptops.
+Examples: Bluetooth-connected devices, wireless earbuds.
+Characteristics:
+Very limited geographical coverage.
+Connects personal devices.
+Often wireless technologies like Bluetooth.
+Supports low-power communication.
+Advantages:
+Enables easy connectivity for personal devices.
+Low power consumption.
+Convenient for short-range communication.
+Wireless and portable.
+Disadvantages:
+Limited coverage range.
+Restricted to personal device connections.
+Limited data transfer rates.
+Susceptible to interference.
+
+Diverse Alert Network (DAN):
+Definition: A DAN is designed for emergency alert and notification systems, providing timely and widespread dissemination of critical information.
+Examples: Emergency broadcast systems, public safety networks.
+Characteristics:
+Specialized for emergency alerts.
+Wide coverage for public safety.
+Supports various communication channels.
+Quick and reliable information dissemination.
+Advantages:
+Rapid dissemination of critical information.
+Wide coverage for public safety.
+Redundant communication channels.
+Real-time alerts for emergencies.
+Disadvantages:
+Limited to emergency alert purposes.
+Dependence on reliable infrastructure.
+Possibility of false alarms.
+Requires coordination among authorities.
+
+Electronic Payments Network (EPN):
+Definition: An EPN facilitates electronic financial transactions, including online banking and digital payment systems.
+Examples: Online banking networks, digital payment platforms.
+Characteristics:
+Secure and encrypted communication.
+Facilitates electronic transactions.
+Involves financial institutions and payment service providers.
+High reliability and security standards.
+Advantages:
+Convenient and efficient electronic transactions.
+Secure financial data transmission.
+Facilitates online banking and digital payments.
+Integration with financial institutions.
+Disadvantages:
+Vulnerability to cyber threats.
+Dependence on secure encryption methods.
+Regulatory compliance challenges.
+Potential for fraud and unauthorized access.
+
+Wireless communication setup:
+Wireless communication is a type of communication that transmits signals without using a physical medium. Wireless communication can use electromagnetic waves, such as radio and microwaves, or light pulses.
+Different types of wireless communication include: 
+1.Wireless Local Area Network (WLAN): A group of devices that form a network based on radio transmissions. A Wi-Fi network is a type of WLAN. Wireless Local Area Networks (WLAN) are wireless networks that use radio waves, not Bluetooth technology like WPANs. There is usually at least one cable that is the access point for internet access, such as a wired internet connection going into a router, which then broadcasts the wireless signal to other devices.
+Definition: WLAN is a type of local area network that uses wireless communication to connect devices within a limited geographic area, such as a building, campus, or home.
+Examples: Wi-Fi networks in homes, offices, cafes, and public spaces.
+Characteristics:
+Wireless connectivity using radio waves.
+High data transfer rates for short distances.
+Commonly used for internet access and local resource sharing.
+Typically employs Wi-Fi technology.
+2.Personal Area Network (PAN):
+Definition: PAN is a small network designed for personal devices within the range of an individual person, often using wireless technologies.
+Examples: Bluetooth-connected devices, such as smartphones, laptops, and wireless earbuds.
+Characteristics:
+Very limited geographical coverage.
+Wireless connectivity for personal devices.
+Supports low-power communication.
+Commonly used for short-range data exchange.
+3.Wireless Metropolitan Area Network (WMAN):
+Definition: WMAN is a network that covers a metropolitan area and uses wireless communication technologies.
+Examples: City-wide Wi-Fi networks, wireless broadband networks.
+Characteristics:
+Larger geographical coverage than WLAN.
+Supports high data transfer rates.
+Used to provide wireless internet access across cities.
+Utilizes technologies like WiMAX.
+4.Wireless Wide Area Network (WWAN):
+Definition: WWAN covers a wide geographical area, often on a national or global scale, using wireless communication.
+Examples: Mobile cellular networks (3G, 4G, 5G), satellite communication.
+Characteristics:
+Broad coverage area, potentially global.
+Utilizes mobile network infrastructure.
+Supports mobility for devices across large distances.
+Commonly used for mobile communication and internet access.
+
+
+IP address:
+An IP (Internet Protocol) address is a unique string of numbers separated with periods. It represents a device uniquely on the Internet or on your company's intranet that try to use the IP in order to communicate on a network. The IP addresses for networks on the Internet are allocated by the InterNIC (Internet Network Information Center).
+When we have a valid Internet connection (which means you should have a registered domain and a permanent link to access the Internet, a dial-up connection is not sufficient), then our computer connected to the Internet is provided a valid network address by the InterNIC.
+It is a numerical label assigned to the devices connected to a computer network that uses the IP for communication.
+IP address acts as an identifier for a specific machine on a particular network. It also helps you to develop a virtual connection between a destination and a source. The IP address is also called IP number or internet address. It helps you to specify the technical format of the addressing and packets scheme. Most networks combine TCP with IP.
+IP Address is divided into two parts:
+-Prefix: The prefix part of IP address identifies the physical network to which the computer is attached. Prefix is also known as a network address.
+-Suffix: The suffix part identifies the individual computer on the network. The suffix is also called the host address.
+
+Classful Addressing:
+Classful addressing is a network addressing the Internet’s architecture from 1981 till Classless Inter-Domain Routing was introduced in 1993.
+This addressing method divides the IP address into five separate classes based on four address bits.
+Here, classes A, B, C offers addresses for networks of three distinct network sizes. Class D is only used for multicast, and class E reserved exclusively for experimental purposes.
+
+Limitations of classful IP addressing:
+Here are the drawbacks/ cons of the classful IP addressing method:
+-Risk of running out of address space soon.
+-Class boundaries did not encourage efficient allocation of address space.
+
+Classless Inter-Domain Routing (CIDR): 
+CIDR or Class Inter-Domain Routing was introduced in 1993 to replace classful addressing. It allows the user to use VLSM or Variable Length Subnet Masks. 
+CIDR notation: 
+In CIDR subnet masks are denoted by /X. For example a subnet of 255.255.255.0 would be denoted by /24. To work a subnet mask in CIDR, we have to first convert each octet into its respective binary value. For example, if the subnet is of 255.255.255.0. then : 
+First Octet –
+255 has 8 binary 1's when converted to binary 
+Second Octet –
+255 has 8 binary 1's when converted to binary 
+Third Octet –
+255 has 8 binary 1's when converted to binary 
+Fourth Octet –
+0 has 0 binary 1's when converted to binary 
+Therefore, in total there are 24 binary 1’s, so the subnet mask is /24.
+While creating a network in CIDR, a person has to make sure that the masks are contiguous, i.e. a subnet mask like 10111111.X.X.X can’t exist. 
+With CIDR, we can create Variable Length Subnet Masks, leading to less wastage of IP addresses. It is not necessary that the divider between the network and the host portions is at an octet boundary. For example, in CIDR a subnet mask like 255.224.0.0 or 11111111.11100000.00000000.00000000 can exist.
+
+CIDR Notation:
+An IP address range in CIDR is specified using a combination of an IP address and its associated network mask. A CIDR IP address is similar to an IP address. The only difference is that it ends with a slash followed by a number, called the IP network prefix.
+For example: 194.300.0.0/11.
+The IP network prefix specifies how many addresses are covered by the CIDR address, with lower numbers covering more addresses. An IP network prefix of /11, for example, can be used to address 1,048,576 former Class C addresses.
+
+Classful Addressing	vs Classless Addressing:
+1.  In Classful addressing IP addresses are allocated according to the classes- A to E.	Classless addressing came to replace the classful addressing and to handle the issue of rapid exhaustion of IP addresses.
+2.	Classful Addressing	is less practical.	Classless Addressing is more practical.
+3.  In Classful addressing, The changes in the Network ID and Host ID depend on the class. In Classless addressing, There is no such restriction of class in classless addressing.
+4.	Classful addressing does not support the Variable Length Subnet Mask (VLSM). Classless addressing supports the Variable Length Subnet Mask (VLSM).
+5.	Classful addressing requires more bandwidth. As a result, it becomes slower and more expensive as compared to classless addressing. Classless addressing requires less bandwidth. Thus, fast and less expensive as compared to classful addressing.
+6.	It does not support Classless Inter-Domain Routing (CIDR). Classless addressing supports Classless Inter-Domain Routing (CIDR).
+7.	In Classful addressing, Regular or periodic updates. In Classless addressing, Triggered Updates
+8.	In Classful addressing, Troubleshooting and problem detection are easy than classless addressing because of the division of network, host and subnet parts in the address. In Classless addressing, It is not as easy compared to classful addressing.
+9.	Division of Address in Classful - Network, Host, Subnet. Division of Address in Classless - Host, Subnet
+
+Classless Routing vs Classful Routing:
+In Classless Routing, Protocols include the subnet masks in the updates.In Classful Routing, Protocols do not include the subnet mask in the updates and cannot support variable-length subnet mask.
+
+IP Classes:
+Depending on the size of the network, IP-based networks are divided into the following classes.
+-Class A: Class A networks are mega-monster networks that contain addresses for about 16 million network interfaces. Class A networks have their network addresses from 1.0.0.0 to 127.255.255.255, with the zeros being replaced by node addresses. An example of a Class A address is 102.168.212.226. Here, “102” helps you identify the network and 168.212.226 identify the host. Class A addresses 127.0.0.0 to 127.255.255.255 cannot be used and is reserved for loopback and diagnostic functions.
+-Class B: Class B networks are smaller networks in comparison to Class A networks. They can have only about 65,000 nodes. Network addresses for these ranges from 128.0.0.0 to 191.255.255.255, with the last two zeros being replaced by the node addresses. An example of Class B IP address is 168.212.226.204, where *168 212* identifies the network and *226.204* helps you identify the Hut network host.
+-Class C: These are the baby networks that can have a maximum of 254 nodes. The network IP addresses for these range from 192.0.0.0 to 223.255.255.255. Example for a Class C IP address: 192.168.178.1
+-Class D: Class D addresses are only used for multicasting applications. Class D is never used for regular networking operations. This class addresses the first three bits set to “1” and their fourth bit set to use for “0”. Class D addresses are 32-bit network addresses. All the values within the range are used to identify multicast groups uniquely. Therefore, there is no requirement to extract the host address from the IP address, so Class D does not have any subnet mask. Example for a Class D IP address: 227.21.6.173
+-Class E: Class E IP address is defined by including the starting four network address bits as 1, which allows you two to incorporate addresses from 240.0.0.0 to 255.255.255.255. However, E class is reserved, and its usage is never defined. Therefore, many network implementations discard these addresses as undefined or illegal. Example for a Class E IP address: 243.164.89.28
+
+Ranges and no. of nodes of IP classes:
+-Class A: 1.0.0.0 to 127.255.255.255. 16 million nodes.
+-Class B: 128.0.0.0 to 191.255.255.255. 65,000 nodes
+-Class C: 192.0.0.0 to 223.255.255.255. 254 nodes
+-Class D: 224.0.0.0 to 239.255.255.255. Reserved for multicasting.
+-Class E: 240.0.0.0 to 255.255.255.255. Reserved for research and development purposes.
+
+IP address is basically divided into two parts: 
+If X1. X2. X3. X4 is a IP address then-
+1. [X1. X2. X3] is the Network ID: It is the part of the left-hand IP address that identifies the specific network where the device is located. In the normal home network, where the device has an IP address 192.168.1.32, the 192.168.1 part of the address will be the network ID. It is customary to fill in the last part that is not zero, so we can say that the device’s network ID is 192.168.1.0.
+2. [X4] is the Host ID: The host ID is part of the IP address that was not taken by the network ID. Identifies a specific device (in the TCP / IP world, we call devices “host”) in that network. Continuing with our example of the IP address 192.168.1.32, the host ID will be 32- the unique host ID on the 192.168.1.0 network.
+
+Version of IP address:
+Currently there are 2 versions of IP addresses are in use i.e IPV4 and IPV6
+- IPV4 (Internet Protocol Version 4): It is the first version of Internet Protocol address. The address size of IPV4 is 32 bit number. In this Internet Protocol Security (IPSec) with respect to network security is optional. It is having 4,294,967,296 number of address still we are seeing a shortage in network addresses as the use of network & virtual devices are increasing rapidly.
+- IPV6 (Internet Protocol Version 6): It is the recent version of Internet Protocol address. The address size of IPV6 is 128 bit number. In this Internet Protocol Security (IPSec) with respect to network security is mandatory. It allows 3.4 x 10^38 unique IP addresses which seems to be more than sufficient to support trillions of internet devices present now or coming in future.
+
+IPv4 vs IPv6:
+1.IPv4 has a 32-bit address length. IPv6 has a 128-bit address length.
+2.IPv4 Supports Manual and DHCP address configuration. IPv6 supports Auto and renumbering address configuration.
+3.In IPv4 end to end, connection integrity is Unachievable. In IPv6 end-to-end, connection integrity is Achievable.
+4.IPv4 can generate 4.29×109 address space. The address space of IPv6 is quite large it can produce 3.4×1038 address space.
+5.The Security feature is dependent on the application. IPSEC is an inbuilt security feature in the IPv6 protocol.
+6.Address representation of IPv4 is in decimal Address. Representation of IPv6 is in hexadecimal.
+7.Fragmentation performed by Sender and forwarding routers. In IPv6 fragmentation is performed only by the sender.
+8.In IPv4 Packet flow identification is not available. In IPv6 packet flow identification are Available and uses the flow label field in the header.
+9.In IPv4 checksum field is available. In IPv6 checksum field is not available.
+10.It has a broadcast Message Transmission Scheme. In IPv6 multicast and anycast message transmission scheme is available.
+11.In IPv4 Encryption and Authentication facility not provided. In IPv6 Encryption and Authentication are provided.
+12. IPv4 has a header of 20-60 bytes. IPv6 has a header of 40 bytes fixed. 
+13. IPv4 can be converted to IPv6. Not all IPv6 can be converted to IPv4
+14. IPv4 consists of 4 fields which are separated by addresses dot (.). IPv6 consists of 8 fields, which are separated by a colon (:)
+15. IPv4’s IP addresses are divided into five different classes. Class A , Class B, Class C, Class D , Class E.	IPv6 does not have any classes of the IP address.
+16. IPv4 supports VLSM(Variable Length subnet mask). IPv6 does not support VLSM.
+17. Example of IPv4: 66.94.29.13. Example of IPv6: 2001:0000:3238:DFE1:0063:0000:0000:FEFB
+
+IP Address Types:
+There are 4 types of IP Addresses- Public, Private, Fixed, and Dynamic. Among them, public and private addresses are derived from their local network location, which should be used within the network while public IP is used offline.
+- Public IP address: A public IP address is an Internet Protocol address, encrypted by various servers/devices. That’s when you connect these devices with your internet connection. This is the same IP address we show on our homepage. So why the second page? Well, not all people speak the IP language. We want to make it as easy as possible for everyone to get the information they need. Some even call this their external IP address. A public Internet Protocol address is an Internet Protocol address accessed over the Internet. Like the postal address used to deliver mail to your home, the public Internet Protocol address is a different international Internet Protocol address assigned to a computer device. The web server, email server, and any server device that has direct access to the Internet are those who will enter the public Internet Protocol address. Internet Address Protocol is unique worldwide and is only supplied with a unique device.
+- Private IP address: Everything that connects to your Internet network has a private IP address. This includes computers, smartphones, and tablets but also any Bluetooth-enabled devices such as speakers, printers, or smart TVs. With the growing internet of things, the number of private IP addresses you have at home is likely to increase. Your router needs a way to identify these things separately, and most things need a way to get to know each other. Therefore, your router generates private IP addresses that are unique identifiers for each device that separates the network.
+- Static IP Address: A static IP address is an invalid IP address. Conversely, a dynamic IP address will be provided by the Dynamic Host Configuration Protocol (DHCP) server, which can change. The Static IP address does not change but can be changed as part of normal network management. Static IP addresses are incompatible, given once, remain the same over the years. This type of IP also helps you get more information about the device.
+- Dynamic IP address: It means constant change. A dynamic IP address changes from time to time and is not always the same. If you have a live cable or DSL service, you may have a strong IP address. Internet Service Providers provide customers with dynamic IP addresses because they are too expensive. Instead of one permanent IP address, your IP address is taken out of the address pool and assigned to you. After a few days, weeks, or sometimes even months, that number is returned to the lake and given a new number. Most ISPs will not provide a static IP address to customers who live there and when they do, they are usually more expensive. Dynamic IP addresses are annoying, but with the right software, you can navigate easily and for free. 
 
 Subnetting:
+A subnet, which is a short form of subnetwork, is an identifiable, logical part of an IP network. A subnet mask is used to divide a given network address into two or more subnets. When a router uses the subnet, it does not need to read the entire 32-bit address. It focuses on the subnet mask and the bits selected by the subnet mask, which saves time. The default subnet masks for class A network is 255.0.0.0, for class B is 255.255.0.0 and for class C is 255.255.255.0, which signifies a network without subnets.
+The process of dividing a network into smaller network sections is called subnetting. Subnetting can be useful for isolating groups of hosts together so that they can be dealt easily. The process of subnetting allows the administrator to break down the network of Class A, Class, B, or Class C into smaller, manageable portions. If the breaking down is not sufficient, then the subnets can further be broken down into sub-subnets.
+When we break down the network into subnets, we can achieve the mentioned benefits:
+-We can experience reduced network traffic since the broadcast volume has been reduced.
+-We can access a work network from your home, without actually opening the complete network.
 
 Need for Subnetting:
+Subnetting is necessary to efficiently manage and organize IP networks. It allows for the division of a network into smaller, logical subnets, providing benefits such as reduced network traffic by minimizing broadcast volume. Subnetting also facilitates easier administration by isolating groups of hosts, and it enables more efficient use of IP addresses, aiding in the optimal allocation of resources. Additionally, subnetting allows for improved security and accessibility, as specific subnets can be isolated or accessed as needed.
+- Efficient network management through logical segmentation using subnets.
+- Conservation of IP addresses by breaking down larger networks into smaller, manageable portions.
+- Reduction of network traffic and broadcast volume, leading to improved performance.
+- Enhanced security by isolating groups of hosts within specific subnets.
+- Facilitates remote access and connectivity to specific network segments rather than the entire network.
 
-Classes of IP
+IPv4 Header:
+An IP header is bits of information attached to each data packet that is transported in the computer network. This information usually includes addressing and routing details which makes it possible to reassemble the packets and have the original data at the destination.
 
-Types of IP
+Fields of IPv4 Header:
+The IPv4 header contains 13 fields. These fields are Version, Internet Header Length, Type of Service, Total Length, Identification, Flags, Fragment offset, Time-to-Live, Protocol, Header Checksum, Source address, Destination address, and Options. The following image shows how these fields are arranged in the IP header.
+1.Version (4 bits): Indicates the IP protocol version; set to 4 for IPv4.
+2.IHL (4 bits): Represents the length of the IPv4 header in 4-byte blocks.
+3.Type of Service (8 bits): Specifies the desired service for packet delivery, including precedence, delay, throughput, reliability, and cost characteristics.
+4.Total Length (16 bits): Indicates the total length of the packet (header + payload).
+5.Identification (16 bits): Used for reassembling fragmented packets.
+6.Flags (3 bits): Controls fragmentation; indicates whether a packet can be fragmented and if more fragments follow.
+7.Fragment Offset (13 bits): Indicates the position of a fragment relative to the beginning of the payload.
+8.Time-to-Live (8 bits): Specifies the maximum number of hops a packet can traverse before being discarded.
+9.Protocol (8 bits): Identifies the upper-layer protocol handling the payload (e.g., UDP or TCP).
+10.Header Checksum (16 bits): Provides a checksum for the header to verify integrity during transmission.
+11.Source Address (32 bits): Stores the IPv4 address of the sending device.
+12.Destination Address (32 bits): Stores the IPv4 address of the destination device.
+13.Options (multiple of 32 bits): Stores IPv4 options, with padding options for non-4-byte-aligned lengths.
 
-Fields of IPv4:
+Some of the IP options:
+Security: Specifies how secret the datagram is
+Strict source routing: Gives the complete path to be followed
+Loose source routing: Gives a list of routers not to be missed
+Record route: Makes each router append its IP address
+Timestamp: Makes each router append its address and timestamp
 
-IPv6:
-
-Host and Net Calculation
+Host and Net Calculation:
+Example-
+IP Address: 192.168.1.0
+Subnet Mask: 255.255.255.128 (or /25)
+Steps:
+-Class: Class C
+-Binary: IP - 11000000.10101000.00000001.00000000; Mask - 11111111.11111111.11111111.10000000
+-Network/Host Bits: First 25 bits for network, last 7 bits for hosts.
+-Subnets: 2^2 = 4 subnets (with two additional subnet bits).
+-Hosts: 2^7 - 2 = 126 hosts per subnet.
+-Network Address: 192.168.1.0
+-Broadcast Address: 192.168.1.127
+-Usable Host Range: 192.168.1.1 to 192.168.1.126
+-Subnetting: Repeat steps for each subnet.
+-Subnetting Table: Organize information for each subnet.
 
 Network Devices:
-
-************************
-
+The components of networking are networking devices. Networking devices are mainly used for communication and, hence, are also known as communicating devices.
+To connect computers and any other electronic devices together, network devices are used. These devices when connected can share data or files or resources like fax machines, printers, scanners, etc. Devices used to setup a LAN are the most common type of network devices used by the public. A LAN requires a hub, switch, or router.
 
 Gateways:
 A gateway is a network point or node that acts as an entrance to another network. With the help of gateway data can be sent back and forth and the communication is made possible between the Internet users.
@@ -756,6 +1086,40 @@ There are following types of Routers:
 • Virtual router – It is a backup router in a Virtual Router Redundancy Protocol (VRRP) setup. A virtual router is a software-based system that does everything a hardware router can do.
 • Wireless router – A wireless router functions both as a router and a wireless access pointin wireless local area network (WLAN). It determines the next available network point towards which the data should be forwarded on the way to its destination.
 
+Utilities:
+In order to configure and analyse different aspects of computer networks, we have specially designed software utilities known as network utilities.
+Some common network utilities are as follows:
+-Ping: Tests network connectivity by sending a simple request and measuring response time.
+-Traceroute/tracert/tracepath: Maps and displays the route packets take to reach a destination, revealing network path details.
+-Ipconfig: Displays and configures network interface information on Windows systems.
+-nslookup: Queries DNS to obtain domain name or IP address information.
+-whois: Retrieves domain registration details and ownership information.
+-netstat: Shows active network connections, listening ports, and routing tables.
+-finger: Retrieves user information, including login name and idle time.
+-port scan/nmap: Maps network services and identifies open ports on a target system for security assessment.
+
+Key pairs:
+The security levels are associated with a specific kind of credential or cryptography key. For instance, to acquire a high-level security, each and every node should have a valid and authentic public and private key pairs.
+-Private Key: One of the two keys used in public-key encryption is a private key. The private key remains with the user and is kept secret. This private key is used by the user to encrypt outgoing messages and decrypt incoming messages. To maintain the security, we need to set the permissions for the private key in a way set so that the read and write access is reserved for the owner. This is more important if the key does not have a passphrase. In usage, a passphrase is similar to a password but is kept longer for added security.
+-Public Key: Other than the private key, the other key used in a public-key encryption is a public key. The user bearing the private key releases a copy of the public key to allow anyone to use this key for decrypting messages received from the user and encrypting a message before sending it back to the user. Let us consider an example. A, the message initiator or sender, sends a message to B. The message sent by A is encrypted with B's public key, while B uses its private key to decrypt A's received message
+
+Need of Using Key-pairs:
+- Secure Communication: Enables encrypted messages for confidentiality.
+- Authentication: Verifies user identity through private key possession.
+- Data Integrity: Maintains message integrity during transmission.
+- Non-Repudiation: Prevents users from denying their actions.
+- Access Control: Manages permissions for data encryption and decryption.
+
+Security Groups:
+Security groups are a collection of users who have similar permissions and rights to access resources and perform certain system-related tasks in common. It provides a systematic approach to grant access to resources on your network.
+We can use security groups to do the following:
+- Assign user rights to security groups in Active Directory (AD).
+- Assign permissions to security groups for resources.
+
+Different types of security groups:
+-Local groups: The security groups that are confined and specific to an individual computer fall under local groups. Although local computers are connected to a domain, they have separate user accounts that do not belong to the connected domain.
+-Domain local groups: The security groups that are commonly used to assign permissions for granting access to resources fall under domain local groups. These permissions can be assigned only in the domain where the domain local group has been created. You can add members of different domains to the domain local group. Apart from that, it can also contain user accounts, global groups and universal groups from any domain.
+-Global groups: This security group is the most commonly used type of group, by far. In maximum cases, a global group acts as a repository of AD user accounts. The global groups can be nested within each other by making a global group member of another global group. This can be done when both the groups exist within the same domain.
 
 Amazon SDB:
 Amazon SDB is a scalable and flexible non-relational data store that offloads the work of database administration. It provides the essential database functions of data indexing and querying in the cloud. SDB provides a simple interface that enables users to create and store multiple data sets. It also allows users to query their data and return the results. The service manages hardware and software maintenance, infrastructure provisioning, performance tuning and replication and indexing of data items. This enables users to focus on application development and just pay for the resources they actually consume storing data and issuing requests.
@@ -814,4 +1178,3 @@ To configure Apache, we need to follow the steps:
 2. Create a load balancer in your Amazon VPC.
 3. Create an Auto Scaling group with two EC2 instances.
 4. Create a sample page.
-
