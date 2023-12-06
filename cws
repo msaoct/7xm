@@ -13,13 +13,12 @@ There are the following operations that we can do using cloud computing:
 -Social networking, email, hosting services & backup
 
 Some well-known uses of cloud-computing are:
-• Social Networking: Usually people do not realise that it is a use case of cloud computing but it is one of the most widely used example of cloud computing.
-Facebook, Twitter, LinkedIn and MySpace are some such examples. Social networking can be used not only for connecting with people online, but also for public relations (PR), business purposes and marketing. For example, a fan page is a popular PR practice these days.
+• Social Networking: Usually people do not realise that it is a use case of cloud computing but it is one of the most widely used example of cloud computing. Facebook, Twitter, LinkedIn and MySpace are some such examples. Social networking can be used not only for connecting with people online, but also for public relations (PR), business purposes and marketing. For example, a fan page is a popular PR practice these days.
 • E-Mail: One of the prevalent cloud computing services is the Web-based e-mail. The cloud computing based e-mail service is useful in hosting an e-mail server and managing it. It also safeguards the e-mail server from being hacked. It also implies that your e-mail can be accessed from any place. Popular example of cloud computing based e-mail solution is Hotmail.
 • Hosting Services: Cloud hosting services offer hosting for Websites on virtual servers that derive their computing resources from widespread underlying networks of physical Web servers. It is available as a service and not as a product. Therefore, the clients can utilise as much of the service as they need, based on the requirements of their Website and need to only pay for how much they use. Services such as online creation and storage of documents, spreadsheets, photographs and videos are examples of cloud based hosting services. Google docs, Onit, Google's Picasa, Yahoo's Flicker, YouTube, MetCafe and Vimeo offer such hosting and sharing services.
 • Backup: A major issue with personal computing is the tendency of losing the data in case your computer is crashed, stolen, or the storage device is damaged. Therefore, the backup becomes essential. However, creating backups on media like CDs, Hard disk, etc. is not very effective. You should store the data off-site to have more comprehensive protection. Services such as, Mozy, Carbonite and JungleDisk, help in automatically backing up all the data to servers spread across the globe at a very low cost. Services such as, Google Drive, OneDrive, Dropbox and Syncplicity allow you to maintain local copies of data on multiple machines. All these files and data are synchronized and a copy is maintained in the cloud.
 
-Characteristics of Cloud Computing
+Characteristics of Cloud Computing:
 The characteristics of cloud computing are given below:
 1) Agility: The cloud works in a distributed computing environment. It shares resources among users and works very fast.
 2) High availability and reliability: The availability of servers is high and more reliable because the chances of infrastructure failure are minimum.
@@ -40,7 +39,7 @@ Advantages of Cloud Computing:
 7) Unlimited storage capacity: Cloud offers us a huge amount of storing capacity for storing our important data such as documents, images, audio, video, etc. in one place.
 8) Data security: Data security is one of the biggest advantages of cloud computing. Cloud offers many advanced features related to security and ensures that data is securely stored and handled.
 
-Disadvantages of Cloud Computing
+Disadvantages of Cloud Computing:
 A list of the disadvantage of cloud computing is given below -
 1) Internet Connectivity: As you know, in cloud computing, every data (image, audio, video, etc.) is stored on the cloud, and we access these data through the cloud by using the internet connection. If you do not have good internet connectivity, you cannot access these data. However, we have no any other way to access data from the cloud.
 2) Vendor lock-in: Vendor lock-in is the biggest disadvantage of cloud computing. Organizations may face problems when transferring their services from one vendor to another. As different vendors provide different platforms, that can cause difficulty moving from one cloud to another.
@@ -101,7 +100,7 @@ Working of cloud computing:
 Assume that you are an executive at a very big corporation. Your particular responsibilities include to make sure that all of your employees have the right hardware and software they need to do their jobs. To buy computers for everyone is not enough. You also have to purchase software as well as software licenses and then provide these softwares to your employees as they require. Whenever you hire a new employee, you need to buy more software or make sure your current software license allows another user. It is so stressful that you have to spend lots of money.
 But, there may be an alternative for executives like you. So, instead of installing a suite of software for each computer, you just need to load one application. That application will allow the employees to log-in into a Web-based service which hosts all the programs for the user that is required for his/her job. Remote servers owned by another company and that will run everything from e-mail to word processing to complex data analysis programs. It is called cloud computing, and it could change the entire computer industry.
 
-Platforms are used for large scale cloud computing?
+Platforms are used for large scale cloud computing:
 The following platforms are used for large scale cloud computing:
 -Apache Hadoop.
 -MapReduce.
@@ -236,41 +235,171 @@ Cloud Computing vs Grid Computing:
 
 
 Service models in Cloud computing:
-1)SaaS:
-Defination: 
-Examples:
-Advantages:
+
+1)SaaS: 
+SaaS is also known as "On-Demand Software". It is a software distribution model in which services are hosted by a cloud service provider. These services are available to end-users over the internet so, the end-users do not need to install any software on their devices to access these services. 
+Examples: Examples of SaaS include Google Apps, Microsoft Office 365, Onlive, GT Nexus, Marketo, Slack, Samepage, Box, and Zoho Forms.
+Advantages: 
+-Cost-Effective: Monthly or annual subscription fees make SaaS more affordable than traditional licensed applications.
+-One-to-Many Model: Allows multiple users to share a single instance of the application.
+-Less Hardware Required: Remote hosting eliminates the need for additional hardware investments.
+-Low Maintenance: No installation or daily maintenance; automatic updates and easy monitoring.
+-Uniformity: All users access the same version through a web browser, reducing IT support costs.
+-Multidevice Support: Accessible from desktops, laptops, tablets, phones, and thin clients.
+-API Integration: Easily integrates with other software or services through standard APIs.
+-No Client-Side Installation: Accessed directly through the internet, eliminating the need for software installation.
 Disadvantages:
-Architecture:
+-Security Concerns: Data stored in the cloud may pose security issues, although cloud security is on par with in-house deployments.
+-Latency Issues: Variable distance to cloud storage may result in greater latency for some applications.
+-Dependency on Internet: Most SaaS applications are unusable without an internet connection.
+-Vendor Switching Difficulty: Transferring large data files and converting/importing into another SaaS can be slow and challenging.
+Architecture: In the SaaS model, Cloud providers install and operate application software in the Cloud and Cloud users access the software from Cloud clients. Cloud users do not manage the Cloud infrastructure and platform where the application runs. This eliminates the need to install and run the application on the Cloud user's own machine, which simplifies maintenance and support. Cloud applications are different from other applications in their scalability-which can be achieved by cloning tasks onto multiple virtual machines at run-time to meet changing work demands. Load balancers distribute the work over the set of virtual machines. This process is transparent to the Cloud user, who sees only a single access point. To accommodate a large number of Cloud users, Cloud applications can be multi-tenant, that is, any machine serves more than one Cloud user organisation.
+SaaS applications run on distant but networked computers in the cloud. These services and distant computers are operated and owned by other people or organisations that connect to the users' gadget through the Internet.
 
 2)PaaS:
-Defination: 
-Examples:
+PaaS, or Platform as a Service, is a cloud computing model where cloud providers deliver a computing platform, including the operating system, programming language execution environment, database, and web server, as a service. It facilitates application development and deployment without the need for organizations to invest in and manage underlying hardware and software infrastructure. PaaS providers handle scalability, allowing resources to automatically adjust to user needs.
+Examples: Examples of PaaS include AWS Elastic Beanstalk, Cloud Foundry, Heroku, Force.com, EngineYard, Mendix, OpenShift, Google App Engine, Windows Azure Cloud Services and OrangeScape.
 Advantages:
+-Rapid Development: Enables faster application design and development, leading to quicker time-to-market.
+-Efficiency in Deployment: Allows users to upload new web applications to the cloud within minutes, reducing deployment time.
+-Cost Savings: Eliminates the need for organizations to invest in and maintain underlying hardware and software layers, reducing costs.
+-Automatic Scalability: Resources scale automatically based on user needs, providing flexibility and efficiency.
+-Decreased Complexity: Middleware is provided as a service, reducing the complexity of managing infrastructure components.
+-Streamlined Maintenance: PaaS providers handle maintenance tasks, freeing users from routine updates and management responsibilities.
 Disadvantages:
-Architecture:
+-Limited Control: Users have less control over the underlying infrastructure, as it is managed by the PaaS provider.
+-Vendor Dependency: Organizations become dependent on PaaS providers for crucial services, and switching providers can be challenging.
+-Security Concerns: Entrusting sensitive data to a third-party provider may raise security concerns, although providers implement security measures.
+-Compatibility Issues: Applications developed on one PaaS platform may face compatibility challenges if migrated to a different provider's platform.
+-Customization Constraints: Some PaaS platforms may limit customization options, impacting the ability to tailor solutions to specific needs.
+-Internet Dependency: Continuous internet access is essential for using PaaS, and disruptions may hinder access to applications and services.
+Architecture: In the PaaS model, cloud providers deliver a computing platform typically including operating system (OS), programming language execution environment, database and Web server. Application developers can develop and run their software solutions on a Cloud platform without the cost and complexity of buying and managing the underlying hardware and software layers. With some PaaS offers, the underlying computer and storage resources scale automatically to match user needs.
 
 3)IaaS:
-Defination: 
-Examples:
-Advantages:
-Disadvantages:
-Architecture:
+IaaS, or Infrastructure as a Service, is a cloud computing service model where cloud providers provision server, storage, and database services to customers. It enables real-time scaling of computing and storage resources based on usage. In IaaS, providers offer virtual machines (VMs), either physical or virtual, and additional resources like storage, firewalls, load balancers, IP addresses, and software bundles. Users deploy their applications by installing operating system images and application software on the cloud infrastructure, taking responsibility for patching and maintaining the software.
+Examples: Examples of laas providers include Amazon EC2, Dyn DNS, HP Cloud, iland, Joyent & Terremark.
+Advantages: 
+-No Hardware Investment: Users do not need to invest in their own hardware, reducing upfront costs.
+-Scalability: Infrastructure can be scaled on demand to support dynamic and varying workloads.
+-On-Demand Services: Innovative and flexible services are available on demand, allowing for agility in resource utilization.
+-Dynamic Scaling: Resources can be dynamically scaled based on changing requirements, providing flexibility.
+-Automation: Administrative tasks are automated, streamlining operations and reducing manual intervention.
+-Pay-as-You-Go Model: Payment is based on a utility computing basis, allowing users to pay for resources consumed without large upfront costs.
+Disadvantages: 
+-Responsibility for Maintenance: Users are responsible for patching and maintaining operating systems and application software.
+-Security Concerns: Security risks exist as users entrust their data and applications to a third-party provider.
+-Learning Curve: Users need to adapt to the cloud environment and manage their infrastructure effectively.
+-Potential Overhead Costs: Depending on usage, costs can accumulate, and unexpected spikes in usage may lead to higher bills.
+-Dependency on Internet Connectivity: Continuous internet access is crucial, and disruptions may impact access to services.
+-Customization Challenges: Some IaaS providers may have limitations on customization, affecting specific application requirements.
+Architecture: 
+System Architecture of IaaS-
+Layer 1: User Interface (Web Browser, Application Interface)-
+Web Browser: Users interact with the IaaS system through a web browser, providing a user-friendly interface for accessing and managing resources.
+Application Interface: Offers programmatic interfaces (APIs) for automation and integration, enabling users to interact with the IaaS platform programmatically.
+Layer 2: Middleware (Management and Automation)-
+Management Layer: Responsible for handling user requests, resource provisioning, and overall system management. It includes components for user authentication, authorization, and resource allocation.
+Automation Layer: Implements automation scripts and tools for tasks such as scaling, load balancing, and resource optimization. This layer streamlines the management of IaaS resources.
+Layer 3: Virtual Machines (VMs), Storage, Networking, and Computing-
+Virtual Machines (VMs):
+-Hypervisor: Manages the creation and operation of virtual machines, enabling multiple operating systems to run on a single physical host.
+-VM Instances: Instances of virtual machines that provide computing power and emulate specific operating system environments.
+Storage:
+-Block Storage: Offers scalable, raw storage blocks for VMs, providing flexibility in storage allocation.
+-Object Storage: Manages and stores data as objects, suitable for unstructured data and file storage.
+Networking:
+-Virtual Networks: Facilitates communication between VMs and external networks, ensuring connectivity.
+-Load Balancers: Distribute network traffic evenly across multiple VMs, optimizing performance and ensuring high availability.
+Computing:
+-Physical Servers: The underlying hardware that hosts VMs and provides computational resources.
+-Resource Allocation: Allocates computing resources (CPU, memory) to VMs based on user demand and application requirements.
 
 4)HaaS:
-SaaS:
-Defination: 
-Examples:
-Advantages:
+Hardware-as-a-Service (HaaS) is a managed service provided by cloud service providers, where IT facilities, including hardware components such as servers and data centers, are leased to clients. This model allows clients to access and utilize computing resources without the need for direct involvement in hardware provisioning, maintenance, and operations. HaaS is akin to utilities providing electricity, water, or gas, where the focus is on consuming services rather than owning and managing the underlying hardware infrastructure. 
+Examples: Cab and bike rental services, IT leasing services, and Office equipment such as printers, copiers, and fax machines.
+Advantages: 
+-Cost Efficiency: Eliminates the need for upfront investment in hardware, reducing capital expenditures.
+-Scalability: Provides the flexibility to scale hardware resources up or down based on business needs.
+-Focus on Application Development: Allows clients to concentrate on application development without the burden of managing hardware infrastructure.
+-Accessibility: Applications developed using HaaS can be accessed from anywhere, promoting remote and flexible work arrangements.
+-Virtualization Benefits: Utilizes virtualization technology to optimize resource allocation and enhance efficiency.
+-Defined Service Level Agreements (SLAs): Establishes clear agreements between users and providers regarding hardware availability and related services.
+-Pay-as-You-Go Model: Offers a pay-as-you-go pricing model, allowing users to pay for hardware resources based on actual usage.
 Disadvantages:
+-Dependency on Service Provider: Users rely on the service provider for hardware provisioning, maintenance, and replacement, leading to potential dependencies.
+-Security Concerns: Entrusting hardware to a third-party provider may raise security and data privacy concerns.
+-Limited Control: Users may have limited control over the underlying hardware infrastructure, impacting customization options.
+-Potential for Downtime: Service interruptions or hardware failures at the provider's end can affect the availability of applications.
+-Monthly Fees: While eliminating upfront costs, monthly fees may accumulate over time, and unexpected usage spikes can result in higher bills.
+-Compatibility Issues: Transitioning between HaaS providers or integrating with existing on-premises infrastructure may pose compatibility challenges.
 Architecture:
+1.Client Interface: User portal for managing hardware resources.
+2.Service Orchestration:
+-Orchestration engine for resource allocation.
+-Automation scripts for task optimization.
+3.Resource Pool: Physical hardware and virtualization layer.
+4.Monitoring and Management:
+-Monitoring tools for performance tracking.
+-Management console for administration.
+5.Security Layer: Access controls and encryption measures.
+6.Billing and Metering: Billing system and metering tools for usage transparency.
+7.Integration APIs: APIs for external system connectivity.
+8.Support and Maintenance:
+-Helpdesk and support services.
+-Defined maintenance procedures.
+9.Backup and Disaster Recovery: Strategies for data backup and recovery.
+10.Compliance and Governance: Measures for regulatory compliance and data governance.
 
+Relationship Between SaaS, PaaS, and IaaS:
+IaaS (Infrastructure as a Service): Provides foundational computing resources like virtual machines and storage.
+PaaS (Platform as a Service): Builds on IaaS, offering a development platform with tools and frameworks.
+SaaS (Software as a Service): Utilizes PaaS for application development and runs on the infrastructure provided by IaaS.
+Relationship:
+- IaaS and PaaS: PaaS relies on IaaS for foundational infrastructure.
+- PaaS and SaaS: SaaS can be built on PaaS, leveraging development frameworks.
+- IaaS and SaaS: IaaS indirectly supports SaaS by providing essential computing resources.
 
 Types of Cloud/deployment models:
-1) Public cloud: 
-2) Private cloud:
-3) Hybrid cloud
-4) Community cloud:
+1) Public Cloud:
+Definition: Public Cloud refers to a cloud infrastructure where services and resources are provided over the internet by third-party cloud service providers. It is open for use by the general public.
+Example: Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP).
+Advantages:
+-Cost-Effective: Users only pay for the resources they use.
+-Scalability: Easily scalable to accommodate varying workloads.
+-Accessibility: Services are accessible from anywhere with an internet connection.
+Disadvantages:
+-Security Concerns: Potential security and privacy risks due to the shared nature of the infrastructure.
+-Limited Customization: Limited control and customization compared to private cloud solutions.
+2) Private Cloud:
+Definition: Private Cloud involves the exclusive use of cloud resources by a single organization. The infrastructure may be on-premises or hosted by a third-party provider.
+Example: VMware Cloud Foundation, OpenStack for private clouds.
+Advantages:
+-Enhanced Security: Greater control over security measures and data privacy.
+-Customization: Tailored to meet specific organizational needs.
+-Compliance: Easier adherence to industry-specific compliance requirements.
+Disadvantages:
+-Cost: Typically involves higher upfront costs compared to public cloud solutions.
+-Complexity: Requires skilled IT personnel for management and maintenance.
+3) Hybrid Cloud:
+Definition: Hybrid Cloud combines both public and private cloud environments, allowing data and applications to be shared between them. It provides greater flexibility and optimization of existing infrastructure.
+Example: Microsoft Azure with on-premises data centers, AWS with a combination of public and private resources.
+Advantages:
+-Flexibility: Can leverage the benefits of both public and private clouds.
+-Scalability: Easily scale resources based on fluctuating workloads.
+-Risk Mitigation: Offers redundancy and risk diversification.
+Disadvantages:
+-Complexity: Managing a hybrid environment can be more complex.
+-Cost: Cost implications associated with both public and private cloud usage.
+4) Community Cloud:
+Definition: Community Cloud is a shared cloud infrastructure that is used by multiple organizations with common interests or requirements, such as regulatory compliance.
+Example: A community cloud used by multiple healthcare organizations sharing patient data.
+Advantages:
+-Collaboration: Facilitates collaboration among organizations with shared goals.
+-Cost Sharing: Shared infrastructure leads to potential cost savings.
+-Customization: Tailored to meet the specific needs of the community.
+Disadvantages:
+-Limited Scope: May not be suitable for organizations with diverse needs.
+-Dependency: Relies on effective collaboration and agreement among community members.
 
 
 Google Cloud Platform / Infrastructure:
@@ -354,7 +483,6 @@ Google created a layer of abstraction to split the flowing data into 2 major pha
 1) The Map Phase–The Map phase may include many map functions. A map function
 refers to a high-order function that applies a given function to each element of a list.
 2) The Reduce Phase–The Reduce phase may include many reduce functions. A reduce function refers to a high-order function that processes the result from the map phase by combining it into a consolidated form. This consolidated result is actually the final output.
-
 
 Components of MapReduce Framework:
 The MapReduce framework consists of several basic components that work together to process and analyze large-scale data in a distributed computing environment:
@@ -540,7 +668,6 @@ Disadvantages of Network:
 - Hacking is also a major concern when it comes to the safety of data and information lying on the network. The network users are always advised to use security measures, such as Firewall on their computers.
 - As easy as it seems from outside, the management of network cables and wires is equally complicated. It requires training and in case of organizations, they need to hire a set of trained staff and network managers for this job.
 
-
 Types of Networking:
 Networks are classified on the basis of scale. The area a network covers determines the type of network it is.
 Originally, there were only two types of networks:
@@ -598,7 +725,7 @@ SNS features the following capabilities:
 • Access control policies allow users to control subscribers to a topic.
 • If message delivery fails, the SNS system retries sending it.
 
-Amazon RDS
+Amazon RDS:
 Setting up and operating a relational database in the cloud is fairly simple and trouble-free with Amazon RDS. It provides resizable capacity and cost-efficient solutions to managing time-consuming database administration tasks. RDS allows users to choose from six familiar database engines - Oracle, Amazon Aurora, Microsoft SQL Server, MySQL, PostgreSQL and MariaDB. This means that applications, codes and tools that you are using with existing databases can be used with Amazon RDS. The service automatically patches the database software and backs up your database. It stores the backups for a user-defined retention period and enables point-in-time recovery. It is possible to scale the storage capacity of a database instance via a single API call.
 Amazon RDS also enables replication. This works to enhance the availability and reliability for production workloads. In case of a failure, you can run mission-critical workloads with high availability and built-in automated failover from your primary database to the replicated secondary database. For read-heavy database workloads, it is possible to scale out beyond the capacity of a single database deployment with Amazon RDS for MySQL.
 
