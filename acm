@@ -404,7 +404,116 @@ Select System and Security
 Select Administrative Tools
 Select Active Directory Users and Computers
 
+Creating users based on a CSV file in powershell:
+1.Prepare the CSV File:
+Ensure your CSV file contains columns with user information, such as Username, Password, FirstName, LastName, etc.
+2.Read CSV File:
+Use Import-Csv cmdlet to read the CSV file into a PowerShell variable.
+$userList = Import-Csv -Path 'C:\Path\To\Your\File.csv'
+3.Iterate Through Each Row:
+Use a foreach loop to iterate through each row in the CSV file.
+foreach ($user in $userList) {
+    # Code for each user creation goes here
+}
+4.Create User Accounts:
+Inside the loop, use New-LocalUser or New-ADUser cmdlet to create user accounts, depending on whether you're working with local or Active Directory accounts.
+New-LocalUser -Name $user.Username -Password (ConvertTo-SecureString $user.Password -AsPlainText -Force) -FullName "$($user.FirstName) $($user.LastName)" -Description $user.Description
+or for Active Directory:
+New-ADUser -SamAccountName $user.Username -UserPrincipalName "$($user.Username)@domain.com" -GivenName $user.FirstName -Surname $user.LastName -Description $user.Description -AccountPassword (ConvertTo-SecureString $user.Password -AsPlainText -Force) -Enabled $true
+5.Handle Errors (Optional):
+Implement error handling to manage any issues during user creation.
+try {
+    # User creation code
+}
+catch {
+    Write-Host "Error creating user: $_"
+}
 
+6.Execute the Script:
+Save your PowerShell script and execute it in the PowerShell console.
+.\CreateUsersScript.ps1
+
+
+PowerShell Modules:
+Definition: A PowerShell module is a collection of organized, reusable code that includes functions, variables, and other resources grouped together to perform specific tasks or manage a particular technology or functionality. Modules offer a way to structure and package code, providing a more efficient means of script management, accessibility, and sharing.
+Description:
+Organized Code Structure:
+Modules provide a structured way to organize PowerShell code by grouping related functions, variables, and other elements around a central theme or purpose.
+This organization enhances code readability and maintainability, making it easier for scripters to manage and understand their codebase.
+Improved Code Management:
+PowerShell modules allow scripters to combine multiple scripts into a cohesive unit, reducing the ad hoc nature of script creation.
+This facilitates better code management, as scripts related to a particular task or application can be grouped together within a module, streamlining future updates and modifications.
+Enhanced Accessibility:
+Modules enhance code accessibility by encapsulating related functionalities. Once a module is imported, all its functions and resources become readily available, simplifying the execution of specific tasks without the need to load individual scripts.
+Code Sharing:
+Modules enable easy sharing of code among team members or the wider community. Shared modules can be imported and utilized, promoting collaboration and reuse of proven, well-structured code.
+Types of PowerShell Modules:
+a. Script Modules:
+PSM1 files containing PowerShell functions and code, organized around a central theme.
+Commonly used by IT professionals for scripting tasks and managing specific functionalities.
+b. Binary Modules:
+Compiled DLL files usually created by developers.
+Not commonly created by IT pros, these modules leverage compiled code for improved performance.
+c. Manifest Modules:
+Script modules (PSM1) with an additional manifest file (PSD1).
+The manifest defines metadata, dependencies, and other module-related information.
+d. Dynamic Modules:
+Modules that exist only in memory and are not written to disk.
+Created and loaded dynamically during script execution, offering flexibility and resource efficiency.
+Conclusion:
+PowerShell modules offer a structured and efficient way to manage, share, and reuse PowerShell code, providing a more organized approach to script development for IT professionals and developers alike.
+
+When Do I Create A PowerShell Module?
+You can easily decide whether to create a module by answering the following questions while writing a script:
+• Will the code we are writing need to be used more than once?
+• Does this code essentially manage a single object or entity?
+• As we write this code, do I find that I'm breaking it apart into functions because it's getting too complex to be in a single script?
+• Do we need to share the code with others? If you answered yes to at least three of these four questions, it's a good bet you should be writing a module instead of a PS1 script.
+
+How to Create A PowerShell Module?
+• Open up Notepad. Save the file with a PSM1 extension. Done.
+• No, really, that’s it. That's all it takes to create a script module.
+• Granted, it won't be a very functional module, but technically it is a script module.
+• Let's concentrate on something more useful, though.
+• Examples are always a great way to demonstrate a concept, so let's create a module to manage houses in a subdivision.
+• This isn't a practical example (at least not until the PowerShell team figures out how to integrate PowerShell into the physical world) but it will show off a little of what a module is capable of.
+
+View Your Drive Information with PowerShell:
+To view your drive information with PowerShell, you can use the following commands:
+Get-WMIObject win32_physicalmedia | Format-List Tag,SerialNumber
+This command will give you the physical drive number that matches the disk number in Disk Management to help with your drive identification.
+wmic diskdrive get model,serialNumber,size,mediaType
+This command will give you the model, serial number, size, and media type of your drive.
+Get-PSDrive.
+This command will list all of the drives on your computer, including their provider, root, and type.
+Get-Disk.
+This command will display disk information at the logical level of the operating system.
+Get-Partition.
+This command will show partition information on all drives.
+You can also use the Get-ChildItem cmdlet to list the files and directories in the PowerShell console. By default Get-ChildItem lists the mode (Attributes), LastWriteTime, file size (Length), and the Name of the item.
+To list all files in a folder (including the hidden .git/ directory for example), you can run C:\path> dir /A.
+To view the used/free disk space for a specified drive, you just need to run Get-PSDrive + drive letter command.
+
+The $error variable:
+• When either type of error occurs during execution, it is logged to a global variable called $error.
+• This variable is a collection of PowerShell Error Objects with the most recent error at index 0.
+• On a freshly initialised PowerShell instance (no errors have occurred yet) the $error variable is ready and waiting as an empty collection:
+>$error.GetType()
+>$error.Count
+
+Available choices for error action preference:
+Silently Continue– error messages are suppressed and execution continues.
+Stop– forces execution to stop, behaving like a terminating error.
+Continue – the default option. Errors will display, and execution will continue.
+Inquire– prompt the user for input to see if we should proceed.
+Ignore– (new in v3) – the error is ignored and not logged to the error stream. Has very restricted usage scenarios.
+
+Converting a function into powershell module:
+To convert a function into a PowerShell module, you need to create a new .psm1 file and save the function in it. You can then import the module into your PowerShell session using the Import-Module cmdlet.
+Here are the steps on how to convert a function into a PowerShell module:
+Create a new .psm1 file. The name of the file should be the same as the name of the module.
+Save the function in the .psm1 file.
+Import the module into your PowerShell session using the Import-Module cmdlet.
 
 
 Network configuration cmdlets:
@@ -736,6 +845,8 @@ Get-PSDrive -PSProvider FileSystem
 To view the Windows PowerShell that represent registry hives, use the PSProvider parameter to display only the Windows PowerShell that are supported by the Windows PowerShell Registry
 Get-PSDrive -PSProvider
 
+-------------------------------------------
+
 Enable remoting on a single local machine:
 • With the combined release of Windows PowerShell and WS-Management (WSMan) into the Windows Management Framework, we’ve heard the occasional question about whether it’s possible to install them independently.
 • This concern is usually focused on security.
@@ -763,6 +874,44 @@ Enable Remote Desktop on a Computer:
 $regkey = "HKLM:\SYSTEM CurrentControlSet Control Terminal Server"
 Set-ItemProperty §regkey fDenyISConnections 0
 
+Enable remoting in an enterprise:
+If you want to enable PowerShell Remoting in an enterprise, Group Policy is the most flexible andscalable option.
+Through Group Policy settings, you can enable automatic configuration of WinRM endpoints and firewall rules.
+For more information about this approach, type Get-Help about_remote_troubleshooting.
+
+Enable PowerShell remoting on workgroup group computers:
+Open PowerShell as Administrator:
+Launch PowerShell with administrative privileges on the target workgroup computer.
+Enable PowerShell Remoting:
+Execute the Enable-PSRemoting -Force command to enable remoting.
+Set TrustedHosts:
+If necessary, configure TrustedHosts using Set-Item WSMan:\localhost\Client\TrustedHosts -Value "<IP_Address>" -Force.
+Start WinRM Service:
+Ensure the WinRM service is running by executing Start-Service WinRM.
+Optionally, set the service to start automatically using Set-Service WinRM -StartupType Automatic.
+Adjust Firewall Settings:
+Allow WinRM through the firewall with New-NetFirewallRule for WINRM-HTTP-In-TCP.
+Optionally, create a rule for WINRM-HTTPS-In-TCP for HTTPS.
+Restart the Computer: Perform a computer restart if required for changes to take effect using Restart-Computer -Force.
+
+Enable PowerShell remoting for non-administrators:
+To enable PowerShell remoting for non-administrators, you can add the user account to the local Remote Management Users group. This group exists only on computers running Windows 8 (or Windows Server 2012) and above. Note that this procedure gives standard users only the right to connect via PowerShell remoting. They will have administration privileges restricted to the rights they have on the corresponding machine.
+Another way to enable PowerShell remoting for non-administrators is by changing the session configuration. In most cases, this procedure is all you need if you want to grant non-administrators access to PowerShell Remoting. However, the method may have a downside. The Remote Management Users group is also used to allow users to remotely manage computers with Server Manager and RSAT. Thus, if you enabled Server Manager remote management (Configure-SMRemoting.exe -enable), users of the Remote Management Users groups will be able to connect via Server Manager.
+
+Manage multiple servers with PowerShell Server Manager:
+PowerShell Server Manager is a tool that lets you manage multiple servers from a single console. It can be used to perform a variety of tasks, including adding and removing servers, installing and uninstalling roles and features, and managing services and applications.
+To use PowerShell Server Manager, you must first install it on each server that you want to manage. Once it is installed, you can connect to the servers using the PowerShell console.
+Once you are connected to the servers, you can use the PowerShell Server Manager commands to manage them. For example, you can use the Add-Server cmdlet to add a new server to the list of managed servers. You can use the Remove-Server cmdlet to remove a server from the list of managed servers. You can use the Install-Role cmdlet to install a new role on a server. You can use the Uninstall-Role cmdlet to uninstall a role from a server. You can use the Start-Service cmdlet to start a service on a server. You can use the Stop-Service cmdlet to stop a service on a server.
+PowerShell Server Manager is a powerful tool that can be used to manage multiple servers from a single console. It is a valuable tool for any organization that has multiple servers.
+
+PowerShell implicit remoting:
+PowerShell implicit remoting is a feature of PowerShell that automatically executes a command on a different computer. When you import commands from a remote session, PowerShell will execute them on the remote computer and return the results to your computer.
+The only caveat with implicit remoting is that the results returned to your computer won't have any methods that you can interact with because the objects properties are copied into an XML file for transmission over the network.
+Here are the steps on how to use PowerShell implicit remoting:
+Import the remote session.
+Get the list of commands available in the remote session.
+Export the commands available in the remote session locally.
+Run the commands as if they were installed locally.
 
 Create New Registry Keys:
 • As the configuration store for the vast majority of applications, the registry plays a central role in system administration.
