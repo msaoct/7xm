@@ -234,6 +234,41 @@ Cmdlet Binding: Advanced functions support cmdlet binding, making them behave mo
 Common Parameters: Advanced functions automatically support common parameters like -Verbose, -Debug, etc.
 ScriptBlock: Both functions and advanced functions use a script block to define their behavior.
 
+
+Importing Data into PowerShell:
+PowerShell offers a variety of ways to import data.
+We will be going over just a few of the ways in this article, but a lot of the concepts stay the same no matter which way you need to use.
+The general guideline we follow is:
+• Import the data
+• Validate the data
+• Iterate through the data and take actions
+• Export data when needed
+Text Files:
+While this method is not as structured as others, it can really be handy in a pinch.
+You can copy and paste a list of users, computers, or anything else you want to iterate through, and then save
+it as a text file.
+Once you have a file, you can use PowerShell to import the contents.
+For this example, will import the contents of Cities.txt.
+>$Cities = Get-Content C:\Users\niks\Desktop\Cities.txt
+>$Cities
+The contents have been successfully imported. We can see what type of object we're working with by piping $Cities to Get-Member.
+>$Cities | Get-Member
+Looks like we are working with an array of strings. We can see this by using the Count property, as well as taking a look at the first value in the array, which would be reflected as $Cities[0].
+>$Cities[0]
+CSV Files:
+PowerShell works nicely with CSV files. This method of importing data is a bit more structured, and overall is very clean.
+The headers of the CSV file will be imported as properties, and we'll take a look at that after we import the contents.
+For this example, I will import a CSV file that contains a list of users that HR wants us to create in our environment.
+I will use the command Import-CSV and store the contents in the variable $Users.
+Let us go ahead and import the CSV:
+>$Users = Import-CSV C:\Users\niks\Desktop\ADUsers.csv
+>$Users
+Let us see what we have when we pipe $Users to Get-Member.
+>$Users | Get-Member
+Looks like CSVs are imported into a custom object, which we can then use as needed!
+We can use the Count property to get the number of users imported, as well as take a look at the first value ($Users[0]) of the array.
+>$Users[1]
+
 Navigation in Powershell:
 A nice thing about PowerShell is you always know where you are because it tells you in the prompt.
 PS C:\Users\niks>
@@ -298,6 +333,80 @@ You can use these cmdlets to manage your Active Directory domains, Active Direct
 If you do not have the Active Directory module installed on your machine, you need to download the correct Remote Server Administration Tools (RSAT) package for your OS.
 If you are running Windows 7, you will also need to run the import-module Active Directory command from an elevated PowerShell prompt.
 
+Fan-in and fan-out in PowerShell:
+Fan-in and fan-out are two terms that are used to describe the behavior of data flowing through a system. Fan-in refers to the number of inputs that a component can have, while fan-out refers to the number of outputs that a component can have.
+In PowerShell, fan-in and fan-out can be used to describe the behavior of data flowing through a pipeline. For example, a cmdlet that takes multiple inputs and produces a single output can be said to have fan-in of 1 and fan-out of 1. A cmdlet that takes a single input and produces multiple outputs can be said to have fan-in of 1 and fan-out of N, where N is the number of outputs.
+Fan-in and fan-out can also be used to describe the behavior of data flowing through a script. For example, a script that calls multiple cmdlets in sequence can be said to have fan-in of 1 and fan-out of N, where N is the number of cmdlets that are called. A script that calls multiple cmdlets in parallel can be said to have fan-in of N and fan-out of 1, where N is the number of cmdlets that are called.
+
+Error handling in PowerShell:
+PowerShell error handling is the process of identifying, catching, and handling errors that occur while a PowerShell script is running. Error handling is important because it allows you to gracefully handle errors and continue executing the script, rather than having the script fail completely.
+There are two main ways to handle errors in PowerShell:
+Using the try and catch blocks:
+The try and catch blocks allow you to specify a block of code that should be executed, and a block of code that should be executed if an error occurs in the try block.
+Using the $ErrorAction variable:
+The $ErrorAction variable controls how PowerShell handles errors.
+The best way to handle errors in PowerShell depends on the specific script you are writing. However, using the try and catch blocks is generally the best way to handle errors, as it allows you to gracefully handle errors and continue executing the script.
+
+Persistent Connection in Powershell:
+In PowerShell, a persistent connection is a connection that stays open after the command has finished. This is in contrast to a non-persistent connection, which is closed after the command has finished.
+Persistent connections can be used to improve performance when you are running multiple commands that share data. For example, if you are running a script that imports data from a CSV file, you can use a persistent connection to the CSV file so that you do not have to open and close the file each time you import data.
+To create a persistent connection in PowerShell, you can use the New-PSSession cmdlet. The New-PSSession cmdlet creates a new PowerShell session on a remote computer. The session remains open until you close it.
+Once you have created a persistent connection, you can use the Enter-PSSession cmdlet to enter the session. The Enter-PSSession cmdlet allows you to run commands on the remote computer as if you were running them on the local computer.
+When you are finished running commands on the remote computer, you can use the Exit-PSSession cmdlet to exit the session. The Exit-PSSession cmdlet closes the persistent connection.
+Here is an example of how to use a persistent connection in PowerShell:
+New-PSSession -ComputerName server01
+Enter-PSSession -Session server01
+Get-Process
+Exit-PSSession
+In this example, the New-PSSession cmdlet creates a new PowerShell session on the computer server01. The Enter-PSSession cmdlet enters the session. The Get-Process cmdlet gets a list of all the processes running on the computer server01. The Exit-PSSession cmdlet exits the session.
+
+Creating a random password using PowerShell:
+1. Importing the necessary Assemblies:
+System.Security.Membership
+System.Management.Automation
+2. Defining the Function:
+Name: Get-RandomPassword
+Parameters:
+PasswordLength (optional, default: 12)
+MinimumSpecialCharacters (optional, default: 2)
+3. Generating the Character Sets:
+Lowercase letters
+Uppercase letters
+Numbers
+Special characters (e.g., !@#$%^&*()_+-)
+4. Selecting Random Characters:
+Use the Get-Random cmdlet to randomly select characters from each set.
+Guarantee at least the MinimumSpecialCharacters amount of special characters.
+Ensure the password length is met.
+5. Combining Characters into a Password String:
+Use the -join operator to combine the selected characters into a single string.
+6. Returning the Password: Return the generated password string as the function output.
+
+To enable Active Directory in Windows 10, you can do the following: 
+Install the remote server administration tools on Windows 10 Professional or Enterprise.
+Go to Control Panel
+Select Programs
+Select Turn Windows features on or off
+Scroll down and select Remote Server Administration Tools
+Expand Role Administrator Tools
+Select AD DS and AD LDS Tools
+Check AD DS Tools and press Ok
+You can also enable Active Directory Users and Computers (ADUC) by doing the following: 
+Go to Settings
+Select Apps and Features
+Select Optional features
+Select Add a feature
+Select RSAT: Active Directory Domain Services and Lightweight Directory Tools
+Select Install
+To launch ADUC, you can do the following: 
+Click Start
+Select System and Security
+Select Administrative Tools
+Select Active Directory Users and Computers
+
+
+
+
 Network configuration cmdlets:
 Network troubleshooting is part of any System Administrator’s life.
 Maybe you need to check the IP address of a machine or test if its networking connection is working.
@@ -307,7 +416,6 @@ There are literally hundreds of networking-related PowerShell cmdlets in Windows
 Just try out this command on your machine: Get-Command -Module Net* | Group Module
 But more important than knowing every one of them, is to know the most useful cmdlets that have the potential to replace those old commands that you cannot live without.
 And it’s when you combine the many networking cmdlets in ways that only PowerShell can do that you’ll find amazing new troubleshooting abilities.
-
 
 IPCONFIG:
 This command has many options, but the most common usage is just to show the IP address, subnet mask and default gateway for each network adapter in a machine.
@@ -382,7 +490,6 @@ Get-WmiObject -Class Win32_SystemDriver | Sort-Object -Property State,Name | For
 You can also sort the objects in reverse order by specifying the Descending parameter. The reverses sort order, so that names are sorted in reverse alphabetical order and numbers are sorted by descending size.
 Get-WmiObject -Class Win32_SystemDriver | Sort-Object -Property State,Name -Descending | Format-Table -Property Name,State,Started,DisplayName - AutoSize -Wrap
 
-
 Filtering Objects:
 • The key to making the most of Windows PowerShell is to understand how objects and the pipeline wor together to let you retrieve exactly the information you need.
 • Each command in the pipeline generates one or more objects and passes them down the pipeline to the next command.
@@ -422,7 +529,7 @@ Parsing, error presentation, and output formatting are not handled by cmdlets. I
 Cmdlets process works on objects not on text stream and objects can be passed as output for pipelining.
 Cmdlets are record-based as they process a single object at a time.
 
-Powershell Loop:
+Powershell Looping:
 PowerShell loops are used to repeat a set of commands until a certain condition is met. They are an essential part of programming, and PowerShell is no exception. Loops allow you to iterate through collections and repeat tasks until a condition is met. Loops can drastically enhance your PowerShell scripts and take your automation to the next level.
 There are four main types of loops in PowerShell:
 For Loop:The for loop is commonly used when the number of times (iteration count) a command or process needs to run, is already known.
@@ -430,13 +537,75 @@ ForEach-Object Loop:The foreach loop is used to iterate through a collection of 
 While Loop:The while loop is used to repeat a set of commands until a certain condition is met.
 Do While Loop:The do while loop is similar to the while loop, but the condition is checked at the end of the loop instead of the beginning.
 
+ForEach Loop:
+In PowerShell, the ForEach loop is used to iterate over elements in a collection (array, hash table, etc.) and perform a specific operation for each element.
+One of the subjects that administrators who are new to PowerShell sometimes have difficulty with is ForEach loops.
+A ForEach loop is generally used to perform some sort of action against the individual items within a data set.
+The data set can be anything. It might consist of a list of processes, a list of disks, or even a list of servers.
+That being the case, the first thing that you will have to do if you want to use a ForEach loop is to define the data set by mapping the data to a variable.
+There are a few different ways to use the ForEach loop in PowerShell. Here are two common methods:
+Method 1: foreach Statement:
+# Example 1: Using foreach with an array
+$fruits = @('Apple', 'Banana', 'Orange')
+foreach ($fruit in $fruits) {
+    Write-Output "Current fruit: $fruit"
+}
+# Example 2: Using foreach with a range of numbers
+foreach ($number in 1..5) {
+    Write-Output "Current number: $number"
+}
+
+Method 2: ForEach-Object Cmdlet:
+# Example 3: Using ForEach-Object with the pipeline
+$fruits = @('Apple', 'Banana', 'Orange')
+$fruits | ForEach-Object {
+    Write-Output "Current fruit: $_"
+}
+# Example 4: Using ForEach-Object with Get-ChildItem cmdlet
+Get-ChildItem C:\Files | ForEach-Object {
+    Write-Output "File Name: $_.Name"
+}
+In these examples:
+The foreach statement is used to iterate through each element in the array or range of numbers. The variable ($fruit or $number) takes on each value in the collection during each iteration.
+The ForEach-Object cmdlet is used with the pipeline (|) to process each item in the input collection. The $_ represents the current object in the pipeline.
+Both methods achieve similar results, and you can choose the one that fits your preference or specific use case. The ForEach loop is handy for automating repetitive tasks or processing items in a collection.
+
+
 Powershell - Conditions:
 Decision making structures have one or more conditions to be evaluated or tested by the program, along with a statement or statements that are to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.
 PowerShell scripting language provides following types of decision making statements.
 1. if statement: An if statement consists of a boolean expression followed by one or more statements.
+$number = 42
+if ($number -gt 0) {
+    Write-Output "$number is a positive number."
+}
 2. if...else statement: An if statement can be followed by an optional else statement, which executes when the boolean expression is false.
+$temperature = 25
+if ($temperature -ge 30) {
+    Write-Output "It's a hot day!"
+} else {
+    Write-Output "It's not too hot today."
+}
 3. nested if statement: You can use one if or elseif statement inside another if or elseif statement(s).
+$grade = 85
+if ($grade -ge 90) {
+    Write-Output "Excellent!"
+} elseif ($grade -ge 70) {
+    Write-Output "Good."
+    if ($grade -ge 80) {
+        Write-Output "You're doing well!"
+    }
+} else {
+    Write-Output "Need improvement."
+}
 4. switch statement: A switch statement allows a variable to be tested for equality against a list of values.
+$day = "Wednesday"
+switch ($day) {
+    "Monday" { Write-Output "Start of the week." }
+    "Friday" { Write-Output "Almost the weekend!" }
+    default { Write-Output "It's a regular day." }
+}
+
 
 Powershell - Scripting:
 Windows PowerShell is a command-line shell and scripting language designed especially for system administration. Its analogue in Linux is called as Bash Scripting. Built on the .NET Framework, Windows PowerShell helps IT professionals to control and automate the administration of the Windows operating system and applications that run on Windows Server environment.
@@ -523,6 +692,25 @@ for ($i = 1; $i -le 10; $i++) {
 }
 
 
+Significance of brackets in PowerShell:
+The significance of brackets in PowerShell is that they allow you to control the order of operations in expressions and to create blocks of code. This can make your code more readable and easier to maintain.
+-Script Blocks: {} define script blocks for encapsulating commands.
+-Scope: Establish variable scope within a script block.
+-Array Declaration: Brackets @() represent arrays in PowerShell.
+-Hashtable Declaration: Curly braces {} define hashtables for key-value pairs.
+
+PSProviders:
+PSProviders Describes how Windows PowerShell providers provide access to data and components that would not otherwise be easily accessible at the command line.
+The data is presented in a consistent format that resembles a file system drive.
+Windows PowerShell providers are Microsoft .NET Framework-based programs that make the data in a specialised data store available in Windows PowerShell so that you can view and manage it.
+The data that a provider exposes appears in a drive, and you access the data in a path like you would on a hard disk drive.
+You can use any of the built-in cmdlets that the provider supports to manage the data in the provider drive. And, you can use custom cmdlets that are designed especially for the data.
+The providers can also add dynamic parameters to the built-in cmdlets.
+These are parameters that are available only when you use the cmdlet with the provider data.
+Windows PowerShell includes a set of built-in providers that you can use to access the different types of data stores.
+You can also create your own Windows PowerShell providers, and you can install providers that others develop. To list the providers that are available in our session, do as:
+Get-PSProvider
+
 Installing and removing providers:
 Providers are typically installed via Windows PowerShell modules.
 Importing the module loads the provider into your session.
@@ -532,12 +720,10 @@ You can unload a provider from the current session.
 You can do this by using the Remove-Module cmdlet.
 This cmdlet does not uninstall the provider, but it makes the provider unavailable in the session.
 
-Significance of brackets in PowerShell:
-The significance of brackets in PowerShell is that they allow you to control the order of operations in expressions and to create blocks of code. This can make your code more readable and easier to maintain.
--Script Blocks: {} define script blocks for encapsulating commands.
--Scope: Establish variable scope within a script block.
--Array Declaration: Brackets @() represent arrays in PowerShell.
--Hashtable Declaration: Curly braces {} define hashtables for key-value pairs.
+PSDrives:
+A Windows PowerShell drive is a data store location that you can access like a file system drive in Windows PowerShell.
+The Windows PowerShell providers create some drives for you, such as the file system drives (including C: and D:), the registry drives (HKCU: and HKLM:), and the certificate drive (Cert:), and you can create your own Windows PowerShell.
+These drives are very useful, but they are available only within Windows PowerShell. You cannot access them by using other Windows tools, such as File Explorer or Cmd.exe.
 
 Working with PSDrives:
 Windows PowerShell uses the noun, PSDrive, for commands that work with Windows PowerShell. For a list of the Windows PowerShell in your Windows PowerShell session, use the Get- PSDrive cmdlet.
@@ -560,11 +746,15 @@ Enable remoting on a single local machine:
 • Windows PowerShell Remoting does not require any specific configuration to let you connect to a remote computer, but it does require a configuration step to allow connections from remote computers.
 • Once you’ve decided to enable remoting, Windows PowerShell makes this a snap (after informing you of the impact).
 • Simply call Enable-Ps Remoting from an elevated shell. The solution demonstrates this approach. To bypass any user prompts or confirmation, also specify the -Force flag.
+
+Enable remoting on a remote machine:
 • Remotely enabling Windows PowerShell Remoting offers many unique challenges.
 • Although you can certainly use Remote Desktop to connect to the system (and then essentially enable it locally), Remote Desktop does not lend itself to automation.
 • Instead, you can leverage another remoting technology that does lend itself to automation:
 • Windows Management Instrumentation (WMI).
 • WMI is enabled on most domain machines, but it offers only a minor facility for remote command execution: the Create() method of the Win32_Process.
+
+Enable Remote Desktop on a Computer:
 • Remote Desktop is the de facto interactive management protocol but can be difficult to enable automatically.
 • Fortunately, its configuration settings come from the Windows Registry, so you can use Windows PowerShell’s registry provider to enable it.
 • To disable Remote Desktop, set the fDenyTSConnections property to 1.
@@ -991,6 +1181,77 @@ Example: Get-Service | Where-Object { $_.DisplayName -like 'SQL*' }
 Code to Locate Installed Applications:
 Registry Access: Use the registry to access uninstall information.
 Example: $uninstallKeys = Get-ItemProperty -Path "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | Select-Object DisplayName, UninstallString
+
+PowerShell Cmdlets and commands:
+1.Get-Location (alias: pwd):
+Description: Displays the current working directory.
+Usage Example: Get-Location
+2.Get-ChildItem (alias: dir):
+Description: Lists the contents of a directory.
+Usage Example: Get-ChildItem
+3.attrib +h dir:
+Description: Adds the hidden attribute to a directory.
+Usage Example: attrib +h C:\ExampleDirectory
+4.attrib -h dir:
+Description: Removes the hidden attribute from a directory.
+Usage Example: attrib -h C:\ExampleDirectory
+5.Get-Process (alias: Tasklist):
+Description: Displays a list of currently running processes.
+Usage Example: Get-Process
+6.Stop-Process (alias: Taskkill):
+Description: Terminates a process with the specified Process ID (PID).
+Usage Example: Stop-Process -Id 123
+7.Get-WmiObject Win32_Processor (alias: cpu):
+Description: Retrieves information about the CPU.
+Usage Example: Get-WmiObject Win32_Processor
+8.diskpart:
+Description: Opens the DiskPart command-line tool for disk management.
+Usage Example: diskpart
+9.Get-Disk (alias: list disk):
+Description: Lists all available disks.
+Usage Example: Get-Disk
+10.Get-Disk (alias: select disk 0):
+Description: Selects a specific disk for further operations.
+Usage Example: Select-Disk -Number 0
+11.chkdsk:
+Description: Checks a disk for errors and attempts to fix them.
+Usage Example: chkdsk C:
+12.Get-Command -Noun S*:
+Description: Retrieves all cmdlets with a noun starting with 'S'.
+Usage Example: Get-Command -Noun S*
+13.Get-Command -Noun service:
+Description: Retrieves cmdlets with the noun 'service'.
+Usage Example: Get-Command -Noun service
+14.Get-Service:
+Description: Lists all services on the computer.
+Usage Example: Get-Service
+15.Get-Help Get-Service (example):
+Description: Displays help information for the Get-Service cmdlet.
+Usage Example: Get-Help Get-Service -Example
+16.Get-Help Get-Service -Online:
+Description: Opens the online documentation for the Get-Service cmdlet in a web browser.
+Usage Example: Get-Help Get-Service -Online
+17.Get-Alias:
+Description: Lists all defined aliases in the current session.
+Usage Example: Get-Alias
+18.Get-Alias cls:
+Description: Retrieves the alias for the 'cls'(clear screen alias).
+Usage Example: Get-Alias cls
+19.Get-History:
+Description: Displays the command history for the current session.
+Usage Example: Get-History
+20.Get-Process:
+Description: Lists all currently running processes.
+Usage Example: Get-Process
+21.Get-Process -Name MicrosoftEdge:
+Description: Retrieves information about the 'MicrosoftEdge' process.
+Usage Example: Get-Process -Name MicrosoftEdge
+22.Get-Process -Name MicrosoftEdge | Get-Member:
+Description: Displays the members (properties and methods) of the 'MicrosoftEdge' process object.
+Usage Example: Get-Process -Name MicrosoftEdge | Get-Member
+23.Get-Process -Name MicrosoftEdge | Select-Object *:
+Description: Selects and displays all properties of the 'MicrosoftEdge' process.
+Usage Example: Get-Process -Name MicrosoftEdge | Select-Object *
 
 Command-Name and Description:
 Syntax for viewing the methods and properties we can pipe our output to Get-Member by: Get-Process | Get-Member
