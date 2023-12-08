@@ -492,12 +492,57 @@ for ($i = 1; $i -le 10; $i++) {
     Write-Host $i
 }
 
+
+Installing and removing providers:
+Providers are typically installed via Windows PowerShell modules.
+Importing the module loads the provider into your session.
+You cannot uninstall the built-in providers.
+You can uninstall providers loaded by other modules.
+You can unload a provider from the current session.
+You can do this by using the Remove-Module cmdlet.
+This cmdlet does not uninstall the provider, but it makes the provider unavailable in the session.
+
 Significance of brackets in PowerShell:
 The significance of brackets in PowerShell is that they allow you to control the order of operations in expressions and to create blocks of code. This can make your code more readable and easier to maintain.
 -Script Blocks: {} define script blocks for encapsulating commands.
 -Scope: Establish variable scope within a script block.
 -Array Declaration: Brackets @() represent arrays in PowerShell.
 -Hashtable Declaration: Curly braces {} define hashtables for key-value pairs.
+
+
+Working with PSDrives:
+Windows PowerShell uses the noun, PSDrive, for commands that work with Windows PowerShell. For a list of the Windows PowerShell in your Windows PowerShell session, use the Get- PSDrive cmdlet.
+File system drives are a subset of the Windows PowerShell. You can identify the file system drives by the Filesystem entry in the Provider column.
+To see the syntax of the Get- PSDrive cmdlet, type a Get-Command command with the Syntax parameter:
+Get-Command -Name Get-PSDrive -Syntax
+The PSProvider parameter lets you display only the Windows PowerShell that are supported by a particular provider.
+For example, to display only the Windows PowerShell that are supported by the Windows PowerShell FileSystem provider, type a Get- PSDrive command with the PSProvider parameter and the FileSystem value:
+Get-PSDrive -PSProvider FileSystem
+To view the Windows PowerShell that represent registry hives, use the PSProvider parameter to display only the Windows PowerShell that are supported by the Windows PowerShell Registry
+Get-PSDrive -PSProvider
+
+Enable remoting on a single local machine:
+• With the combined release of Windows PowerShell and WS-Management (WSMan) into the Windows Management Framework, we’ve heard the occasional question about whether it’s possible to install them independently.
+• This concern is usually focused on security.
+• As a background, Windows Remote Management (WinRM) has been part of the operating system since Windows Vista and Server 2008.
+• WinRM does not listen to network connections by default, and it must be explicitly activated.
+• Both Windows PowerShell and WinRM advanced greatly during the release of version two—most notably by working together to support a rich Windows PowerShell-based remoting experience.
+• The Windows Management Framework download (Windows PowerShell + WinRM) simply updates the binaries on supported operating systems to bring them up to the same version already included in Windows 7 and Windows Server 2008 R2.
+• Windows PowerShell Remoting does not require any specific configuration to let you connect to a remote computer, but it does require a configuration step to allow connections from remote computers.
+• Once you’ve decided to enable remoting, Windows PowerShell makes this a snap (after informing you of the impact).
+• Simply call Enable-Ps Remoting from an elevated shell. The solution demonstrates this approach. To bypass any user prompts or confirmation, also specify the -Force flag.
+• Remotely enabling Windows PowerShell Remoting offers many unique challenges.
+• Although you can certainly use Remote Desktop to connect to the system (and then essentially enable it locally), Remote Desktop does not lend itself to automation.
+• Instead, you can leverage another remoting technology that does lend itself to automation:
+• Windows Management Instrumentation (WMI).
+• WMI is enabled on most domain machines, but it offers only a minor facility for remote command execution: the Create() method of the Win32_Process.
+• Remote Desktop is the de facto interactive management protocol but can be difficult to enable automatically.
+• Fortunately, its configuration settings come from the Windows Registry, so you can use Windows PowerShell’s registry provider to enable it.
+• To disable Remote Desktop, set the fDenyTSConnections property to 1.
+• To enable Remote Desktop on a remote computer, use Windows PowerShell Remoting to change the registry properties, or remotely manage the registry settings directly.
+• Set the fDenyTSConnections property of the remote desktop registry key to 0:
+$regkey = "HKLM:\SYSTEM CurrentControlSet Control Terminal Server"
+Set-ItemProperty §regkey fDenyISConnections 0
 
 Command-Name and Description:
 Add-content: This cmdlet adds the content to the specified file.
