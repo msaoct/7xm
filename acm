@@ -19,6 +19,7 @@ Versions of PowerShell for Windows XP, Windows Server 2003, Windows Vista and Wi
 On 18 August 2016, Microsoft announced that they had made PowerShell open-source and cross-platform with support for Windows, macOS, CentOS and Ubuntu.
 
 PowerShell Design:
+PowerShell was designed by - A. Jeffrey Snover, Bruce Payette, James Truher.
 PowerShell's developers based the core grammar of the tool on that of the POSIX 1003.2 Korn shell.
 Windows PowerShell can execute four kinds of named commands:
 • cmdlets (.NET Framework programmes designed to interact with PowerShell).
@@ -31,6 +32,192 @@ Run a search for PowerShell on your computer.
 You probably have several different options, like “PowerShell,” “PowerShell ISE,” and “PowerShell (x86)”.
 The ISE (integrated scripting environment) is a handy tool which allows you to write scripts on the fly, and
 also has a convenient look-up for all the PowerShell commands.
+
+Two Ways of Extending PowerShell:
+A. PSSnapins:
+Definition: PSSnapins are legacy extensions in PowerShell used to add cmdlets, providers, and sometimes types to the environment.
+Usage: Loaded using Add-PSSnapin cmdlet.
+Example: Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+B. Modules:
+Definition: Modules are a more modern and flexible way to extend PowerShell, encapsulating cmdlets, functions, variables, and other resources in a structured manner.
+Usage: Loaded using Import-Module cmdlet. Automatic loading is also supported in recent PowerShell versions.
+Example: Import-Module ActiveDirectory
+
+The four types of FORMAT commands in PowerShell are:
+1.Format-Wide:
+Purpose: Displays wide, table-like views of selected properties of objects.
+Usage Example: Get-Process | Format-Wide -Property Name
+2.Format-List:
+Purpose: Formats the output as a list of property-value pairs.
+Usage Example: Get-Service | Format-List -Property DisplayName, Status
+3.Format-Table:
+Purpose: Presents tabular data with columns for specified properties.
+Usage Example: Get-EventLog -LogName Application | Format-Table -Property TimeGenerated, EntryType, Source
+4.Format-Custom:
+Purpose: Provides a detailed, customizable view of objects.
+Usage Example: Get-Command Format-Custom
+
+Two ways to find all the sql services are on one server in PowerShell:
+1.WMI Query for SQL Services:
+Command: Get-WmiObject Win32_Service | Where-Object { $_.Name -like "sql" }
+Description: Uses WMI (Windows Management Instrumentation) to query all services with names containing "sql" and filters the results.
+2.Get-Service for SQL Services:
+Command: get-service sql
+Description: Utilizes the Get-Service cmdlet with a wildcard pattern to retrieve all services whose names start with "sql."
+
+Platforms of PowerShell:
+1. .NET Framework
+2. .NET Core
+
+PowerShell Consists of different OS:
+1. Windows 7
+2. Windows Server 2008 R2
+3. Mac OS 10.12
+4. Ubuntu
+
+PowerShell commands related to files and directories:
+1.mkdir (alias for New-Item):
+Command: mkdir NewDirectory
+Description: Creates a new directory with the specified name.
+2.rm (alias for Remove-Item):
+Command: rm File.txt
+Description: Removes or deletes a file or directory.
+3.ls (alias for Get-ChildItem):
+Command: ls -Path C:\Directory
+Description: Lists files and directories in the specified path. Can be customized with various parameters for detailed information.
+4.mv (alias for Move-Item):
+Command: mv SourceFile.txt Destination\
+Description: Moves a file or directory to a new location.
+5.cp (alias for Copy-Item):
+Command: cp SourceFile.txt Destination\
+Description: Copies a file or directory to a new location
+
+Command keeps all history in Documents folder and can be accessed even after closing powershell:
+To keep a history of PowerShell commands in a file that persists even after closing PowerShell, you can use the Start-Transcript cmdlet. This cmdlet records all output, including errors and input commands, to a text file. Here's how you can use it:
+Start-Transcript -Path "$HOME\Documents\PowerShellHistory.txt"
+This command starts recording the session and saves it to a text file named "PowerShellHistory.txt" in the Documents folder. After running this command, all your commands and their output will be logged to that file.
+To stop recording, you can use the Stop-Transcript cmdlet:
+Stop-Transcript
+This will close the recording session, and you can find the transcript file in your Documents folder. You can open the transcript file in a text editor to review your command history even after closing PowerShell.
+
+"Get-Command -noun s*" cmdlet:
+The Get-Command cmdlet retrieves information about all the cmdlets that are installed on the computer. This includes cmdlets, aliases, functions, filters, scripts, and applications. The -noun parameter specifies that only the cmdlets whose names start with the letter s should be returned.
+For example, to get a list of all the cmdlets whose names start with the letter s, you would use the following command:
+Get-Command -Noun s*
+This would return a list of all the cmdlets whose names start with the letter s, such as Get-Service, Set-Service, and Stop-Service.
+The Get-Command cmdlet can be used to get information about a specific cmdlet, or to get a list of all the cmdlets that are installed on the computer. This information can be used to help you learn how to use PowerShell cmdlets, or to troubleshoot problems that you might be having with PowerShell.
+
+"get-help get-service -examples" cmdlet
+The get-help get-service -examples cmdlet displays examples of how to use the Get-Service cmdlet.
+The Get-Service cmdlet is used to get a list of all the services that are running on a local or remote computer. It can also be used to get information about a specific service, such as its status, startup type, and description.
+The get-help get-service -examples cmdlet can be used to learn how to use the Get-Service cmdlet to perform specific tasks, such as:
+Getting a list of all the services that are running on a local computer
+Getting information about a specific service
+Starting, stopping, or restarting a service
+Changing the startup type of a service
+The get-help get-service -examples cmdlet is a valuable tool for learning how to use the Get-Service cmdlet to manage services on Windows computers.
+
+A powerShell command using pipeline for a child item in path home and search recursively where the length of the file is greater than 20 MB:
+Get-ChildItem -Path $HOME -Recurse | Where-Object {$_.Length -gt 20MB} | Select-Object -ExpandProperty FullName
+This command will:
+-Use Get-ChildItem to list all child items (files and folders) in the user's home directory ($HOME).
+-Use the -Recurse parameter to search all subdirectories recursively.
+-Pipe the results to Where-Object to filter for items with a Length property greater than 20 Megabytes (MB).
+-Pipe the filtered results to Select-Object with the -ExpandProperty parameter to only return the full path of each matching file.
+This command will output a list of full paths to all files in your home directory and subdirectories that are larger than 20 MB.
+
+Pipelines in PowerShell:
+A pipeline is a powerful feature in PowerShell that allows you to chain commands together, sending the output of one command directly to the next as input. This allows you to build complex workflows and automate tasks efficiently.
+Here's an example:
+Get all files in the current directory and filter for those with "txt" extension, then sort by size and display the top 5 largest files.
+Get-ChildItem -Path . -Filter "*.txt" | Sort-Object -Property Length -Descending | Select-Object -First 5
+Breakdown:
+-Get-ChildItem retrieves all child items in the current directory.
+-Path. specifies the current directory.
+-Filter "*.txt" filters for files with the "txt" extension.
+-The output is piped to Sort-Object.
+-Property Length specifies that sorting should be done based on the "Length" property (file size).
+-Descending sorts in descending order, showing the largest files first.
+-The output is piped to Select-Object.
+-First 5 selects only the first 5 objects in the sorted list.
+Sorting Processes by ID:
+Here's the command to sort running processes on your computer by ID:
+Get-Process | Sort-Object -Property Id -Ascending
+Breakdown:
+-Get-Process retrieves information about all running processes.
+-The output is piped to Sort-Object.
+-Property Id specifies that sorting should be done based on the "ID" property.
+-Ascending sorts in ascending order, listing processes with the lowest IDs first.
+This command will display a list of running processes with their IDs sorted from smallest to largest.
+
+PowerShell Variables:
+Variables are the fundamental part of the Windows PowerShell. We can store all the types of values in the PowerShell variables. For example, we can store the result of commands, and the elements which are used in expressions and commands, such as paths, names, settings, and values. In fact, they store the objects specifically, Microsoft .NET Framework objects.
+A variable is a unit of memory in which the data is stored. In Windows PowerShell, the name of a variable starts with the dollar ($) sign, such as $process, $a. The name of the variables are not case-sensitive, and they include spaces and special characters. By default, the value of all the variables in a PowerShell is $null.
+In PowerShell, variables hold any type of values while executing the commands. The variables store the result from a command, function, and expression. Variables are declared using $ sign before the variable name. For example, to store the output of the Get-Process command in a variable, you would use the following command:
+$process = Get-Process
+You can then use the $process variable to access the output of the Get-Process command. For example, to display the name of the first process in the $process variable, you would use the following command:
+Write-Host $process[0].Name
+Variables can also be used to store arrays of data. For example, to store the names of all the processes running on the local computer in an array, you would use the following command:
+$processes = Get-Process | Select-Object -Property Name
+You can then use the $processes array to access the names of all the processes running on the local computer. For example, to display the name of each process in the $processes array, you would use the following command:
+foreach ($process in $processes) {
+    Write-Host $process.Name
+}
+Variables are a powerful tool that can be used to simplify your PowerShell scripts. By using variables, you can avoid repeating the same commands multiple times and you can make your scripts more readable and maintainable.
+
+Types of Variables:
+Following are the different types of variables in the Windows PowerShell-
+User-created Variables: Those variables which are created and maintained by the user are called user-created variables. The variables that we create at the PowerShell command line exist only while the Window of PowerShell is open. When the Window of PowerShell is closed, the variables are also deleted. We can create the variables in the scripts with the local, global, or script scope.
+Automatic Variables: Those variables which store the state of PowerShell are called automatic variables. The PowerShell creates this type of variable, and their values are changed by the PowerShell to maintain their accuracy. The user cannot change the values of these variables.
+Preference Variables: Preference variables are those variables that store the user preferences for the Windows PowerShell. The Windows PowerShell creates this type of variable, and they are populated with the default values. Any user can change the value of preference variables.
+
+The key characteristics of PowerShell are:
+It is object-based and not text based.
+Commands are able to be modified to suit a particular task.
+It is a command line interpreter and scripting environment.
+
+Advantages of PowerShell:
+Following are the few benefits of a PowerShell:
+-It is easy to learn and implement.
+-It is an object-based scripting language.
+-It provides more functions as compared to VBScript and cmd.exe
+-PowerShell supports automation platform, which is also an important factor.
+-We can also execute a .NET code in PowerShell.
+-In PowerShell, there is no need to specify the "type" of a variable.
+-It is also interactive. It allows programmers to try first at a console and then work with more complicated scripts.
+-There is a concept of background jobs in PowerShell scripting.
+-It provides the feature of Reusability. The scripts which are written once to perform a particular task can be saved for later use. And can be merged with other scripts to perform various tasks. So, repetitive tasks can be performed to execute the tasks. It saves time and money of administrator in configuring the machines.
+
+Disadvantages of PowerShell:
+Following are the few disadvantages of PowerShell:
+-Framework: It requires .NET framework.
+-Object-based: With most shells, the text-based commands are used to get the work done while writing scripts. If a user switches to Windows PowerShell from some other type of shells, he will have to get used to a different way of thinking. Due to this, some users need more time to understand the PowerShell.
+-Security risks: Another drawback of using PowerShell is that it can create some potential security risks. Many professionals of IT use it as a way to connect remotely to other servers and computers. During this process, PowerShell can leave some holes open for security breaches. It is the major disadvantages of using PowerShell script.
+-Web Server: Another drawback of PowerShell is that it requires a user to run a web server on his server when utilizing remote functionality.
+
+Powershell features:
+1. Windows PowerShell Workflow: Workflow capabilities have been introduced in Windows PowerShell version 3.0. It is designed particularly to help us by performing long-time and effort-consuming complex tasks across different and multiple devices at different locations.
+2. Desired State Configuration: DSC is the feature of a Windows PowerShell which provides a collection of language extensions, resources, and cmdlets that can be used to configure the software declaratively.
+3. Background job: Windows PowerShell introduced the concept of background jobs that run scripts and cmdlets asynchronously on the remote and local machines in the background without affecting the user interface or interacting with the console.
+4. Scheduled job: It is similar to the background job. Both the jobs execute asynchronously in the background without affecting the interface, but the main difference is that the background jobs are started manually.
+5. Error-handling: Windows PowerShell provides the error-handling mechanism through the Try{ }, Catch { }, and Finally {} blocks as in .NET language.
+6. PowerShell remoting: This feature of Windows PowerShell allows the execution of cmdlets on remote systems which help to manage the set of remote computers from one single machine.
+7. Script debugging: It is a feature of PowerShell to examine the script, function, command, or expressions while PowerShell is running. PowerShell script debugger includes the set of cmdlets which allow to set and manage breakpoints and view the call stack.
+8. Tab expansion: Tab expansion is an implementation of auto-completion, which completes the cmdlets, properties, and parameter names by pressing the Tab key once.
+9. Steppable pipeline: This feature allows the splitting of script blocks into a steppable pipeline. And then it gives the option to call the begin(), process(), and end() methods of script block to control the execution sequence.
+10. Constrained runspaces: It allows the creation of PowerShell runspaces with the set of constraints which includes the ability to access and execution of scripts, cmdlets, and language elements.
+11. Windows PowerShell web access: PowerShell console introduced a web-based version in Windows Server 2012. Here, we can run PowerShell cmdlets from any web browser which is not available on desktops but also on any tablet or mobile devices.
+12. Network file transfer: This feature provides the native support for prioritized, and asynchronous transfer of files between the machines using BITS (Background Intelligent Transfer Service).
+13. Windows PowerShell Integrated Scripting Environment (ISE): It is the host GUI based application for the Windows PowerShell. This feature provides tab completion, multiline editing, syntax coloring, context-sensitive help, selective execution, and support for right-to-left languages.
+14. Transactions: This feature of Windows PowerShell enables us to start a transaction, to indicate which command is a part of it, and to either rollback or commit a transaction.
+
+PowerShell Comments:
+When you want to help others by providing the information about a code, then you must use the comments in that code.
+Just like other programming or scripting languages, you can give the comments in a PowerShell for the documentation purpose.
+In PowerShell, there are two types of comments:
+1) Single-line Comment - Single line comments are those comments in which you can type a hash symbol # at the beginning of each line. Everything to the right of the hash symbol will be ignored. If you write the multiple lines in a script, you had to use the hash # symbol at the starting of each line.
+2) Multiple-line comment or comment block - With PowerShell 2.0 or above, multiple line comments or block comments have been introduced. To comment the multiple lines, put the <# symbol at the beginning of the first line and #> symbol at the end of the last line.
+
 
 Navigation in Powershell:
 A nice thing about PowerShell is you always know where you are because it tells you in the prompt.
@@ -79,7 +266,10 @@ PS C:\Users\niks> Get-Command Get-Process
 • The command and the output associated with the command illustrate the problem.
 • The default output does not appear to display much more information than you knew when you typed in the command.
 • You figured it was a cmdlet, you knew the name of Get-Process, and the definition does not add much additional information.
-Point to remember, everything in Windows PowerShell is an object. In fact, the Get-Command cmdlet returns a CmdletInfo object. This is shown here.
+Point to remember, everything in Windows PowerShell is an object. In fact, the Get-Command cmdlet returns a CmdletInfo object. 
+
+Get-Command:
+The PowerShell Get-Command cmdlet is used to get a list of all the PowerShell commands that are installed on the computer. This cmdlet includes functions, other cmdlets, aliases, filters, scripts, and applications. You can use the Get-Command cmdlet to get only those commands that have been imported into the current session by using the -ListImported parameter. With the starting of Windows PowerShell 5.0, this cmdlet displays a version column by default.
 
 Active Directory and PowerShell:
 • The one thing that makes system administration on the Windows platform unique is its interaction with Active Directory.
@@ -217,6 +407,69 @@ Parsing, error presentation, and output formatting are not handled by cmdlets. I
 Cmdlets process works on objects not on text stream and objects can be passed as output for pipelining.
 Cmdlets are record-based as they process a single object at a time.
 
+Powershell Loop:
+PowerShell loops are used to repeat a set of commands until a certain condition is met. They are an essential part of programming, and PowerShell is no exception. Loops allow you to iterate through collections and repeat tasks until a condition is met. Loops can drastically enhance your PowerShell scripts and take your automation to the next level.
+There are four main types of loops in PowerShell:
+For Loop:The for loop is commonly used when the number of times (iteration count) a command or process needs to run, is already known.
+ForEach-Object Loop:The foreach loop is used to iterate through a collection of objects.
+While Loop:The while loop is used to repeat a set of commands until a certain condition is met.
+Do While Loop:The do while loop is similar to the while loop, but the condition is checked at the end of the loop instead of the beginning.
+
+Powershell - Conditions:
+Decision making structures have one or more conditions to be evaluated or tested by the program, along with a statement or statements that are to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.
+PowerShell scripting language provides following types of decision making statements.
+1. if statement: An if statement consists of a boolean expression followed by one or more statements.
+2. if...else statement: An if statement can be followed by an optional else statement, which executes when the boolean expression is false.
+3. nested if statement: You can use one if or elseif statement inside another if or elseif statement(s).
+4. switch statement: A switch statement allows a variable to be tested for equality against a list of values.
+
+Powershell - Scripting:
+Windows PowerShell is a command-line shell and scripting language designed especially for system administration. Its analogue in Linux is called as Bash Scripting. Built on the .NET Framework, Windows PowerShell helps IT professionals to control and automate the administration of the Windows operating system and applications that run on Windows Server environment.
+Windows PowerShell commands, called cmdlets, let you manage the computers from the command line. Windows PowerShell providers let you access data stores, such as the Registry and Certificate Store, as easily as you access the file system.
+In addition, Windows PowerShell has a rich expression parser and a fully developed scripting language. So in simple words you can complete all the tasks that you do with GUI and much more. Windows PowerShell Scripting is a fully developed scripting language and has a rich expression parser/
+Features:
+Cmdlets − Cmdlets perform common system administration tasks, for example managing the registry, services, processes, event logs, and using Windows Management Instrumentation (WMI).
+Task oriented − PowerShell scripting language is task based and provide supports for existing scripts and command-line tools.
+Consistent design − As cmdlets and system data stores use common syntax and have common naming conventions, data sharing is easy. The output from one cmdlet can be pipelined to another cmdlet without any manipulation.
+Simple to Use − Simplified, command-based navigation lets users navigate the registry and other data stores similar to the file system navigation.
+Object based − PowerShell possesses powerful object manipulation capabilities. Objects can be sent to other tools or databases directly.
+Extensible interface. − PowerShell is customizable as independent software vendors and enterprise developers can build custom tools and utilities using PowerShell to administer their software.
+
+Uses of PowerShell Pipiline:
+The PowerShell pipeline is a feature of the PowerShell shell and scripting language that allows you to chain together commands to build a single 'pipeline' which simplifies code, allows parallel processing and more.
+Commands in a pipeline act like human runners in a relay race. The output of one command is passed as the input to the next command, and so on. This allows you to automate complex tasks with just a few lines of code.
+For example, we can use the pipeline to:
+-Get a list of all the files in a directory, and then sort them by size.
+-Get the contents of a website, and then extract all the links.
+-Convert a video file to a different format, and then compress it.
+
+
+PowerShell Operators:
+1. Arithmetic Operators:
+Definition: Perform mathematical operations on values.
+Operator Names: + (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulus)
+2. Assignment Operators:
+Definition: Assign values to variables.
+Operator Names: = (Assignment), += (Add and Assign), -=, *=, /=, %=
+3. Comparison Operators:
+Definition: Compare values and return a Boolean result.
+Operator Names: -eq (Equal), -ne (Not Equal), -gt (Greater Than), -lt (Less Than), -ge (Greater Than or Equal), -le (Less Than or Equal)
+4. Logical Operators:
+Definition: Combine or modify Boolean values.
+Operator Names: -and (Logical AND), -or (Logical OR), -not (Logical NOT)
+5. Redirectional Operators:
+Definition: Control input/output redirection.
+Operator Names: > (Output to a file), < (Input from a file), >> (Append to a file)
+6. Split and Join Operators:
+Definition: Split and join strings.
+Operator Names: -split (Split a string), -join (Join elements into a string)
+7. Type Operators:
+Definition: Check and manipulate data types.
+Operator Names: -is (Is of a certain type), -as (Casting or conversion)
+8. Unary Operators:
+Definition: Operate on a single operand.
+Operator Names: - (Negation), + (Unary plus), ! (Logical NOT)
+
 Uses/Needs/Importance of powershell:
 -It is both a scripting language and a command-line Shell.
 -It can interact with a different number of technologies.
@@ -227,48 +480,24 @@ Uses/Needs/Importance of powershell:
 -It allows performing repetitive tasks more efficiently by combining multiple commands and by writing scripts. Suppose, a system administrator wants to create hundreds of active directory users, he can achieve this with the help of only some PowerShell cmdlets placed in a script.
 -Many complex and time-consuming configurations and tasks can be done in a second with simple cmdlets of PowerShell.
 
-Advantages of PowerShell:
-Following are the few benefits of a PowerShell:
--It is easy to learn and implement.
--It is an object-based scripting language.
--It provides more functions as compared to VBScript and cmd.exe
--PowerShell supports automation platform, which is also an important factor.
--We can also execute a .NET code in PowerShell.
--In PowerShell, there is no need to specify the "type" of a variable.
--It is also interactive. It allows programmers to try first at a console and then work with more complicated scripts.
--There is a concept of background jobs in PowerShell scripting.
--It provides the feature of Reusability. The scripts which are written once to perform a particular task can be saved for later use. And can be merged with other scripts to perform various tasks. So, repetitive tasks can be performed to execute the tasks. It saves time and money of administrator in configuring the machines.
+Powershell - Brackets:
+There are three types of brackets in PowerShell:
+Round/Parenthesis brackets ()
+are used for grouping arguments and expressions. For example, the expression (1 + 2) * 3 will be evaluated as (1 + 2) * 3 = 9.
+Square brackets []
+are used for indexing arrays and accessing hash table elements. For example, the expression $array will return the first element of the array $array.
+Curly brackets {}
+are used for creating blocks of code. For example, the following code will create a loop that prints the numbers from 1 to 10:
+for ($i = 1; $i -le 10; $i++) {
+    Write-Host $i
+}
 
-Disadvantages of PowerShell:
-Following are the few disadvantages of PowerShell:
--Framework: It requires .NET framework.
--Object-based: With most shells, the text-based commands are used to get the work done while writing scripts. If a user switches to Windows PowerShell from some other type of shells, he will have to get used to a different way of thinking. Due to this, some users need more time to understand the PowerShell.
--Security risks: Another drawback of using PowerShell is that it can create some potential security risks. Many professionals of IT use it as a way to connect remotely to other servers and computers. During this process, PowerShell can leave some holes open for security breaches. It is the major disadvantages of using PowerShell script.
--Web Server: Another drawback of PowerShell is that it requires a user to run a web server on his server when utilizing remote functionality.
-
-Powershell features:
-1. Windows PowerShell Workflow: Workflow capabilities have been introduced in Windows PowerShell version 3.0. It is designed particularly to help us by performing long-time and effort-consuming complex tasks across different and multiple devices at different locations.
-2. Desired State Configuration: DSC is the feature of a Windows PowerShell which provides a collection of language extensions, resources, and cmdlets that can be used to configure the software declaratively.
-3. Background job: Windows PowerShell introduced the concept of background jobs that run scripts and cmdlets asynchronously on the remote and local machines in the background without affecting the user interface or interacting with the console.
-4. Scheduled job: It is similar to the background job. Both the jobs execute asynchronously in the background without affecting the interface, but the main difference is that the background jobs are started manually.
-5. Error-handling: Windows PowerShell provides the error-handling mechanism through the Try{ }, Catch { }, and Finally {} blocks as in .NET language.
-6. PowerShell remoting: This feature of Windows PowerShell allows the execution of cmdlets on remote systems which help to manage the set of remote computers from one single machine.
-7. Script debugging: It is a feature of PowerShell to examine the script, function, command, or expressions while PowerShell is running. PowerShell script debugger includes the set of cmdlets which allow to set and manage breakpoints and view the call stack.
-8. Tab expansion: Tab expansion is an implementation of auto-completion, which completes the cmdlets, properties, and parameter names by pressing the Tab key once.
-9. Steppable pipeline: This feature allows the splitting of script blocks into a steppable pipeline. And then it gives the option to call the begin(), process(), and end() methods of script block to control the execution sequence.
-10. Constrained runspaces: It allows the creation of PowerShell runspaces with the set of constraints which includes the ability to access and execution of scripts, cmdlets, and language elements.
-11. Windows PowerShell web access: PowerShell console introduced a web-based version in Windows Server 2012. Here, we can run PowerShell cmdlets from any web browser which is not available on desktops but also on any tablet or mobile devices.
-12. Network file transfer: This feature provides the native support for prioritized, and asynchronous transfer of files between the machines using BITS (Background Intelligent Transfer Service).
-13. Windows PowerShell Integrated Scripting Environment (ISE): It is the host GUI based application for the Windows PowerShell. This feature provides tab completion, multiline editing, syntax coloring, context-sensitive help, selective execution, and support for right-to-left languages.
-14. Transactions: This feature of Windows PowerShell enables us to start a transaction, to indicate which command is a part of it, and to either rollback or commit a transaction.
-
-PowerShell Comments:
-When you want to help others by providing the information about a code, then you must use the comments in that code.
-Just like other programming or scripting languages, you can give the comments in a PowerShell for the documentation purpose.
-In PowerShell, there are two types of comments:
-1) Single-line Comment - Single line comments are those comments in which you can type a hash symbol # at the beginning of each line. Everything to the right of the hash symbol will be ignored. If you write the multiple lines in a script, you had to use the hash # symbol at the starting of each line.
-2) Multiple-line comment or comment block - With PowerShell 2.0 or above, multiple line comments or block comments have been introduced. To comment the multiple lines, put the <# symbol at the beginning of the first line and #> symbol at the end of the last line.
-
+Significance of brackets in PowerShell:
+The significance of brackets in PowerShell is that they allow you to control the order of operations in expressions and to create blocks of code. This can make your code more readable and easier to maintain.
+-Script Blocks: {} define script blocks for encapsulating commands.
+-Scope: Establish variable scope within a script block.
+-Array Declaration: Brackets @() represent arrays in PowerShell.
+-Hashtable Declaration: Curly braces {} define hashtables for key-value pairs.
 
 Command-Name and Description:
 Add-content: This cmdlet adds the content to the specified file.
@@ -365,3 +594,9 @@ Uninstall-Package: This cmdlet uninstalls one or more packages of software.
 Unregister-ScheduledJob: This cmdlet deletes the scheduled jobs on the local computer
 Update-Help: This cmdlet is used to download and installs the newest help files on the computer.
 Write-Output: This cmdlet sends the particular object down the pipeline to the next command.
+
+Parameters:
+-ArgumentList: The -ArgumentList parameter is used to specify an array of arguments. An alias for this parameter is Args. Wildcard characters are not supported.
+-Verb: The -Verb parameter is used to specify an array of command verbs. Wildcard characters are accepted.
+-Noun: The -Noun parameter is used to specify an array of command nouns. Wildcard characters are accepted.
+-Module: The -Module parameter is used to specify an array of modules. It gets those commands which come from the specified modules. The -Module parameter takes the string values, but the value of it can also be a PSModuleInfo object
