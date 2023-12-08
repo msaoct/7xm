@@ -100,6 +100,19 @@ To stop recording, you can use the Stop-Transcript cmdlet:
 Stop-Transcript
 This will close the recording session, and you can find the transcript file in your Documents folder. You can open the transcript file in a text editor to review your command history even after closing PowerShell.
 
+Check the default path for powershell modules:
+There are two ways to check the default path for PowerShell modules:
+1. Using the $env:PSModulePath environment variable:
+This variable contains a list of all the default module paths for the current user. To view the value of this variable, simply type $env:PSModulePath in PowerShell.
+2. Using the Get-Module cmdlet:
+This cmdlet can be used to get a list of all the modules that are currently installed on the system. To view the default module paths, use the -ListAvailable parameter.
+Here is an example of how to use both methods:
+# Using the $env:PSModulePath environment variable
+$env:PSModulePath
+# Using the Get-Module cmdlet
+Get-Module -ListAvailable
+By default, on Windows 10 and higher, that location is $HOME\Documents\PowerShell\Modules . On Linux or Mac, the CurrentUser location is $HOME/. local/share/powershell/Modules .
+
 "Get-Command -noun s*" cmdlet:
 The Get-Command cmdlet retrieves information about all the cmdlets that are installed on the computer. This includes cmdlets, aliases, functions, filters, scripts, and applications. The -noun parameter specifies that only the cmdlets whose names start with the letter s should be returned.
 For example, to get a list of all the cmdlets whose names start with the letter s, you would use the following command:
@@ -234,6 +247,26 @@ Cmdlet Binding: Advanced functions support cmdlet binding, making them behave mo
 Common Parameters: Advanced functions automatically support common parameters like -Verbose, -Debug, etc.
 ScriptBlock: Both functions and advanced functions use a script block to define their behavior.
 
+Map a network drive in PowerShell:
+There are two ways to map a network drive in PowerShell-
+Using the New-PSDrive cmdlet.
+Using the net use command.
+The New-PSDrive cmdlet is the preferred method for mapping network drives in PowerShell because it is more robust and easier to use. The net use command is still available, but it is not as reliable and can be more difficult to use.
+To map a network drive using the New-PSDrive cmdlet, you will need to specify the following parameters:
+Name: The name of the drive letter you want to map.
+PSProvider: The provider for the drive. For network drives, the provider is FileSystem.
+Root: The root path of the shared folder you want to map.
+Persist: This parameter specifies whether the drive mapping should be persisted across sessions. If you set this parameter to True, the drive mapping will be available the next time you open PowerShell.
+For example, to map the network drive Z: to the shared folder \\server\share, you would use the following command:
+New-PSDrive -Name Z: -PSProvider FileSystem -Root \\server\share -Persist
+To map a network drive using the net use command, you will need to specify the following parameters:
+LocalName: The drive letter you want to map.
+RemoteName: The root path of the shared folder you want to map.
+UserName: The user name you want to use to access the shared folder.
+Password: The password you want to use to access the shared folder.
+For example, to map the network drive Z: to the shared folder \\server\share using the user name user1 and the password password1, you would use the following command:
+net use Z: \\server\share /user:user1 /password:password1
+Once you have mapped the network drive, you can access it just like any other drive on your computer
 
 Importing Data into PowerShell:
 PowerShell offers a variety of ways to import data.
@@ -1412,6 +1445,16 @@ Example: Get-Service | Where-Object { $_.DisplayName -like 'SQL*' }
 Code to Locate Installed Applications:
 Registry Access: Use the registry to access uninstall information.
 Example: $uninstallKeys = Get-ItemProperty -Path "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | Select-Object DisplayName, UninstallString
+
+Logging Function in Powershell:
+PowerShell logging is a feature that allows you to track and record the activities that occur in PowerShell. This can be useful for troubleshooting problems, auditing user activity, and tracking the performance of scripts.
+There are two main types of PowerShell logging:
+Event logging:
+Event logging is a built-in feature of Windows that allows you to log events from the operating system and other applications. PowerShell events are logged in the Windows Event Viewer.
+Transcript logging:
+Transcript logging is a PowerShell-specific feature that allows you to log the input and output of PowerShell commands. Transcript files are saved in text format and can be opened in any text editor.
+To enable event logging for PowerShell, you need to set the Turn on PowerShell Transcription policy setting to enabled. This policy setting is located in the Computer Configuration > Administrative Templates > Windows Components > Windows PowerShell section of the Group Policy Editor.
+To enable transcript logging for PowerShell, you need to use the Start-Transcript cmdlet. This cmdlet starts logging the input and output of PowerShell commands to a file. To stop logging, you need to use the Stop-Transcript cmdlet.
 
 PowerShell Cmdlets and commands:
 1.Get-Location (alias: pwd):
