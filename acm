@@ -1,0 +1,367 @@
+PowerShell:
+- PowerShell is a task automation and configuration management framework from Microsoft, consisting of a command-line shell and associated scripting language.
+- Initially a Windows component only, known as Windows PowerShell, it was made open-source and cross-platform on 18 August 2016 with the introduction of PowerShell Core.
+- The former is built on .NET Framework while the latter on .NET Core.
+- In PowerShell, administrative tasks are generally performed by cmdlets (pronounced command-lets), which are specialised .NET classes implementing a particular operation.
+- Third-party developers can develop their own cmdlets and add them to PowerShell.
+- Sets of cmdlets may be combined into scripts.
+
+PowerShell Background:
+Every version of Microsoft Windows for personal computers has included a command line interpreter (CLI) for managing the operating system. Its predecessor, MS-DOS, relied exclusively on a CLI.
+These are COMMAND.COM in MS-DOS and Windows 9x, and cmd.exe in the Windows NT family of operating systems.
+Microsoft attempted to introduce the Windows Script Host in 1998 with Windows 98, and its command-line based host: cscript.exe.
+Different versions of Windows provided various special-purpose command-line interpreters (such as netsh and WMIC) with their own command sets, but they were not interoperable.
+By 2002 Microsoft had started to develop a new approach to command line management, including a CLI called Monad (also known as Microsoft Shell or MSH).
+Microsoft published the first Monad public beta release on June 17, 2005, Beta 2 on September 11, 2005, and Beta 3 on January 10, 2006.
+On April 25, 2006, Microsoft formally announced that Monad had been renamed Windows PowerShell.
+PowerShell v2.0 was completed and released to manufacturing in August 2009, as an integral part of Windows 7 and Windows Server 2008 R2.
+Versions of PowerShell for Windows XP, Windows Server 2003, Windows Vista and Windows Server 2008 were released in October 2009.
+On 18 August 2016, Microsoft announced that they had made PowerShell open-source and cross-platform with support for Windows, macOS, CentOS and Ubuntu.
+
+PowerShell Design:
+PowerShell's developers based the core grammar of the tool on that of the POSIX 1003.2 Korn shell.
+Windows PowerShell can execute four kinds of named commands:
+• cmdlets (.NET Framework programmes designed to interact with PowerShell).
+• PowerShell scripts (files suffixed by .ps1).
+• PowerShell functions.
+• Standalone executable programmes.
+
+Open Powershell:
+Run a search for PowerShell on your computer.
+You probably have several different options, like “PowerShell,” “PowerShell ISE,” and “PowerShell (x86)”.
+The ISE (integrated scripting environment) is a handy tool which allows you to write scripts on the fly, and
+also has a convenient look-up for all the PowerShell commands.
+
+Navigation in Powershell:
+A nice thing about PowerShell is you always know where you are because it tells you in the prompt.
+PS C:\Users\niks>
+Our first command is Get-ChildItem.
+Go ahead and type it in, and hit enter.
+You’ll see a list of everything in your current directory.
+PS C:\Users\niks> gci
+
+Moving Between Directories in Powershell:
+To move to your desktop, we will use the Set-Location cmdlet. Enter
+PS C:\Users\niks> sl .\Desktop\
+PS C:\Users\niks\Desktop>
+We can move back to the YOURUSERNAME directory by typing, Don’t leave out the space!
+PS C:\Users\niks\Desktop> sl
+PS C:\Users\niks>
+
+Creating New Directories:
+Let us make a directory where we can store everything we are using for this lesson. Navigate back home by typing
+PS C:\Users\niks\Desktop> sl ~
+PS C:\Users\niks>
+We’ll make a new directory inside of your YOURUSERNAME directory.
+To do this, we use the command mkdir.
+Call your directory whatever you want, but try not to use spaces, as these make working on the command line more complicated than necessary.
+PS C:\Users\niks> mkdir abc
+
+Deletion:
+Now that you can see the results of what you are doing in PowerShell. Let us learn to delete things - for
+instance, that directory with the long name. First, create a few more directories. Name them “dir,” “dir1,”and “dir2.” You can make all three with a single command by typing-
+PS C:\Users\niks> mkdir dir, dir1, dir2
+Now, let us get rid of that long-named directory. To do this, we use the cmdlet Remove-Item or just rm. You have to be very careful with this cmdlet, because it does not put things in your recycle bin. It deletes them permanently. Gone. Type in rm followed by a space and the long-named directory’s name. You’ll probably want to use tab for auto-completion.
+PS C:\Users\niks> rm .\dir\
+Multiple deletes at a time is possible-
+PS C:\Users\niks> rm dir1 dir2
+
+Find Powershell commands:
+• The first thing to keep in mind is that in Windows PowerShell, not everything is a cmdlet.
+• There are language statements, functions, aliases, various objects (from the .NET Framework or COM), and even other executables—all of which are utilisable from within Windows PowerShell.
+• In Windows 8 Consumer Preview, this means you have around 1000 commands from which to choose.
+• In Windows 7, the situation is not quite so overwhelming, but still, you need to know how to find what you want.
+Two cmdlets are essential for discovering Windows PowerShell commands.
+The first is the Get-Command cmdlet, and the second is the Get-Help cmdlet.
+At first glance, the Get-Command cmdlet might not appear to be all that useful. For example, you provide it with the name of a cmdlet, and basically what returns is the name of the cmdlet.
+This command is shown below:
+PS C:\Users\niks> Get-Command Get-Process
+• The command and the output associated with the command illustrate the problem.
+• The default output does not appear to display much more information than you knew when you typed in the command.
+• You figured it was a cmdlet, you knew the name of Get-Process, and the definition does not add much additional information.
+Point to remember, everything in Windows PowerShell is an object. In fact, the Get-Command cmdlet returns a CmdletInfo object. This is shown here.
+
+Active Directory and PowerShell:
+• The one thing that makes system administration on the Windows platform unique is its interaction with Active Directory.
+• As the centralised authorisation, authentication, and information store for Windows networks, Active Directory automation forms the core of many enterprise administration tasks.
+• In PowerShell version one, the primary way to interact with Active Directory came through its support for Active Directory Service Interface (ADSI) type shortcuts.
+• While PowerShell version two was under development, the Active Directory team created an immensely feature-filled PowerShell module to manage Active Directory domains.
+Working with the Active Directory module has two requirements:
+Support from the server: This module works with any domain that has enabled the Active Directory Web Services feature. Windows Server 2008 R2 enables this feature by default on Active Directory instances, and you can install it on any recent server operating system from Windows Server 2003 on.
+Support from the client: The module itself is included in the Windows 7 Remote Server Administration Tools (RSAT) package. After downloading and installing the package, you can enable it through the “Turn Windows Features On or Off” dialogue in the Control Panel. The Active Directory module for Windows PowerShell is a PowerShell module that consolidates a group of cmdlets.
+You can use these cmdlets to manage your Active Directory domains, Active Directory Lightweight Directory Services (AD LDS) configuration sets, and Active Directory Database Mounting Tool instances in a single, self-contained package.
+If you do not have the Active Directory module installed on your machine, you need to download the correct Remote Server Administration Tools (RSAT) package for your OS.
+If you are running Windows 7, you will also need to run the import-module Active Directory command from an elevated PowerShell prompt.
+
+Network configuration cmdlets:
+Network troubleshooting is part of any System Administrator’s life.
+Maybe you need to check the IP address of a machine or test if its networking connection is working.
+Maybe you need to see if DNS is properly configured or check the latency between two hosts.
+If you have been in this field long enough, you probably have a few favourite commands that you learned years ago and use on a regular basis, like IPCONFIG or PING.
+There are literally hundreds of networking-related PowerShell cmdlets in Windows these days. 
+Just try out this command on your machine: Get-Command -Module Net* | Group Module
+But more important than knowing every one of them, is to know the most useful cmdlets that have the potential to replace those old commands that you cannot live without.
+And it’s when you combine the many networking cmdlets in ways that only PowerShell can do that you’ll find amazing new troubleshooting abilities.
+
+
+IPCONFIG:
+This command has many options, but the most common usage is just to show the IP address, subnet mask and default gateway for each network adapter in a machine.
+Get-NetIPConfiguration or Get-NetIPAddress
+Sample command lines:
+Get-NetIPConfiguration
+Get-NetIPAddress | Sort InterfaceIndex | FT InterfaceIndex, InterfaceAlias, AddressFamily,
+IPAddress, PrefixLength -Autosize
+Get-NetIPAddress | ? AddressFamily -eq IPv4 | FT –AutoSize
+Get-NetAdapter Wi-Fi | Get-NetIPAddress | FT -AutoSize
+
+PING:
+Checks connectivity to a specific host. Commonly used to check for liveliness, but also used to measure network latency.
+Test-NetConnection
+Sample command lines:
+Test-NetConnection www.microsoft.com
+Test-NetConnection -ComputerName www.microsoft.com -InformationLevel Detailed
+Test-NetConnection -ComputerName www.microsoft.com | Select –ExpandProperty
+PingReplyDetails | FT Address, Status, RoundTripTime
+
+NSLOOKUP:
+Name server lookup. Mostly used to find the IP address for a given DNS name (or vice-
+versa). Has many, many options.
+Resolve-DnsName
+Sample command lines:
+Resolve-DnsName www.microsoft.com
+Resolve-DnsName microsoft.com -type SOA
+Resolve-DnsName microsoft.com -Server 8.8.8.8 –Type A
+
+ROUTE:
+Shows the IP routes in a given system (also used to add and delete routes)
+Get-NetRoute (also New-NetRoute and Remove-NetRoute)
+Sample command lines:
+Get-NetRoute -Protocol Local -DestinationPrefix 192.168*
+Get-NetAdapter Wi-Fi | Get-NetRoute
+
+NETSAT:
+Shows current TCP/IP network connections.
+Get-NetTCPConnection
+Sample command lines:
+Get-NetTCPConnection | Group State, RemotePort | Sort Count | FT Count, Name –Autosize
+Get-NetTCPConnection | ? State -eq Established | FT –Autosize
+Get-NetTCPConnection | ? State -eq Established | ? RemoteAddress -notlike 127* | % { $_; Resolve-DnsName $_.RemoteAddress -type PTR -ErrorAction SilentlyContinue }
+
+The Powershell Pipeline:
+• Pipelines act like a series of connected segments of pipe.
+• Items moving along the pipeline pass through each segment.
+• To create a pipeline in PowerShell, you connect commands together with the pipe operator "|".
+• The output of each command is used as input to the next command.
+• The notation used for pipelines is similar to the notation used in other shells.
+• At first glance, it may not be apparent how pipelines are different in PowerShell.
+• Although you see text on the screen, PowerShell pipes object, not text, between commands.
+• Pipelines are arguably the most valuable concept used in command-line interfaces.
+• When used properly, pipelines reduce the effort of using complex commands and make it easier to see the flow of work for the commands.
+• Each command in a pipeline (called a pipeline element) passes its output to the next command in the pipeline, item-by-item.
+• Commands don't have to handle more than one item at a time.
+• The result is reduced resource consumption and the ability to begin getting the output immediately.
+
+Objects in the pipeline:
+When you run a cmdlet in PowerShell, you see text output because it is necessary to represent objects as text in a console window. The text output may not display all of the properties of the object being output.
+For example, consider the Get-Location cmdlet.
+When you pipe the output to the Get-Member cmdlet you get information about the object returned by Get-Location.
+
+Selecting object:
+You can use the Select-Object cmdlet to create new, custom Windows PowerShell objects that contain properties selected from the objects you use to create them. Type the following command to create a new object that includes only the Name and FreeSpace properties of the Win32_LogicalDisk WMI class.
+Get-WmiObject -Class Win32_LogicalDisk | Select-Object -Property Name, FreeSpace
+
+Sorting Objects:
+We can organise displayed data to make it easier to scan by using the Sort-Object cmdlet. Sort-Object takes the name of one or more properties to sort on and returns data sorted by the values of those properties. Consider the problem of listing Win32_SystemDriver instances. 
+If we want to sort by State and then by Name, we can do it by typing:
+Get-WmiObject -Class Win32_SystemDriver | Sort-Object -Property State,Name | Format-Table -Property Name,State,Started,DisplayName - AutoSize -Wrap
+You can also sort the objects in reverse order by specifying the Descending parameter. The reverses sort order, so that names are sorted in reverse alphabetical order and numbers are sorted by descending size.
+Get-WmiObject -Class Win32_SystemDriver | Sort-Object -Property State,Name -Descending | Format-Table -Property Name,State,Started,DisplayName - AutoSize -Wrap
+
+
+Filtering Objects:
+• The key to making the most of Windows PowerShell is to understand how objects and the pipeline wor together to let you retrieve exactly the information you need.
+• Each command in the pipeline generates one or more objects and passes them down the pipeline to the next command.
+• Integral to this process is the ability to filter the objects and their data as they pass from one command the next.
+• To that end, PowerShell includes a number of cmdlets that, in one way or another, let you create commands that refine your pipeline's output.
+Here we discuss five of those cmdlets-
+• Where-Object: Where-Object is one of the most commonly used cmdlets in PowerShell and probably the one most often used for filtering data. This cmdlet filters objects passed down the pipeline based on the search criteria you specify in a script block included with the cmdlet. In other words, the script block determines which objects are permitted to continue down the pipeline and which are not.
+• Select-Object: There might be times when you need to refine your results a bit differently from what the Where-Object cmdlet provides. That is where the Select-Object cmdlet comes in. Using this cmdlet, you can filter your results based on property names, a number of objects, or other criter For example, the statement pipes the Get-Process cmdlet's output to the Select-Object cmdlet and specific that only the ProcessName and CPU properties be returned.
+• Select-String: The Select-String cmdlet lets you move into new territory: You can use it to search an input string or a file's contents for a specific value. This cmdlet searches for text or text patterns within the target data and returns matching the content. It operates on a line-by-line basis, filtering out all lines that don't contain the specified string and returning those that do. In addition, the cmdlet lets you specify that nonmatching lines are returned instead of matching lines. You can even test for the existence of matches, without returning the actual data.
+• ForEach-Object: The ForEach-Object cmdlet in PowerShell is used to perform an operation on each item in a collection or pipeline. It allows you to iterate through a collection of objects and apply a script block to each item. This cmdlet is commonly used in pipelines to perform actions on individual items as they pass through. ForEach-Object iterates through each item in a collection or pipeline, applying a script block to perform customized actions on individual objects. Example: 1, 2, 3, 4 | ForEach-Object { $_ * 2 } multiplies each number by 2, yielding 2, 4, 6, 8.
+• Out-GridView: The last PowerShell cmdlet related to filtering that I want to demonstrate is the Out-GridView cmdlet. This cmdlet sends your output to a new window that displays your data in a grid. You can then filter the returned data however you want, without having to generate additional PowerShell commands. To open the grid window, you simply pipe your results to the Out-GridView cmdlet.
+
+Sending pipeline data as output:
+The Out-File cmdlet sends output to a file.
+You can use this cmdlet instead of the redirection operator (>) when you need to use its parameters.
+This command sends a list of processes on the computer to the Process.txt file. If the file does not exist, Out-File creates it.
+• The Out cmdlets do not format objects; they just render them and send them to the specified display destination.
+• If you send an unformatted object to an Out cmdlet, the cmdlet sends it to a formatting cmdlet before rendering it.
+• The Out cmdlets do not have parameters for names or file paths.
+• To send data to a cmdlet that contains the Out verb (an Out cmdlet), use a pipeline operator (|) to send the output of a PowerShell command to the cmdlet.
+• You can also store data in a variable and use the InputObject parameter to pass the data to the cmdlet
+
+Cmdlet:
+The cmdlets in a PowerShell perform an action and returns a Microsoft .NET framework object to the next command in the pipeline. Cmdlets can receive objects as input and can also output their results as objects, which makes them suitable for use as recipients in a pipeline.
+If you write a cmdlet, you must implement a cmdlet class which derives from one of two specialized cmdlet base classes. A derived class must:
+-Declare an attribute which identifies the derived class as a cmdlet.
+-Define the public properties which are decorated with the attributes that identify the public properties as parameters of a cmdlet.
+-To process records, it overrides one or more of the input processing methods.
+-An assembly can be loaded which contains the class directly by using an Import-Module cmdlet, or we can create a host application which loads the assembly by using a System.Management.Automation.Runspaces.Initialsessionstate API. Both methods provide programmatic and command-line access to cmdlet functionality.
+
+Cmdlets vs Command:
+A cmdlet or "Command let" is a lightweight command used in the Windows PowerShell environment. The Windows PowerShell runtime invokes these cmdlets at command prompt. You can create and invoke them programmatically through Windows PowerShell APIs.
+Cmdlets are way different from commands in other command-shell environments in the following manners −
+Cmdlets are .NET Framework class objects; and not just stand-alone executables.
+Cmdlets can be easily constructed from as few as a dozen lines of code.
+Parsing, error presentation, and output formatting are not handled by cmdlets. It is done by the Windows PowerShell runtime.
+Cmdlets process works on objects not on text stream and objects can be passed as output for pipelining.
+Cmdlets are record-based as they process a single object at a time.
+
+Uses/Needs/Importance of powershell:
+-It is both a scripting language and a command-line Shell.
+-It can interact with a different number of technologies.
+-Windows PowerShell allows complete access to all the types in the .NET framework.
+-PowerShell is object-based.
+-Many interfaces of GUI that Microsoft designed for its various products are front end interfaces to PowerShell.
+-It is more secure than running VBScript or other scripting languages.
+-It allows performing repetitive tasks more efficiently by combining multiple commands and by writing scripts. Suppose, a system administrator wants to create hundreds of active directory users, he can achieve this with the help of only some PowerShell cmdlets placed in a script.
+-Many complex and time-consuming configurations and tasks can be done in a second with simple cmdlets of PowerShell.
+
+Advantages of PowerShell:
+Following are the few benefits of a PowerShell:
+-It is easy to learn and implement.
+-It is an object-based scripting language.
+-It provides more functions as compared to VBScript and cmd.exe
+-PowerShell supports automation platform, which is also an important factor.
+-We can also execute a .NET code in PowerShell.
+-In PowerShell, there is no need to specify the "type" of a variable.
+-It is also interactive. It allows programmers to try first at a console and then work with more complicated scripts.
+-There is a concept of background jobs in PowerShell scripting.
+-It provides the feature of Reusability. The scripts which are written once to perform a particular task can be saved for later use. And can be merged with other scripts to perform various tasks. So, repetitive tasks can be performed to execute the tasks. It saves time and money of administrator in configuring the machines.
+
+Disadvantages of PowerShell:
+Following are the few disadvantages of PowerShell:
+-Framework: It requires .NET framework.
+-Object-based: With most shells, the text-based commands are used to get the work done while writing scripts. If a user switches to Windows PowerShell from some other type of shells, he will have to get used to a different way of thinking. Due to this, some users need more time to understand the PowerShell.
+-Security risks: Another drawback of using PowerShell is that it can create some potential security risks. Many professionals of IT use it as a way to connect remotely to other servers and computers. During this process, PowerShell can leave some holes open for security breaches. It is the major disadvantages of using PowerShell script.
+-Web Server: Another drawback of PowerShell is that it requires a user to run a web server on his server when utilizing remote functionality.
+
+Powershell features:
+1. Windows PowerShell Workflow: Workflow capabilities have been introduced in Windows PowerShell version 3.0. It is designed particularly to help us by performing long-time and effort-consuming complex tasks across different and multiple devices at different locations.
+2. Desired State Configuration: DSC is the feature of a Windows PowerShell which provides a collection of language extensions, resources, and cmdlets that can be used to configure the software declaratively.
+3. Background job: Windows PowerShell introduced the concept of background jobs that run scripts and cmdlets asynchronously on the remote and local machines in the background without affecting the user interface or interacting with the console.
+4. Scheduled job: It is similar to the background job. Both the jobs execute asynchronously in the background without affecting the interface, but the main difference is that the background jobs are started manually.
+5. Error-handling: Windows PowerShell provides the error-handling mechanism through the Try{ }, Catch { }, and Finally {} blocks as in .NET language.
+6. PowerShell remoting: This feature of Windows PowerShell allows the execution of cmdlets on remote systems which help to manage the set of remote computers from one single machine.
+7. Script debugging: It is a feature of PowerShell to examine the script, function, command, or expressions while PowerShell is running. PowerShell script debugger includes the set of cmdlets which allow to set and manage breakpoints and view the call stack.
+8. Tab expansion: Tab expansion is an implementation of auto-completion, which completes the cmdlets, properties, and parameter names by pressing the Tab key once.
+9. Steppable pipeline: This feature allows the splitting of script blocks into a steppable pipeline. And then it gives the option to call the begin(), process(), and end() methods of script block to control the execution sequence.
+10. Constrained runspaces: It allows the creation of PowerShell runspaces with the set of constraints which includes the ability to access and execution of scripts, cmdlets, and language elements.
+11. Windows PowerShell web access: PowerShell console introduced a web-based version in Windows Server 2012. Here, we can run PowerShell cmdlets from any web browser which is not available on desktops but also on any tablet or mobile devices.
+12. Network file transfer: This feature provides the native support for prioritized, and asynchronous transfer of files between the machines using BITS (Background Intelligent Transfer Service).
+13. Windows PowerShell Integrated Scripting Environment (ISE): It is the host GUI based application for the Windows PowerShell. This feature provides tab completion, multiline editing, syntax coloring, context-sensitive help, selective execution, and support for right-to-left languages.
+14. Transactions: This feature of Windows PowerShell enables us to start a transaction, to indicate which command is a part of it, and to either rollback or commit a transaction.
+
+PowerShell Comments:
+When you want to help others by providing the information about a code, then you must use the comments in that code.
+Just like other programming or scripting languages, you can give the comments in a PowerShell for the documentation purpose.
+In PowerShell, there are two types of comments:
+1) Single-line Comment - Single line comments are those comments in which you can type a hash symbol # at the beginning of each line. Everything to the right of the hash symbol will be ignored. If you write the multiple lines in a script, you had to use the hash # symbol at the starting of each line.
+2) Multiple-line comment or comment block - With PowerShell 2.0 or above, multiple line comments or block comments have been introduced. To comment the multiple lines, put the <# symbol at the beginning of the first line and #> symbol at the end of the last line.
+
+
+Command-Name and Description:
+Add-content: This cmdlet adds the content to the specified file.
+Add-Computer: This cmdlet adds the local computer to a domain or workgroup.
+Add-History: This cmdlet is used to add the command in the history.
+Add-jobTrigger: This cmdlet adds the job triggers to the scheduled jobs.
+Add-member: The cmdlet adds the custom methods or properties to an instance of a PowerShell object.
+Add-type: This cmdlet adds a Microsoft .NET framework class to a Windows PowerShell session.
+Clear-Content: This cmdlet deletes the content of a file, but not delete that file.
+Clear-History: This cmdlet deletes the entries from the command history.
+Clear-Item: This cmdlet clears the value of item or variable, but not clear that item or a variable.
+Clear-ItemProperty: This cmdlet clears the value of a property but not delete that property.
+Clear-Variable: This cmdlet deletes the value of a variable.
+Clear-Host: This cmdlet clears the display of the host program.
+Copy-ItemProperty: This cmdlet copies a value and property from a specified location to another location.
+Copy-Item: This cmdlet copies an item from one location to another.
+Complete-Transaction: This cmdlet commits the active transaction.
+Compare-object: This cmdlet compares two sets of objects.
+Disable-PSBreakpoint: This Cmdlet disables the breakpoint in the current console.
+Enable-PSBreakpoint: This Cmdlet enables the breakpoint in the current console.
+Find-package: This cmdlet finds the software packages in the available packages sources.
+Find-script: This cmdlet is used to find a script
+ForEach-Object: This cmdlet performs an operation on each item in a collection of input objects.
+Get-Alias: This cmdlet gets the aliases for the current session.
+Get-childItem: This cmdlet gets the item and the child items in one or more specified locations.
+Get-Command: This cmdlet is used to get all commands.
+Get-Content: This cmdlet gets the content of the file at the specified location.
+Get-Date: This cmdlet is used to get the current date and time.
+Get-ExecutionPolicy: This cmdlet gets the execution policy for the current session.
+Get-Help: This cmdlet displays information about PowerShell commands and concepts.
+Get-History: This cmdlet displays a list of commands which are entered during the current session.
+Get-host: This cmdlet gets an object which represents the current host program.
+Get-InstalledScript: This cmdlet gets a script which is installed for the current user.
+Get-Item: This cmdlet gets the item or a file at a particular location.
+Get-ItemProperty: This cmdlet gets the properties of a particular item.
+Get-Location: This cmdlet displays the current working location.
+Get-PSBreakpoint: This cmdlet gets the breakpoint which is set in the current session.
+Get-Package: This cmdlet displays the list of all installed packages by using the package management.
+Get-Process: This cmdlet gets the processes which are running on local or remote computers.
+Get-Service: This cmdlet gets the services on local or remote computers.
+Get-Transaction: This cmdlet gets the currently active transaction.
+Get-Variable: This cmdlet gets the variable in the current console.
+Install-package: This cmdlet is used to install one or more software packages.
+Install-script: This cmdlet is used to install a script.
+Invoke-commands: This cmdlet executes commands on local and remote computers.
+Move-Item: This cmdlet is used to move an item from one location to another.
+Move-ItemProperty: This cmdlet is used to move the property of an item from one location to another.
+New-alias: This cmdlet creates a new alias.
+New-Item: This cmdlet creates a new item.
+New-ItemProperty: This cmdlet creates a new property for an item and sets its value.
+New-Service: This cmdlet creates a new Window service.
+New-variable: This cmdlet creates a new variable.
+Read-Host: This cmdlet reads a line of inputs from the console.
+Remove-computer: This cmdlet removes a local computer from its domain.
+Remove-Item: This cmdlet deletes the particular item.
+Remove-ItemProperty: This cmdlet deletes the property & its value from an item.
+Remove-job: This cmdlet removes the background job of Windows PowerShell.
+Remove-PSBreakpoint: This cmdlet deletes the breakpoint from the current console.
+Remove-variable: This cmdlet deletes a variable with its value.
+Rename-computer: This cmdlet is used to rename a computer.
+Restart-Service: This cmdlet stops and starts one or more services.
+Restart-computer: This cmdlet is used to restart the Windows operating system on local and remote computers.
+Resume-job: This cmdlet is used to restart a suspended job.
+Save-Help: It is used to download and save the newest help files to a file system directory.
+Save-packages: This cmdlet is used to save the packages to the local computer without installing them.
+Save-Script: This cmdlet is used to save a script.
+Select-string: This cmdlet is used to find the text in string or files.
+Send-MailMessage: This cmdlet is used to send an e-mail message.
+Set-Alias: This cmdlet creates or changes the alias for a cmdlet in the current Windows PowerShell.
+Set-content: This cmdlet writes the content in a file.
+Set-Date: This cmdlet changes the time of the system.
+Set-Item: This cmdlet changes the value of an item to the value specified in the command.
+Set-ItemProperty: This cmdlet change or creates the value of the property of an item.
+Set-Location: This cmdlet is used to set the current working location to a particular location.
+Set-PSBreakpoint: This cmdlet sets a breakpoint on a command, line or a variable.
+Set-ScheduledJob: This cmdlet changes the scheduled Job.
+Set-Service: This cmdlet stops, start and suspend services, and changes its properties.
+Set-variable: This cmdlet sets the value of the variable.
+Show-command: This cmdlet creates the Windows PowerShell commands in a graphical command Window.
+Sort-Object: This cmdlet sorts the object by the property value.
+Start-Job: This cmdlet starts a background job of Windows PowerShell.
+Start-Process: This cmdlet starts on or more process on a local computer.
+Start-services: This cmdlet starts one or more services which are stopped.
+Start-transaction: This cmdlet starts a transaction.
+Stop-Computer: This cmdlet shut down the local and remote computers.
+Stop-Job: This cmdlet stops a background job of Windows PowerShell.
+Stop-Process: This cmdlet stops one or more processes.
+Stop-Services: This cmdlet stops one or more running services.
+Suspend-jobs: This cmdlet temporarily stops the workflow jobs.
+Suspend-Service: This cmdlet suspends or pauses one or more running services.
+Undo-transaction: This cmdlet rollbacks the active transaction.
+Uninstall-module: This cmdlet is used to uninstall a module.
+Uninstall-Package: This cmdlet uninstalls one or more packages of software.
+Unregister-ScheduledJob: This cmdlet deletes the scheduled jobs on the local computer
+Update-Help: This cmdlet is used to download and installs the newest help files on the computer.
+Write-Output: This cmdlet sends the particular object down the pipeline to the next command.
