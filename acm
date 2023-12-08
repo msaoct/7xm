@@ -845,7 +845,89 @@ Get-PSDrive -PSProvider FileSystem
 To view the Windows PowerShell that represent registry hives, use the PSProvider parameter to display only the Windows PowerShell that are supported by the Windows PowerShell Registry
 Get-PSDrive -PSProvider
 
--------------------------------------------
+Test Connectivity Between Two Computers
+As a command-line shell, PowerShell, of course, continues to support traditional command-line utilities.
+Ping.exe is one of the most common network diagnostic tools, and it works as expected from PowerShell.
+The Test-Connection cmdlet offers the same features as ping.exe plus a great deal of additional functionality.
+Most ping utilities let you verify the connection between the current computer and a target computer, but the Test-Connection cmdlet lets you also specify the source computer for the network test.
+Using test-connection:
+> Test-Connection inurture.co.in
+Using ping.exe
+> ping inurture.co.in
+
+Powershell Remoting:
+PowerShell’s support for local and interactive computer automation makes it an incredibly attractive platform for computer management and administration.
+Its rich, object-flavoured perspective takes even the simplest of management tasks to the next level.
+In version one, local administration was essentially the limit of where PowerShell applied its unique perspective.
+It supported interaction with traditional remoting technologies (SSH, FTP, Telnet, PsExec, and more), its support was no different than that offered by any other shell.
+In version two, the PowerShell and Windows Remote Management (WinRM) teams worked together closely to create a combined release known as the Windows Management Framework.
+Designing a rich remoting experience was one of the top focus of their collaboration. Starting with standard interactive remoting, PowerShell lets you easily connect to a remote system and work with it one to one.
+If you want to import the commands from that remote system (but still have them run on the remote system), implicit remoting often lets you forget you are managing a remote system altogether.
+Expanding on interactive and implicit remoting, large-scale fan-out remoting is a natural next step.
+Fan-out remoting let you manage many computers at a time in a bulk, command-based approach.
+As with the rest of PowerShell, fan-out remoting offers a unique, object-focused treatment that elevates its experience past plain-text-based approaches.
+
+Windows PowerShell Remoting Without Configuration:
+Many Windows PowerShell cmdlets have the ComputerName parameter that enables you to collect data and change settings on one or more remote computers. These cmdlets use varying communication protocols and work on all Windows operating systems without any special configuration.
+These cmdlets include:
+• Restart-Computer
+• Test-Connection
+• Clear-EventLog
+• Get-EventLog
+• Get-HotFix
+• Get-Process
+• Get-Service
+• Set-Service
+• Get-WinEvent
+• Get-WmiObject
+Typically, cmdlets that support remoting without special configuration have the ComputerName parameter and do not have the Session parameter. To find these cmdlets in your session, type:
+> Get-Command where { §_.parameters.keys -contains "ComputerName" -and $_ parameters.keys -notcontains "Session"}
+
+Enable PowerShell Remoting on a Computer:
+With the combined release of PowerShell and WS-Management (WSMan) into the Windows Management Framework, we’ve heard the occasional question about whether it’s possible to install them independently. This concern is usually focused on security.
+Security is a natural concern with any technology that supports network connections, and it is something that both teams took very seriously.
+As a background, Windows Remote Management (WinRM) has been part of the operating system since
+Windows Vista and Server 2008. WinRM does not listen to network connections by default, and it must be explicitly activated.
+Both PowerShell and WinRM advanced greatly during the release of version two—most notably by working together to support a rich PowerShell-based remoting experience.
+The Windows Management Framework download (PowerShell + WinRM) simply updates the binaries on supported operating systems to bring them up to the same version already included in Windows 7 and Windows Server 2008 R2.
+Investigating this concern further, it usually comes down to worries about increased network attack surface through automatically opening a network port to accept incoming connections.
+Installing the Windows Management Framework does not enable any networking features automatically.
+“Secure by Default” is a guiding principle of Windows Management Framework, and of Microsoft as a whole.
+To help you manage your network exposure, PowerShell Remoting must be explicitly enabled by an administrator of the machine.
+PowerShell Remoting does not require any specific configuration to let you connect to a remote computer, but it does require a configuration step to allow connections from remote computers.
+
+Enabling remoting on the local computer:
+To enable PowerShell remoting on a single machine, you can log on to this computer locally or via Remote Desktop and then execute Enable-PSRemoting at a PowerShell prompt with administrator rights. To avoid the confirmation prompts, you can use the -Force parameter:
+> Enable-PSRemoting -Force
+If the computer's current connection type is set to public, the above command will produce an error message because by default PowerShell remoting is only enabled for private and domain connection types.
+To avoid the error message and enable PowerShell remoting on a public network, you can use the -SkipNetworkProfileCheck parameter:
+> Enable-PSRemoting -Force -SkipNetworkProfileCheck
+If you try to enable PowerShell remoting on a PowerShell console with Enable-PSRemoting -Force, you will sometimes receive the error message below:
+'WinRM firewall exception will not work'.
+Set-WSManQuickConfig : WinRM firewall exception will not work since one of the network connection types on this machine is set to Public. Change the network connection type to either Domain or Private and try again.
+The reason is that the computer will allow connections with other devices in the same network if the network connection type is Public.
+Microsoft considers it as a security risk if you enable PowerShell remoting in a Public network.
+You can verify your current connection type settings in the Control Panel: Control Panel\Network and Internet\Network and Sharing Centre
+You can also check your profile settings with the PowerShell cmdlet Get-NetConnectionProfile. The NetworkCategory property corresponds to the network connection type.
+> Get-NetConnectionProfile
+This problem can even occur if your computer is an Active Directory member.
+If you've previously signed on to the member machine, Windows will cache your credentials, and you can log on without an available domain controller.
+In that case, Windows will automatically set your connection type to Public.
+If a domain controller has authenticated you, it will set the network category to DomainAuthenticated:
+'Skipping the network profile check'.
+In this case, PowerShell won't throw an error if you enable remoting. However, if a domain controller hasn't authenticated your computer, you have two options.
+With the SkipNetworkProfileCheck parameter, you can just ignore the warning.
+The Force parameter avoids the confirmation prompt.
+Skipping the network profile check:
+> Enable-PSRemoting -Force -SkipNetworkProfileCheck
+Changing the network connection type with PowerShell:
+However, this option poses a security risk because Windows enables network discovery features for your computer. Thus, it is better to change the connection type manually to Private:
+> Set-NetConnectionProfile -NetworkCategory Private
+> Get-NetConnectionProfile
+Changing the network connection type with PowerShell:
+Notice that you cannot set the NetworkCategory property to DomainAuthenticated. If you try, PowerShell will return an error:
+Set-NetConnectionProfile: Unable to set NetworkCategory to 'DomainAuthenticated'.This NetworkCategory type will be set automatically when authenticated to a domain network.
+Notice that if your computer is not a domain member, you have to consider a few other things if you enable PowerShell Remoting.
 
 Enable remoting on a single local machine:
 • With the combined release of Windows PowerShell and WS-Management (WSMan) into the Windows Management Framework, we’ve heard the occasional question about whether it’s possible to install them independently.
