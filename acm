@@ -218,6 +218,21 @@ In PowerShell, there are two types of comments:
 1) Single-line Comment - Single line comments are those comments in which you can type a hash symbol # at the beginning of each line. Everything to the right of the hash symbol will be ignored. If you write the multiple lines in a script, you had to use the hash # symbol at the starting of each line.
 2) Multiple-line comment or comment block - With PowerShell 2.0 or above, multiple line comments or block comments have been introduced. To comment the multiple lines, put the <# symbol at the beginning of the first line and #> symbol at the end of the last line.
 
+Function of $input Variable:
+Input Handling: $input is an automatic variable in PowerShell that represents the input to a function or script.
+Iterative Processing: It allows access to input data, making it useful for processing items within a loop or pipeline.
+Enumerator: $input acts as an enumerator, facilitating the handling of input streams.
+
+Rename a Variable in PowerShell:
+Set-Variable Cmdlet: Use Set-Variable cmdlet to change the name of a variable.
+Example: $oldName = 'Original'; Set-Variable -Name 'NewName' -Value $oldName
+Note: Directly assigning a new name is not supported.
+
+Difference between Function and Advanced Function:
+Parameters: Advanced functions support parameter attributes like [Parameter()] for enhanced parameter control.
+Cmdlet Binding: Advanced functions support cmdlet binding, making them behave more like cmdlets.
+Common Parameters: Advanced functions automatically support common parameters like -Verbose, -Debug, etc.
+ScriptBlock: Both functions and advanced functions use a script block to define their behavior.
 
 Navigation in Powershell:
 A nice thing about PowerShell is you always know where you are because it tells you in the prompt.
@@ -443,6 +458,21 @@ For example, we can use the pipeline to:
 -Get the contents of a website, and then extract all the links.
 -Convert a video file to a different format, and then compress it.
 
+Making up of Variables in powershell:
+Name: Starts with $, alphanumeric and some special characters.
+Data type: String, integer, decimal, boolean, array, hashtable, object.
+Scope: Global, script, local.
+Value: Actual data stored.
+Special: Predefined variables start with _.
+Preference: Control PowerShell behavior.
+PowerShell variables are containers that store data. They can be used to store any type of data, including strings, integers, arrays, and objects. Variables are named using the dollar sign ($) followed by the variable name. For example, the following code creates a variable called $name and assigns it the value "John Doe":
+$name = "John Doe"
+To access the value of a variable, you simply use the variable name. For example, the following code prints the value of the $name variable to the console:
+Write-Host $name
+Variables can also be used in expressions. For example, the following code creates a variable called $age and assigns it the value 30. It then uses the $age variable in an expression to calculate the person's retirement age:
+$age = 30
+$retirementAge = $age + 65
+Variables can be used to store data that is needed throughout a script. They can also be used to pass data between different scripts. Variables are a powerful tool that can make your PowerShell scripts more efficient and easier to read.
 
 PowerShell Operators:
 1. Arithmetic Operators:
@@ -509,7 +539,6 @@ The significance of brackets in PowerShell is that they allow you to control the
 -Array Declaration: Brackets @() represent arrays in PowerShell.
 -Hashtable Declaration: Curly braces {} define hashtables for key-value pairs.
 
-
 Working with PSDrives:
 Windows PowerShell uses the noun, PSDrive, for commands that work with Windows PowerShell. For a list of the Windows PowerShell in your Windows PowerShell session, use the Get- PSDrive cmdlet.
 File system drives are a subset of the Windows PowerShell. You can identify the file system drives by the Filesystem entry in the Provider column.
@@ -544,7 +573,427 @@ Enable remoting on a single local machine:
 $regkey = "HKLM:\SYSTEM CurrentControlSet Control Terminal Server"
 Set-ItemProperty §regkey fDenyISConnections 0
 
+
+Create New Registry Keys:
+• As the configuration store for the vast majority of applications, the registry plays a central role in system administration.
+• It is also generally hard to manage.
+• Although command-line tools (such as reg.exe) exist to help you work with the registry, their interfaces are usually inconsistent and confusing.
+• The Registry Editor graphical user interface is easy to use, but it does not support scripted administration.
+• Windows PowerShell tackles this problem by exposing the Windows Registry as a navigation provider: a data source that you navigate and manage in exactly the same way that you work with the filesystem.
+• Windows PowerShell lets you navigate the Windows Registry in exactly the same way that you navigate the filesystem, certificate drives, and other navigation-based providers.
+• Like these other providers, the registry provider supports the Set-Location cmdlet (with the standard aliases of sl, cd, and chdir), Push-Location (with the standard alias pushd), Pop-Location (with the standard alias popd), and more.
+• Use the Set-Location cmdlet to navigate the registry, just as you would navigate the filesystem.
+• When working in the registry, you might sometimes want to chain a set of related changes and be sure that they all get applied as a single unit.
+• These are goals known as atomicity and consistency: the desire to avoid situations where an error during any step of the operation could cause an inconsistent system state if the other operations are not also successful.
+• To support this type of management task, Windows PowerShell supports a change management strategy known as transactions.
+• On Windows Vista and later, Windows PowerShell’s registry provider fully supports transactions.
+• When you start a transaction, any commands in that transaction are virtual and don’t actually apply to the system until you complete the transaction.
+• Within the context of the transaction, though, each participating command sees the system as though the state really had changed.
+• Once you complete a transaction, changes are applied as a single unit.
+• Some systems that support transactions (such as databases) put locks on any resources that are being changed by a transaction.
+• If another user tries to modify the locked resources, the user gets an error message.
+• This is not supported in the Windows Registry.
+• If something alters a resource that your transaction depends on, the changes contained in your transaction will be abandoned, and you will receive an error message when you try to complete that transaction.
+
+
+Active Directory Management:
+• Every IT Administrator faces a number of Active Directory Management challenges which includes managing user accounts in Active Directory almost every day.
+• Configuring user properties manually is extremely time-consuming, tiresome, and error-prone, especially in a large, complex Windows network.
+• Active Directory administrators and IT managers mostly have to perform repetitive and mundane tasks which often end up eroding into their productive or free times.
+• Moreover, accomplishing these tasks using the native tools or Windows PowerShell also demands a deeper knowledge in Active Directory Management, and related technologies are not trouble or complexity free by any means.
+• Software that can automate these cumbersome tasks, simplify AD management and provide exhaustive reports on tasks done and their status, is the need of the hour.
+• AD Manager Plus is one simple, hassle-free web-based solution for all Active Directory Management challenges, safe with secure authentication and performs all actions with just mouse clicks.
+• This Active Directory management tool allows administrators to design templates to manage all Active Directory account creation and modification processes.
+• Moreover, through its web-interface, this AD management software offers administrators an absolute control over their Active Directory environment.
+• Keep in mind that in order to use these Windows PowerShell scripts, you must import the module for interacting with AD — the Active Directory Module for Microsoft Windows PowerShell.
+• This module was introduced in Windows Server 2008 R2 and is enabled by default in Windows Server 2012 and later. You can get the full list of AD module cmdlets by running the following command: Get-Command -Module ActiveDirectory -Name "*Group*"
+• To create an AD group, use the New- ADGroup cmdlet. You can get its syntax by running the following command: Get-Command New-ADGroup -Syntax
+• The system will ask you to specify the “GroupScope” parameter, and then it will create a new group.
+However, this group will have default values, such as:
+-It will be created in the default LDAP container called “Users”.
+-It will have the “Security” group type.
+-The members, member of, description, email and notes fields will all be blank.
+
+
+WMI (Windows Management Instrumentation):
+WMI is a Microsoft technology that provides a standardized way for Windows operating systems to expose management information.
+It is Microsoft's implementation of the Web-Based Enterprise Management (WBEM) standard.
+WMI has been available on Windows operating systems since Windows NT 4.0.
+
+CIM (Common Information Model):
+CIM is a specification defined by the Distributed Management Task Force (DMTF) that describes computer hardware and software components.
+It is part of a larger systems-management framework called Web-Based Enterprise Management (WBEM).
+CIM is based on open, cross-platform standards.
+
+WMI and CIM History:
+WMI:
+WMI has been part of Windows operating systems since Windows NT 4.0.
+It is Microsoft's long-standing approach to management information.
+CIM:
+CIM is a newer technology that is based on open, cross-platform standards.
+It is part of the Web-Based Enterprise Management (WBEM) framework.
+
+WMI and CIM Characteristics:
+WMI:
+-Microsoft's implementation of WBEM.
+-Based on preliminary standards and proprietary technology.
+-Has been available on Windows operating systems since Windows NT 4.0.
+-Uses DCOM for ad-hoc connections.
+CIM:
+-Based on open, cross-platform standards.
+-Forms part of the larger WBEM framework.
+-Supports various types of connections, including DCOM and WS-MAN.
+
+WMI and CIM Cmdlets:
+WMI Cmdlets:
+-Used for ad-hoc connections over DCOM.
+-Communicate with the WMI service.
+-Necessary when PowerShell remoting is not enabled.
+-Considered legacy, and Microsoft is deprecating them in favor of CIM cmdlets.
+-Examples: Get-WmiObject, Set-WmiInstance, Invoke-WmiMethod, etc.
+CIM Cmdlets:
+-Provide cross-platform and cross-version capabilities.
+-Support local and remote connections using DCOM or WS-MAN.
+-Leaner, meaner, and more modern compared to WMI commands.
+-Recommended for use over WMI commands.
+-Examples: Get-CimInstance, Set-CimInstance, Invoke-CimMethod, etc.
+
+WMI and CIM Commands:
+WMI Commands:
+-Support only ad-hoc connections over DCOM.
+-Communicate with the WMI service.
+-Used when PowerShell remoting is not enabled or in legacy environments.
+CIM Commands:
+-Support local connections using DCOM.
+-Support ad-hoc connections to remote computers using WS-MAN.
+-Support session-based connections to remote computers using DCOM or WS-MAN.
+-Modern and recommended for use.
+
+WMI vs CIM:
+-WMI is Microsoft's specific implementation of the WBEM standard.
+-CIM is a broader specification that is not tied to a specific vendor and is based on open standards.
+-WMI commands are specific to Microsoft and may not be as cross-platform as CIM commands.
+-CIM is more modern, supports open standards, and is recommended for use over WMI.
+
+WMI Commands vs CIM Commands:
+-WMI commands are legacy and are being deprecated by Microsoft.
+-CIM commands are more modern, support cross-platform capabilities, and are recommended for use.
+-WMI commands are necessary only in specific cases, such as when PowerShell remoting is not enabled or in legacy environments.
+
+There are 3 types of connections possible with CIM:
+-Connection to local Computer using DCOM.
+-Ad hoc connection to a remote computer using WS-MAN
+-Session-based connection to a remote computer using DCOM or WS-MAN
+
+Use CIM commands in two ways:
+• The first way requires the remote computer to have WinRM installed and enabled.
+• The second way to use CIM commands is to use the earlier WMI technology for CIM commands.
+
+Windows PowerShell WS-Man remoting brings these possibilities:
+• HTTP/HTTPS transport and XML serialised data streams make the remote access extremely firewall-friendly.
+• WS-Man remoting is stateless, which means faster performance than with the older DCOM/RPC methods.
+• Remote computers are queried in parallel, in what Microsoft calls a "fan out" remote management scenario.
+
+Querying WMI:
+• One of the main tools of Windows Management Instrumentation (WMI) is the ability to query the WMI repository for class and instance information.
+• For example, you can request that WMI return all the objects representing shut-down events from your desktop system.
+• You can also retrieve class, instance, or schema data. The following table lists the different types of queries you can make.
+Invoking a Synchronous Query:
+• Describes how to maintain a link with WMI throughout the query process.
+• Synchronous queries are good for small queries or queries to a local system.
+Invoking an Asynchronous Query:
+• Describes how to set up a separate process to receive queries.
+• Asynchronous queries are more complex and provide a lower level of security, but generally, improve system performance.
+
+Powershell array:
+PowerShell arrays are a data structure that allows you to store a collection of items in a single variable. The items in an array can be of the same type or different types. An item can be a string, an integer, an object, or even another array. Each element or value in an array has an index.
+Arrays are a fundamental part of PowerShell, or any programming language because they allow you to store and structure a collection of items into a single variable. We can then use the array to perform a wide range of tasks on each of the items in the array.
+To create an array, you use the New-Object cmdlet. The syntax is:
+New-Object -TypeName <type> -ArgumentList <list of arguments>
+For example, to create an array of 10 integers, you would use the following command:
+New-Object -TypeName Integer -ArgumentList 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+To access an element in an array, you use the index. The index starts at 0, so the first element in an array is at index 0. For example, to access the first element in the array above, you would use the following command:
+$array
+To iterate over an array, you can use a for loop. For example, the following code will print all of the elements in the array above:
+For ($i = 0; $i -lt $array.Count; $i++) {
+Write-Host $array[$i]
+}
+Arrays can be used to store a lot of data, and they can be very useful for performing tasks on large amounts of data.
+
+Jagged and multidimensional arrays:
+• Jagged and multidimensional arrays are useful for holding lists of lists and arrays of arrays.
+• Jagged arrays are arrays of arrays, where each array has only as many elements as it needs.
+• A nonjagged array is more like a grid or matrix, where every array needs to be the same size.
+• Jagged arrays are much easier to work with (and use less memory), but nonjagged multidimensional arrays are sometimes useful for dealing with large grids of data.
+• Since a jagged array is an array of arrays, creating an item in a jagged array follows the same rules as creating an item in a regular array.
+• If any of the arrays are single-element arrays, use the unary comma operator.
+• To create an array of arrays (a jagged array), use the @() array syntax: $jagged = @((1,2,3,4),(5,6,7,8))
+• To create a (nonjagged) multidimensional array, use the New-Object cmdlet: $multidimensional = New-Object "int32[,]" 2,4
+
+Access Elements of an Array in powershell:
+To access elements of an array in PowerShell, you can use the index. The index of the array usually starts at 0, so to access the first element you must use the index.
+For example, if you have an array called $array that contains the values 1,22,33,66,88,99, then you can access the first element of the array by typing the following command on the PowerShell:
+$array[0]
+This will return the value 1.
+
+Sort an array or list of items in powershell:
+To sort an array or list of items in PowerShell, you can use the Sort-Object cmdlet. The syntax is:
+Sort-Object [-Property <property1> [<property2> ...]] [-Descending] [-Unique]
+The -Property parameter specifies the property or properties you want to sort by. The -Descending switch specifies whether you want to sort the data in descending order. The -Unique switch removes duplicate items from the result.
+For example, to sort the items in the array $array by the Name property in ascending order, you would use the following command:
+$array | Sort-Object -Property Name
+To sort the items in the array $array by the Name property in descending order, you would use the following command:
+$array | Sort-Object -Property Name -Descending
+To sort the items in the array $array by the Name property and remove duplicate items, you would use the following command:
+$array | Sort-Object -Property Name -Unique
+
+Combine two arrays:
+• To combine two arrays, Windows PowerShell creates a new array large enough to hold the contents of both arrays and then copies both arrays into the destination array.
+• If you plan to add and remove data from an array frequently, the System.Collections.ArrayList class provides a more dynamic alternative.
+• To combine Windows PowerShell arrays, use the addition operator (+).
+
+Hashtables in PowerShell:
+In PowerShell, a hashtable is a collection of key-value pairs, where each key is unique within the hashtable. It allows you to store and retrieve values based on their associated keys, providing a convenient way to organize and access data. Hashtables are created using the @{} syntax in PowerShell and are often used for tasks such as configuration settings, mapping, or quick data lookups.
+# Example of a Hashtable
+$myHashtable = @{
+    Key1 = 'Value1'
+    Key2 = 'Value2'
+    Key3 = 'Value3'
+    # ... additional key-value pairs
+}
+Sorting a Hashtable by Key or Value:
+To sort a hashtable in PowerShell, you can use the GetEnumerator() method to retrieve the key-value pairs and then use the Sort-Object cmdlet to sort them based on either the keys or values.
+Sorting by Key:
+$sortedHashtableByKey = $myHashtable.GetEnumerator() | Sort-Object Key
+# Displaying the sorted hashtable
+$sortedHashtableByKey | ForEach-Object { Write-Output "$($_.Key): $($_.Value)" }
+Sorting by Value:
+$sortedHashtableByValue = $myHashtable.GetEnumerator() | Sort-Object Value
+# Displaying the sorted hashtable
+$sortedHashtableByValue | ForEach-Object { Write-Output "$($_.Key): $($_.Value)" }
+
+The different ways that PowerShell uses to ‘Select’:
+a. Select * from
+b. Select-String
+c. Select Object
+
+Windows PowerShell Jobs:
+Overview:
+Windows PowerShell jobs enable the execution of commands in the background, allowing concurrent task handling.
+Initiate a new job with the Start-Job cmdlet, encapsulating the command in a script block. Jobs are sequentially named (e.g., Job1, Job2).
+Jobs receive sequential IDs, starting with 1, and can be referenced by either ID or name (e.g., Get-Job -Id 3).
+Job Management:
+Upon completion, retrieve job results using the Receive-Job cmdlet. Use a variable or include the -Keep switch to retain data.
+Best practice: use Remove-Job to clear completed jobs, avoiding confusion between active, completed, and pending jobs.
+Removed jobs are inaccessible; attempting retrieval triggers an error with Get-Job.
+Naming Conventions:
+Assign meaningful names to jobs (e.g., getProc for a job returning process objects). Contextual names enhance clarity.
+Utilize wildcard characters for flexibility in typing lengthy job names.
+Working with Job Results:
+When receiving job output, store it in a variable for further use with other PowerShell cmdlets.
+Note: retrieved objects are deserialized; use Get-Member (gm) to inspect available methods.
+Cmdlets and Noun "Job":
+List all cmdlets with the noun "job" using Get-Command -Noun job | Select-Object Name.
+Keep in mind that data retrieved with Receive-Job is consumed, and attempting a second retrieval will result in an error.
+Example Cleanup:
+After using Receive-Job, handle any errors using the job object stored in a variable (e.g., $rtn) or the Get-Net6to4Configuration job.
+Conclusion:
+Windows PowerShell jobs offer parallel execution, efficient multitasking, and streamlined job management.
+Adopting proper naming conventions, utilizing wildcard characters, and managing job remnants enhance script readability and maintainability.
+
+Starting and managing jobs in powershell:
+Start-Job: Starts a background job on the local or remote computer.
+Get-Job: Retrieves information about running background jobs.
+Receive-Job: Outputs the results of a completed or stopped job.
+Wait-Job: Waits for a specific job to finish before continuing.
+
+Creating a scheduled job in powershell:
+New-JobTrigger: Creates a scheduled trigger for a job.
+Register-ScheduledJob: Registers a job with the Windows Task Scheduler.
+Use Get-ScheduledJob, Enable-ScheduledJob, Disable-ScheduledJob, and Remove-ScheduledJob for managing scheduled jobs.
+Trigger types: Time-based, event-based (e.g., logon), manual trigger.
+
+NTFS Persmissions:
+• There are both basic and advanced NTFS permissions. You can set each of the permissions to “Allow” or “Deny”. Here are the basic permissions:
+• Full Control: Users can modify, add, move and delete files and directories, as well as their associated properties. In addition, users can change permissions settings for all files and subdirectories.
+• Modify: Users can view and modify files and file properties, including deleting and adding files to a directory or file properties to a file.
+• Read and Execute: Users can run executable files, including script.
+• Read: Users can view files, file properties and directories.
+• Write: Users can write to a file and add files to directories
+
+Configuring NTFS permissions: 
+Many organisations with a Microsoft Windows environment rely on NTFS as the main file system for their storage devices that contain sensitive data. It is the easiest way for users to work with files. In order to implement a least-privilege model, which is a best practice for system security, IT security specialists and system administrators configure NTFS access control lists (ACLs) by adding access control entries (ACEs) on NTFS file servers.
+NTFS permissions can be either explicit or inherited. Explicit permissions are permissions that are configured individually, while inherited permissions are inherited from the parent folder. The hierarchy for permissions is as follows:
+• Explicit Deny
+• Explicit Allow
+• Inherited Deny
+• Inherited Allow
+Now, that we know NTFS permissions are, let’s explore how to manage them.
+The first PowerShell cmdlet used to manage file and folder permissions is “get-acl”; It lists all object permissions.
+get-acl C:\Users\niks\Desktop\Crack | f1
+-Copy File and Folder Permissions:
+To copy permissions, a user must own both the source and target folders.
+The following command will copy the permissions from the “Crack” folder to the “niks” folder:
+get-acl C:lUsers\niks\Desktop\Crack | Set-Acl C:\Users\niks\Desktop\niks
+get-acl C:\Users\niks\Desktop\niks | f1
+-Set File and Folder Permissions:
+• The PowerShell “set-acl” cmdlet is used to change the security descriptor of a specified item, such as a file, folder or a registry key;
+• In other words, it is used to modify file or folder permissions.
+• The following script sets the “FullControl” permission to “Allow” for the user “DESKTOP-9QLDK2P\niks” to the folder “niks”:
+PS C: \WINDOWS\system32> $acl = get-acl C: \Users\niks\Desktop\Crack
+PS C: \WINDOWS\system32> $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("DESKTOP-9QLDK2P\niks", "FullControl", "Deny")
+PS C: \WINDOWS\system32> $acl.SetAccessRule($AccessRule)
+PS C: \WINDOWS\system32> $acl | Set-Acl C: \Users\niks\Desktop\Crack
+PS C: \WINDOWS\system32> get-acl C:\Users\niks\Desktop\Crack | f1
+
+Profiles in PowerShell:
+In Windows PowerShell ISE (Integrated Scripting Environment), profiles are scripts that automatically run when the PowerShell ISE starts. These scripts can be used to customize the environment, load specific modules, define functions, or perform other tasks to set up your PowerShell environment according to your preferences.
+PowerShell profiles are powerful tools that allow you to customize your environment and automate tasks every time you start a new PowerShell session. 
+They are essentially scripts that run automatically when PowerShell launches, providing a way to:
+Set variables and aliases: You can define your commonly used variables and aliases in your profile, making them available in every session without needing to redefine them each time.
+Import modules: Frequently used modules can be imported in your profile, saving you the time of importing them manually in each session.
+Change the look and feel: You can customize the appearance of your console, including font size, colors, and prompt settings.
+Load scripts: You can load scripts that automate repetitive tasks or configure your environment automatically.
+There are six different types of profiles in PowerShell:
+CurrentUserCurrentHost: This profile is specific to the current user and current host. It is the most commonly used profile. $profile.CurrentUserCurrentHost.
+AllUsersCurrentHost: This profile applies to all users on the current host. $profile.AllUsersCurrentHost.
+CurrentUserAllHosts: This profile applies to the current user on all hosts. $profile.CurrentUserAllHosts.
+AllUsersAllHosts: This profile applies to all users on all hosts. $profile.AllUsersAllHosts.
+Microsoft.PowerShell: This profile is used specifically by the PowerShell engine and should not be modified manually.
+Microsoft.PowerShellISE: This profile applies to the PowerShell ISE and is used to customize the ISE environment.
+Here are some of the benefits of using profiles:
+Increased efficiency: By automating tasks and making commonly used elements readily available, profiles can save you time and improve your workflow.
+Consistency: Profiles ensure that your environment is always configured the way you want it, regardless of which machine you are using.
+Reduced errors: By having your environment preconfigured, you can avoid typos and other errors that can occur when setting up your environment manually.
+
+3 Methods to Validate IP Addresses in PowerShell:
+1. Splitting the IP Address Octets and Typecasting to [Byte]:
+Split the string by "." into four octets.
+Check if the length is exactly four.
+For each octet, convert it to a byte using [byte] type cast and validate if it's between 0 and 255.
+If all octets are valid, the IP address is valid.
+2. Using a Regular Expression:
+Use a regular expression like ^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$ to match valid IP address format.
+This regex ensures each octet has 1 to 3 digits and is separated by dots.
+If the string matches the regex, the IP address is valid.
+3. Type Cast to [System.Net.IPAddress] Class:
+Use the [System.Net.IPAddress].TryParse() method.
+This method attempts to convert the string to a valid IP address object.
+If the conversion is successful, the IP address is valid.
+
+Disable or Enable Permissions Inheritance:
+• To manage an inheritance, we use the “SetAccessRuleProtection” method. It has two parameters:
+• The first parameter is responsible for blocking inheritance from the parent folder.
+• It has two states: “$true” and “$false”.
+• The second parameter determines whether the current inherited permissions are retained or removed.
+• It has the same two states: “$true” and “$false”.
+• Let us disable inheritance for the “Sales” folder and delete all inherited permissions as well:
+
+Location of PowerShell in SharePoint:
+PowerShell modules related to SharePoint are typically found in the SharePoint Management Shell.
+The executable is often located in the SharePoint Hive folder, e.g., C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\CONFIG\POWERSHELL\Registration\SharePoint.ps1
+
+Differences between $Other_Language and PowerShell:
+Syntax: PowerShell uses a verb-noun syntax for cmdlets (Get-Process), while other languages may have different syntax conventions.
+Object-Oriented: PowerShell treats data as objects, providing rich manipulation capabilities, whereas some languages may use different data structures.
+
+Difference between Concerto-CSV and Export-CSV Commands:
+There is no recognized command called "Concerto-CSV" in PowerShell.
+Export-CSV is a valid cmdlet that exports data to a CSV file.
+
+Checking Default Path for PowerShell Modules:
+Use $env:PSModulePath to check the default paths for PowerShell modules.
+Example: $env:PSModulePath -split ';'
+
+Updating Help on Servers without Internet Access:
+Use the Update-Help cmdlet with the -SourcePath parameter.
+Example: Update-Help -SourcePath "C:\Path\To\HelpFiles"
+
+Two Methods for Pipeline Input:
+ByValue: Objects are passed down the pipeline by value.
+ByPropertyName: Objects are passed down the pipeline based on matching property names.
+
+How does Remoting Work:
+Remoting in PowerShell uses protocols like WS-Man or SSH to establish a secure connection between computers.
+It involves creating a session on the remote machine and executing commands or scripts within that session.
+
+Is PowerShell Remoting Secure:
+Yes, PowerShell remoting is designed with security in mind.
+It uses encryption and authentication mechanisms to protect data during transmission.
+Requires appropriate permissions and configuration for secure operation.
+
+Do All Remote Commands Require PowerShell Remoting:
+No, not all remote commands require PowerShell remoting.
+Some commands, like those using WMI or CIM, can interact with remote systems without explicitly enabling PowerShell remoting.
+
+Running a Command on a Remote Computer:
+Use Invoke-Command to run commands on a remote computer.
+Example: Invoke-Command -ComputerName "RemoteComputer" -ScriptBlock { Get-Process }
+
+"Telnet Into" a Remote Computer:
+PowerShell remoting can provide a similar experience.
+Example: Enter-PSSession -ComputerName "RemoteComputer"
+
+Creating a Persistent Connection:
+Use New-PSSession to create a persistent session.
+Example: $session = New-PSSession -ComputerName "RemoteComputer"
+
+Running Commands on Multiple Computers:
+Use workflows, jobs, or parallel scripting to run commands on multiple computers simultaneously.
+Examples: Invoke-Command -ComputerName "Computer1", "Computer2" -ScriptBlock { ... }
+
+Throttling on Remote Commands:
+Throttling limits the number of simultaneous remote connections or commands.
+Helps prevent resource exhaustion on the local or remote systems.
+
+Output of Remote Commands vs. Local Output:
+Output from remote commands is serialized and sent back to the local machine.
+The format may differ from local output, especially when dealing with complex objects or collections.
+
+Fan-In and Fan-Out Configurations:
+Fan-In: Refers to the scenario where multiple clients or sources send data to a central point.
+Fan-Out: Refers to the scenario where data is distributed from a central source to multiple destinations.
+In PowerShell remoting, fan-out occurs when commands are executed on multiple remote machines simultaneously.
+
+PowerShell Scripts for SharePoint Deployment:
+PowerShell scripts, known as PowerShell SharePoint Deployment Scripts, can automate deployment tasks in SharePoint.
+Cmdlets: SharePoint Management Shell provides specific cmdlets for SharePoint component deployment.
+Script Examples: Scripts can handle tasks like deploying solutions, activating features, and updating configurations.
+
+Comparison Operators in PowerShell:
+Common Operators: Include -eq (equal), -ne (not equal), -lt (less than), -gt (greater than), etc.
+Object Comparison: PowerShell's operators can compare not only scalar values but also complex objects.
+Case-Insensitive: Many operators have case-insensitive variants (e.g., -ieq, -ine).
+Chaining: Multiple operators can be chained for complex comparisons.
+
+Mapping Network Drive in PowerShell:
+New-PSDrive Cmdlet: Used to map a network drive.
+Example: New-PSDrive -Name "Z" -PSProvider FileSystem -Root "\\server\share" -Persist $true
+Persist Parameter: Ensures the drive persists across sessions.
+
+Get-Service Status Function:
+Cmdlet: Get-Service retrieves information about services on a computer.
+Status Parameter: The -Status parameter filters services based on their status (e.g., Get-Service -Status Running).
+
+$input Variable:
+Input Handling: $input is an automatic variable in PowerShell that represents input passed to a script or function.
+Enumerator: Acts as an enumerator for input data, useful in processing pipeline input.
+Read-Host Replacement: Can be used as an alternative to Read-Host for interactive input.
+
+Identifying 32-bit or 64-bit in PowerShell:
+[Environment] Class: Use [Environment]::Is64BitOperatingSystem to check if the operating system is 64-bit.
+True/False: Returns True if the OS is 64-bit, False otherwise.
+
+Finding SQL Services in PowerShell:
+Get-Service Cmdlet: Use Get-Service with filters or conditional statements to find SQL services.
+Example: Get-Service | Where-Object { $_.DisplayName -like 'SQL*' }
+
+Code to Locate Installed Applications:
+Registry Access: Use the registry to access uninstall information.
+Example: $uninstallKeys = Get-ItemProperty -Path "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | Select-Object DisplayName, UninstallString
+
 Command-Name and Description:
+Syntax for viewing the methods and properties we can pipe our output to Get-Member by: Get-Process | Get-Member
 Add-content: This cmdlet adds the content to the specified file.
 Add-Computer: This cmdlet adds the local computer to a domain or workgroup.
 Add-History: This cmdlet is used to add the command in the history.
@@ -645,3 +1094,14 @@ Parameters:
 -Verb: The -Verb parameter is used to specify an array of command verbs. Wildcard characters are accepted.
 -Noun: The -Noun parameter is used to specify an array of command nouns. Wildcard characters are accepted.
 -Module: The -Module parameter is used to specify an array of modules. It gets those commands which come from the specified modules. The -Module parameter takes the string values, but the value of it can also be a PSModuleInfo object
+
+Windows PowerShell Scripting:
+Definition: Windows PowerShell scripting involves creating sequences of commands (scripts) written in the PowerShell language to automate and perform tasks on Windows systems.
+Purpose: Automates repetitive tasks, enhances system management, and enables efficient administration.
+Language: PowerShell scripting uses cmdlets, functions, and scripts to execute commands.
+
+Cmdlets:
+Definition: Cmdlets (Command-lets) are lightweight commands in PowerShell.
+Verb-Noun Naming: Follow a Verb-Noun naming convention (e.g., Get-Process, Stop-Service).
+Built-in: PowerShell includes numerous built-in cmdlets for various tasks.
+Extensibility: Users can create custom cmdlets to extend functionality.
