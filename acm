@@ -92,6 +92,23 @@ Description: Moves a file or directory to a new location.
 Command: cp SourceFile.txt Destination\
 Description: Copies a file or directory to a new location
 
+PSSession:
+A PowerShell session (PSSession) is an environment where PowerShell runs. PSSessions are important for remote commands. 
+Here are some cmdlets for PSSessions: 
+New-PSSession: Creates a PSSession on a local or remote computer
+Enter-PSSession: Starts an interactive session with a single remote computer
+Exit-PSSession: Ends interactive sessions started by Enter-PSSession
+Import-PSSession: Imports commands from a PSSession
+Get-PSSession: Gets the sessions on specified computers
+To create a PSSession, use the New-PSSession cmdlet. The PSSession will persist until the current PowerShell session ends. 
+To run multiple commands that share data, use a PSSession. For example, you can use a PSSession to run a background job in each of the sessions.
+
+PowerShell has four execution policies: 
+Restricted: The default execution policy, which prevents PowerShell scripts from running. However, it does allow the shell to be used interactively.
+RemoteSigned: Requires that all scripts and configuration files downloaded from the Internet be signed by a trusted publisher. It also allows scripts to be created on the computer.
+AllSigned: Allows all scripts to run.
+Unrestricted: Runs any script without restrictions.
+
 Command keeps all history in Documents folder and can be accessed even after closing powershell:
 To keep a history of PowerShell commands in a file that persists even after closing PowerShell, you can use the Start-Transcript cmdlet. This cmdlet records all output, including errors and input commands, to a text file. Here's how you can use it:
 Start-Transcript -Path "$HOME\Documents\PowerShellHistory.txt"
