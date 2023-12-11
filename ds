@@ -1,0 +1,22 @@
+Data in Data Science:
+Data is the foundation of data science. Data is the systematic record of a specified characters, quantity or symbols on which operations are performed by a computer, which may be stored and transmitted. It is a compilation of data to be utilised for a certain purpose, such as a survey or an analysis. When structured, data may be referred to as information. The data source (original data, secondary data) is also an essential consideration.
+Data comes in many shapes and forms, but can generally be thought of as being the result of some random experiment - an experiment whose outcome cannot be determined in advance, but whose workings are still subject to analysis. Data from a random experiment are often stored in a table or spreadsheet. A statistical convention to denote variables is often called as features or columns and individual items (or units) as rows.
+
+Data Science:
+Data Science is also known as data-driven science, which makes use of scientific methods, processes, and systems to extract knowledge or insights from data in various forms, i.e. either structured or unstructured. Data Science uses the most advanced hardware, programming systems, and algorithms to solve problems that have to do with data. It is where artificial intelligence is going.
+Data Science is about data gathering, analysis and decision-making.
+Data Science is about finding patterns in data, through analysis, and make future predictions.
+By using Data Science, companies are able to make:
+Better decisions (should we choose A or B)
+Predictive analysis (what will happen next?)
+Pattern discoveries (find pattern, or maybe hidden information in the data).
+
+Need of Data Science:
+- For route planning: To discover the best routes to ship
+- To foresee delays for flight/ship/train etc. (through predictive analysis)
+- To create promotional offers
+- To find the best suited time to deliver goods
+- To forecast the next years revenue for a company
+- To analyze health benefit of training
+- To predict who will win elections
+
