@@ -113,6 +113,44 @@ Query: The query might not be well formed or precisely stated. The data miner mi
 Data: The data accessed is usually a different version from that of the original operational database. The data have been cleansed and modified to better support the mining process.
 Output: The output of the data mining query probably is not a subset of the database. Instead it is the output of some analysis of the contents of the database.
 
+Data Mining vs. Traditional Database Management:
+Purpose:
+Data Mining: Focuses on discovering patterns, trends, and knowledge from large datasets, often for decision support and prediction.
+Traditional Database Management: Primarily concerned with storing, retrieving, and managing structured data for transactional processing.
+Nature of Data:
+Data Mining: Analyzes historical and often large datasets to uncover hidden patterns or relationships.
+Traditional Database Management: Manages structured data efficiently for day-to-day operational needs.
+Query Type:
+Data Mining: Involves complex queries and analysis to uncover hidden patterns.
+Traditional Database Management: Involves straightforward queries for data retrieval and transactional operations.
+Focus on Knowledge Discovery:
+Data Mining: Emphasizes the discovery of new and actionable knowledge from data.
+Traditional Database Management: Primarily concerned with data storage, retrieval, and integrity.
+Goal:
+Data Mining: Seeks to extract valuable insights, correlations, and patterns for decision-making.
+Traditional Database Management: Aims to efficiently store and manage data to support daily business operations.
+Data Structure:
+Data Mining: Handles structured and unstructured data, and often deals with data from various sources.
+Traditional Database Management: Primarily deals with structured data in relational databases.
+Usage:
+Data Mining: Applied in exploratory analysis, predictive modeling, and knowledge discovery tasks.
+Traditional Database Management: Used for routine transactional processing, reporting, and maintaining data consistency.
+Query Flexibility:
+Data Mining: Requires flexible and complex queries to uncover hidden patterns.
+Traditional Database Management: Generally involves standard SQL queries for data retrieval.
+Algorithms:
+Data Mining: Involves machine learning algorithms, statistical analysis, and pattern recognition techniques.
+Traditional Database Management: Relies on traditional indexing, query optimization, and transaction management.
+Decision Support:
+Data Mining: Provides insights and patterns to support decision-making processes.
+Traditional Database Management: Supports operational decision-making through data retrieval and reporting.
+Time Sensitivity:
+Data Mining: Often deals with historical data and may not be time-sensitive.
+Traditional Database Management: Emphasizes real-time or near-real-time data access and processing.
+Example:
+Data Mining: Analyzing customer purchase history to identify buying patterns.
+Traditional Database Management: Storing and retrieving customer order information.
+
 The Knowledge Discovery in Databases (KDD) process comprises five key steps:
 KDD (Knowledge Discovery in Databases) is a process that involves the extraction of useful, previously unknown, and potentially valuable information from large datasets.
 The KDD process is an iterative process and it requires multiple iterations of the above steps to extract accurate knowledge from the data.The following steps are included in KDD process: 
