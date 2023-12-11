@@ -1,11 +1,193 @@
 
-Association rule algorithms
-Clustering algorithms
-K Mean Algorithm - define, example, importance, adv, disadv
-K Mean Clustering Algorithms - define, algorithm, example, importance, adv, disadv
-K Nearest Neighbours - define, algorithm, example, importance, adv, disadv
-Precision, recall
-----------------------------
+K-Nearest Neighbor(KNN) Algorithm:
+The K-Nearest Neighbors (KNN) algorithm is a robust and intuitive machine learning method employed to tackle classification and regression problems. By capitalizing on the concept of similarity, KNN predicts the label or value of a new data point by considering its K closest neighbours in the training dataset. In this article, we will learn about a supervised learning algorithm (KNN) or the k – Nearest Neighbours, highlighting it’s user-friendly nature.
+K-Nearest Neighbour is one of the simplest Machine Learning algorithms based on Supervised Learning technique.
+K-NN algorithm assumes the similarity between the new case/data and available cases and put the new case into the category that is most similar to the available categories.
+K-NN algorithm stores all the available data and classifies a new data point based on the similarity. This means when new data appears then it can be easily classified into a well suite category by using K- NN algorithm.
+K-NN algorithm can be used for Regression as well as for Classification but mostly it is used for the Classification problems.
+K-NN is a non-parametric algorithm, which means it does not make any assumption on underlying data.
+It is also called a lazy learner algorithm because it does not learn from the training set immediately instead it stores the dataset and at the time of classification, it performs an action on the dataset.
+KNN algorithm at the training phase just stores the dataset and when it gets new data, then it classifies that data into a category that is much similar to the new data.
+Example: Suppose, we have an image of a creature that looks similar to cat and dog, but we want to know either it is a cat or dog. So for this identification, we can use the KNN algorithm, as it works on a similarity measure. Our KNN model will find the similar features of the new data set to the cats and dogs images and based on the most similar features it will put it in either cat or dog category.
+
+Need of a KNN algorithm:
+(K-NN) algorithm is a versatile and widely used machine learning algorithm that is primarily used for its simplicity and ease of implementation. It does not require any assumptions about the underlying data distribution. It can also handle both numerical and categorical data, making it a flexible choice for various types of datasets in classification and regression tasks. It is a non-parametric method that makes predictions based on the similarity of data points in a given dataset. K-NN is less sensitive to outliers compared to other algorithms.
+The K-NN algorithm works by finding the K nearest neighbors to a given data point based on a distance metric, such as Euclidean distance. The class or value of the data point is then determined by the majority vote or average of the K neighbors. This approach allows the algorithm to adapt to different patterns and make predictions based on the local structure of the data.
+
+5 Importance of KNN:
+Simple Implementation: KNN is easy to understand and implement, making it suitable for quick prototypes and baseline models.
+Non-Parametric: KNN is a non-parametric algorithm, meaning it doesn't make assumptions about the underlying data distribution.
+Versatility: It can be used for both classification and regression tasks.
+No Training Phase: KNN doesn't require an explicit training phase; the entire dataset is the model.
+Robust to Outliers: KNN can be robust to outliers since it relies on the majority class or average value of neighbors.
+
+Distance Metrics Used in KNN Algorithm:
+As we know that the KNN algorithm helps us identify the nearest points or the groups for a query point. But to determine the closest groups or the nearest points for a query point we need some metric. For this purpose, we use below distance metrics:
+Euclidean Distance:
+This is nothing but the cartesian distance between the two points which are in the plane/hyperplane. Euclidean distance can also be visualized as the length of the straight line that joins the two points which are into consideration. This metric helps us calculate the net displacement done between the two states of an object.
+distance(x, X_i) = \sqrt{\sum_{j=1}^{d} (x_j - X_{i_j})^2} ]  
+Manhattan Distance:
+Manhattan Distance metric is generally used when we are interested in the total distance traveled by the object instead of the displacement. This metric is calculated by summing the absolute difference between the coordinates of the points in n-dimensions.
+d( x,y)={\sum_{i=1}^{n}\left | x_i-y_i \right |}   
+Minkowski Distance:
+We can say that the Euclidean, as well as the Manhattan distance, are special cases of the Minkowski distance.
+d( x,y)=\left ( {\sum_{i=1}^{n}\left ( x_i-y_i \right )^p} \right )^{\frac{1}{p}}   
+From the formula above we can say that when p = 2 then it is the same as the formula for the Euclidean distance and when p = 1 then we obtain the formula for the Manhattan distance.
+The above-discussed metrics are most common while dealing with a Machine Learning problem but there are other distance metrics as well like Hamming Distance which come in handy while dealing with problems that require overlapping comparisons between two vectors whose contents can be boolean as well as string values.
+
+Workings of KNN algorithm:
+The K-NN working can be explained on the basis of the below algorithm:
+Step-1: Select the number K of the neighbors
+Step-2: Calculate the Euclidean distance of K number of neighbors
+Step-3: Take the K nearest neighbors as per the calculated Euclidean distance.
+Step-4: Among these k neighbors, count the number of the data points in each category.
+Step-5: Assign the new data points to that category for which the number of the neighbor is maximum.
+Step-6: Our model is ready.
+Thе K-Nearest Neighbors (KNN) algorithm operates on the principle of similarity, where it predicts the label or value of a new data point by considering the labels or values of its K nearest neighbors in the training dataset.
+To make predictions, the algorithm calculates the distance between each new data point in the test dataset and all the data points in the training dataset. The Euclidean distance is a commonly used distance metric in K-NN, but other distance metrics, such as Manhattan distance or Minkowski distance, can also be used depending on the problem and data. Once the distances between the new data point and all the data points in the training dataset are calculated, the algorithm proceeds to find the K nearest neighbors based on these distances. Thе specific method for selecting the nearest neighbors can vary, but a common approach is to sort the distances in ascending order and choose the K data points with the shortest distances.
+After identifying the K nearest neighbors, the algorithm makes predictions based on the labels or values associated with these neighbors. For classification tasks, the majority class among the K neighbors is assigned as the predicted label for the new data point. For regression tasks, the average or weighted average of the values of the K neighbors is assigned as the predicted value.
+Let X be the training dataset with n data points, where each data point is represented by a d-dimensional feature vector X_i and Y be the corresponding labels or values for each data point in X.Given a new data point x, the algorithm calculates the distance between x and each data point X_i in X using a distance metric, such as Euclidean distance:
+distance(x, X_i) = \sqrt{\sum_{j=1}^{d} (x_j - X_{i_j})^2}  
+The algorithm selects the K data points from X that have the shortest distances to x. For classification tasks, the algorithm assigns the label y that is most frequent among the K nearest neighbors to x. For regression tasks, the algorithm calculates the average or weighted average of the values y of the K nearest neighbors and assigns it as the predicted value for x.
+Steps to implement the K-NN algorithm:
+-Data Pre-processing step
+-Fitting the K-NN algorithm to the Training set
+-Predicting the test result
+-Test accuracy of the result(Creation of Confusion matrix)
+-Visualizing the test set result.
+
+Applications of the KNN Algorithm:
+Data Preprocessing – While dealing with any Machine Learning problem we first perform the EDA part in which if we find that the data contains missing values then there are multiple imputation methods are available as well. One of such method is KNN Imputer which is quite effective ad generally used for sophisticated imputation methodologies.
+Pattern Recognition – KNN algorithms work very well if you have trained a KNN algorithm using the MNIST dataset and then performed the evaluation process then you must have come across the fact that the accuracy is too high.
+Recommendation Engines – The main task which is performed by a KNN algorithm is to assign a new query point to a pre-existed group that has been created using a huge corpus of datasets. This is exactly what is required in the recommender systems to assign each user to a particular group and then provide them recommendations based on that group’s preferences.
+
+4 Advantages of KNN:
+Simple and Intuitive: The algorithm is straightforward and easy to understand.
+Doesn't Assume Data Distribution: Suitable for situations where the data distribution is not well-defined.
+Adapts to Local Patterns: KNN can capture local patterns that may be missed by other algorithms.
+Doesn't Make Strong Assumptions: It doesn't assume linear relationships between features.
+4 Disadvantages of KNN:
+Computationally Expensive: Predictions can be slow for large datasets since it requires calculating distances for each data point.
+Sensitive to Noise and Outliers: Outliers can significantly impact predictions.
+Choosing the Right K: The choice of K can impact the algorithm's performance; a small K may lead to overfitting, and a large K may lead to underfitting.
+Not Suitable for High-Dimensional Data: KNN's performance may degrade in high-dimensional feature spaces.
+
+Visualization:
+Visualization refers to the visual presentation of data. The old expression "a picture is worth a thousand words" certainly is true when examining the structure of data. For example, a line graph that shows the distribution of a data variable is easier to understand and perhaps more informative than the formula for the corresponding distribution. The use of visualization techniques allows users to summarize, extract, and grasp more complex results than more mathematical or text type descriptions of the results. Visualization techniques include:
+Graphical: Traditional graph structures including bar charts, pie charts, histograms, and line graphs may be used.
+Geometric: Geometric techniques include the box plot and scatter diagram techniques.
+Icon-based: Using figures, colors, or other icons can improve the presentation of the results.
+Pixel-based: With these techniques each data value is shown as a uniquely colored pixel.
+Hierarchical: These techniques hierarchically divide the display area (screen) into regions based on data values.
+Hybrid: The preceding approaches can be combined into one display.
+
+K-Means Clustering Algorithm:
+K-Means Clustering is an unsupervised learning algorithm that is used to solve the clustering problems in machine learning or data science. In this topic, we will learn what is K-means clustering algorithm, how the algorithm works, along with the Python implementation of k-means clustering.
+K-Means Clustering is an Unsupervised Learning algorithm, which groups the unlabeled dataset into different clusters. Here K defines the number of pre-defined clusters that need to be created in the process, as if K=2, there will be two clusters, and for K=3, there will be three clusters, and so on.
+It is an iterative algorithm that divides the unlabeled dataset into k different clusters in such a way that each dataset belongs only one group that has similar properties.
+It allows us to cluster the data into different groups and a convenient way to discover the categories of groups in the unlabeled dataset on its own without the need for any training.
+It is a centroid-based algorithm, where each cluster is associated with a centroid. The main aim of this algorithm is to minimize the sum of distances between the data point and their corresponding clusters.
+The algorithm takes the unlabeled dataset as input, divides the dataset into k-number of clusters, and repeats the process until it does not find the best clusters. The value of k should be predetermined in this algorithm.
+The k-means clustering algorithm mainly performs two tasks:
+1.Determines the best value for K center points or centroids by an iterative process.
+2.Assigns each data point to its closest k-center. Those data points which are near to the particular k-center, create a cluster.
+
+Working of K-Means Algorithm :
+The working of the K-Means algorithm is explained in the below steps:
+Step-1: Select the number K to decide the number of clusters.
+Step-2: Select random K points or centroids. (It can be other from the input dataset).
+Step-3: Assign each data point to their closest centroid, which will form the predefined K clusters.
+Step-4: Calculate the variance and place a new centroid of each cluster.
+Step-5: Repeat the third steps, which means reassign each datapoint to the new closest centroid of each cluster.
+Step-6: If any reassignment occurs, then go to step-4 else go to FINISH.
+Step-7: The model is ready.
+To find the optimal value of clusters, the elbow method follows the below steps:
+It executes the K-means clustering on a given dataset for different K values (ranges from 1-10).
+For each value of K, calculates the WCSS value.
+Plots a curve between calculated WCSS values and the number of clusters K.
+The sharp point of bend or a point of the plot looks like an arm, then that point is considered as the best value of K.
+The steps to be followed for the implementation are given below:
+-Data Pre-processing
+-Finding the optimal number of clusters using the elbow method
+-Training the K-means algorithm on the training dataset
+-Visualizing the clusters
+
+Example of K-means:
+Let's consider a simple dataset of fruits with features like color, size, and shape. We want to group them into three clusters using K-means.
+Initialization:
+We set k = 3, meaning we want to form three clusters.
+We randomly select three fruit data points as the initial centroids.
+Assignment:
+We calculate the distance (e.g., Euclidean distance) of each fruit data point to each centroid.
+We assign each fruit to the cluster with the closest centroid.
+Update:
+For each cluster, we calculate the average properties (color, size, shape) of all assigned fruits. These become the new cluster centroids.
+Repeat:
+We repeat steps 2 and 3 until the centroids stabilize, meaning they don't move significantly between iterations.
+After convergence, we will have three distinct clusters of fruits, each with similar features like color, size, and shape.
+
+Importance of K-Means:
+Data Segmentation: Useful for segmenting data into distinct groups, aiding in pattern recognition.
+Customer Segmentation: Commonly used in marketing to group customers based on purchasing behavior.
+Anomaly Detection: Identifying outliers or anomalies in a dataset.
+Image Compression: Reducing the number of colors in an image by clustering similar pixels.
+Feature Engineering: Can be used as a preprocessing step for feature extraction.
+
+Advantages of K-Means:
+Simple and Efficient: Computationally efficient and easy to understand.
+Scalability: Scales well to large datasets and high-dimensional spaces.
+Versatility: Applicable to various types of data and domains.
+Fast Convergence: Typically converges quickly.
+Disadvantages of K-Means:
+Sensitive to Initial Centroids: Results may vary based on the initial selection of centroids.
+Requires Predefined K: The number of clusters (K) needs to be specified beforehand.
+Assumes Spherical Clusters: Works best when clusters are roughly spherical and equally sized.
+Impacted by Outliers: Outliers can significantly affect cluster assignments.
+
+Applications of K-means:
+Customer segmentation
+Image segmentation
+Anomaly detection
+Recommender systems
+Document clustering
+
+Stopping Criteria for K-Means Clustering:
+There are essentially three stopping criteria that can be adopted to stop the K-means algorithm:
+Centroids of newly formed clusters do not change.
+Points remain in the same cluster.
+Maximum number of iterations is reached.
+
+Alternatives to calculate the distance between clusters:
+Many clustering algorithms require that the distance between clusters (rather than elements) be determined. This is not an easy task given that there are many interpretations for distance between clusters. Given clusters Ki and Kj, there are several standard alternatives to calculate the distance between clusters. A representative list is:
+• Single link: Smallest distance between an element in one cluster and an element in the other. We thus have dis(Ki, Kj) = min(dis(til, t jm)) Vtil € Ki & K; and Vtjm € Kj isnot eq.to Ki.
+• Complete link: Largest distance between an element in one cluster and an element in the other. We thus have dis(Ki, Kj) = max(dis (til, tjm))Vti € Ki & K; and Vtjm  € kj isnot eq.to Ki.
+• Average: Average distance between an element in one cluster and an element in the other. We thus have dis(Ki, Kj) = mean(dis(til, tjm))Yti € Ki $ K; and Vtjm  € K; isnot eq.to Ki.
+• Centroid: If clusters have a representative centroid, then the centroid distance is defined as the distance between the centroids. We thus have dis(Ki, Kj) = dis(Ci, Cj), where C; is the centroid for Kj and similarly for Cj.
+• Medoid: Using a medoid to represent each cluster, the distance between the clusters can be defined by the distance between the medoids: dis(K;, K;) = dis(Mi, Mj).
+
+Precision and Recall in Confusion Matrix:
+Precision and recall are two important metrics used to evaluate the performance of a binary classification model. They are often used in conjunction with a confusion matrix, which visualizes the number of correctly and incorrectly classified instances.
+Precision: Precision represents the proportion of positive predictions that are actually correct. It answers the question: "Out of all the instances the model classified as positive, how many were actually positive?"
+Formula: Precision = TP / (TP + FP)
+Example: Imagine a spam filter that classifies emails as spam or not spam. Suppose the confusion matrix look:
+------------------------------
+Predicted Class |	Actual Class
+Spam	          | Not Spam
+100 (TP)	    | 5 (FP)
+10 (FN)	    | 85 (TN)
+------------------------------
+Precision = 100 / (100 + 5) = 0.95
+This means that out of all the emails the filter classified as spam, 95% were actually spam.
+Recall:
+Recall represents the proportion of actual positive examples that were correctly classified. It answers the question: "Out of all the actual positive instances, how many did the model correctly identify?"
+Formula:Recall = TP / (TP + FN)
+Example:
+Continuing with the spam filter example:
+Recall = 100 / (100 + 10) = 0.91
+This means that the filter correctly identified 91% of all the actual spam emails.
+Interpreting Precision and Recall:
+Precision and recall often have an inverse relationship. A model with high precision may have lower recall, and vice versa. This is because focusing on correctly classifying positive instances (high precision) can lead to missed positive instances (low recall) and vice versa.
+Choosing which metric is more important depends on the specific context. For example, in spam filtering, high precision might be more important to minimize false alarms (misclassifying emails as spam). However, in medical diagnosis, high recall might be more important to avoid missing actual positive cases (misclassifying a diseased patient as healthy).
 
 Data in Data Science:
 Data is the foundation of data science. Data is the systematic record of a specified characters, quantity or symbols on which operations are performed by a computer, which may be stored and transmitted. It is a compilation of data to be utilised for a certain purpose, such as a survey or an analysis. When structured, data may be referred to as information. The data source (original data, secondary data) is also an essential consideration.
@@ -19,6 +201,11 @@ By using Data Science, companies are able to make:
 Better decisions (should we choose A or B)
 Predictive analysis (what will happen next?)
 Pattern discoveries (find pattern, or maybe hidden information in the data).
+
+There are many approaches to handling missing data:
+• Ignore the missing data.
+• Assume a value for the missing data. This may be determined by using some method to predict what the value could be.
+• Assume a special value for the missing data. This means that the value of missing data is taken to be a specific value all of its own.
 
 Need of Data Science:
 - For route planning: To discover the best routes to ship
