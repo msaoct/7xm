@@ -1,3 +1,12 @@
+
+Association rule algorithms
+Clustering algorithms
+K Mean Algorithm - define, example, importance, adv, disadv
+K Mean Clustering Algorithms - define, algorithm, example, importance, adv, disadv
+K Nearest Neighbours - define, algorithm, example, importance, adv, disadv
+Precision, recall
+----------------------------
+
 Data in Data Science:
 Data is the foundation of data science. Data is the systematic record of a specified characters, quantity or symbols on which operations are performed by a computer, which may be stored and transmitted. It is a compilation of data to be utilised for a certain purpose, such as a survey or an analysis. When structured, data may be referred to as information. The data source (original data, secondary data) is also an essential consideration.
 Data comes in many shapes and forms, but can generally be thought of as being the result of some random experiment - an experiment whose outcome cannot be determined in advance, but whose workings are still subject to analysis. Data from a random experiment are often stored in a table or spreadsheet. A statistical convention to denote variables is often called as features or columns and individual items (or units) as rows.
@@ -107,6 +116,26 @@ Data mining algorithms can be characterized as consisting of three parts:
 Model: The purpose of the algorithm is to fit a model to the data.
 Preference: Some criteria must be used to fit one model over another.
 Search: All algorithms require some technique to search the data.
+
+Measures of Distance in Data Mining:
+Most clustering approaches use distance measures to assess the similarities or differences between a pair of objects, the most popular distance measures used are:
+1. Euclidean Distance: Euclidean distance is considered the traditional metric for problems with geometry. It can be simply explained as the ordinary distance between two points. It is one of the most used algorithms in the cluster analysis. One of the algorithms that use this formula would be K-mean. Mathematically it computes the root of squared differences between the coordinates between two objects.
+2. Manhattan Distance: This determines the absolute difference among the pair of the coordinates. Suppose we have two points P and Q to determine the distance between these points we simply have to calculate the perpendicular distance of the points from X-Axis and Y-Axis. In a plane with P at coordinate (x1, y1) and Q at (x2, y2). Manhattan distance between P and Q = |x1 – x2| + |y1 – y2|
+3. Jaccard Index: The Jaccard distance measures the similarity of the two data set items as the intersection of those items divided by the union of the data items.
+4. Minkowski distance:
+It is the generalized form of the Euclidean and Manhattan Distance Measure. In an N-dimensional space, a point is represented as,
+(x1, x2, ..., xN) 
+Consider two points P1 and P2:
+P1: (X1, X2, ..., XN)
+P2: (Y1, Y2, ..., YN) 
+Then, the Minkowski distance between P1 and P2 is given as:
+\sqrt[p]{(x 1-y 1)^{p}+(x 2-y 2)^{p}+\ldots+(x N-y N)^{p}} 
+5. Cosine Index:
+Cosine distance measure for clustering determines the cosine of the angle between two vectors given by the following formula.
+\operatorname{sim}(A, B)=\cos (\theta)=\frac{A \cdot B}{\|A\| B \|} 
+Here (theta) gives the angle between two vectors and A, B are n-dimensional vectors.
+When p = 2, Minkowski distance is same as the Euclidean distance.
+When p = 1, Minkowski distance is same as the Manhattan distance.
 
 Data mining access of a database differs from this traditional access in several ways:
 Query: The query might not be well formed or precisely stated. The data miner might not even be exactly sure of what he wants to see.
@@ -275,6 +304,174 @@ Disadvantages:
 -CNN do not encode the position and orientation of object.
 -Lack of ability to be spatially invariant to the input data.
 -Lots of training data is required.
+
+A convolutional neural network (CNN) has four main layers: 
+Convolutional layer: The main building block of a CNN. This layer performs a dot product between two matrices.
+Pooling layer: Reduces the spatial size of the representation and the number of computations required.
+Fully-connected (FC) layer: Connected to both the previous and current layers.
+ReLU correction layer: A layer of a CNN.
+Other layers of a CNN include: 
+Coevolutionary layer.
+Max-pooling layer.
+Concatenation layer.
+Dropout.
+CNNs are deep learning neural networks that are well-suited for image and video analysis. They can also be used for classifying non-image data such as audio, time series, and signal data.
+The number of layers in a neural network defines its depth. CNNs commonly have around five to ten layers, but some modern architectures have up to one hundred layers. 
+
+CNN Process:
+Convolutional Neural Networks (CNNs) use a series of layers to extract features from images or videos. The four main components of a CNN are: 
+Convolutional layers: Extract features by sliding a filter over the image or video.
+Pooling layers: Reduce the dimensions of the feature maps.
+Fully connected layers: Classify images based on the features extracted in the previous layers.
+Activation functions: Enable feature extraction, dimension reduction, and classification.
+The convolution process involves: 
+Mathematical combination: Merging two sets of information to produce a third function.
+Filter or kernel: A small filter, or kernel, that slides over the image or video.
+Feature map: The result of performing convolution on the input data.
+The pooling process involves: 
+Feature maps: The dimensions of the feature maps are reduced.
+Computation: The amount of computation performed in the network is reduced.
+Types: There are two types of pooling: average pooling and max pooling.
+
+Types of Convolutional Neural Network (CNN) architectures and algorithms:
+LeNet-5:
+Definition: LeNet-5 is a convolutional neural network designed for handwritten digit recognition, employing convolutional and subsampling layers, as well as fully connected layers.
+Application: Handwritten digit recognition.
+Key Features: Convolutional layers, subsampling, fully connected layers.
+Layers: Input, Convolutional, Average Pooling, Flatten layer, n-first hidden layer, n-2nd hidden layer, Output.
+Architecture: Input -> Convolution -> poo;ing -> Convolution -> pooling -> Flatten layer -> n-first hidden layer -> n-2nd hidden layer -> Output type.
+AlexNet:
+Definition: AlexNet is a deep convolutional neural network primarily used for image classification tasks, known for its depth and regularization techniques.
+Application: Image classification on ImageNet dataset.
+Key Features: Deeper architectures, ReLU activation, dropout for regularization.
+Layers: Convolutional, Max Pooling, Local Response Normalization, Fully Connected.
+Architecture: Input -> Convolution -> Max Pooling -> Convolution -> Max Pooling -> Convolution -> Convolution -> Convolution -> Max Pooling -> Fully Connected -> Fully Connected -> Fully Connected.
+VGGNet (VGG16 and VGG19):
+Definition: VGGNet is a convolutional neural network architecture renowned for its simplicity and uniformity, commonly employed in image classification and object detection.
+Application: Image classification and object detection.
+Key Features: Simple and uniform architecture with small 3x3 convolutional filters.
+Layers: Convolutional, Max Pooling, Fully Connected.
+Architecture: Input -> (Convolution -> Convolution -> Max Pooling) x N -> Fully Connected -> Fully Connected.
+GoogLeNet (Inception):
+Definition: GoogLeNet, or Inception, is a convolutional neural network known for its inception module, enabling parallel processing of convolutional operations for improved feature extraction.
+Application: Image classification and object detection.
+Key Features: Inception module with parallel convolutional operations.
+Layers: Convolutional, Inception Module, Average Pooling, Fully Connected.
+Architecture: Input -> Inception Module -> Inception Module -> Inception Module -> Average Pooling -> Fully Connected.
+ResNet (Residual Network):
+Definition: ResNet is a convolutional neural network architecture featuring residual blocks, addressing the vanishing gradient problem and facilitating training of deeper networks.
+Application: Image classification.
+Key Features: Skip connections (residual blocks) to address vanishing gradient problem.
+Layers: Convolutional, Residual Block, Global Average Pooling, Fully Connected.
+Architecture: Input -> Convolution -> Residual Block x N -> Global Average Pooling -> Fully Connected.
+MobileNet:
+Definition: DenseNet is a convolutional neural network architecture characterized by dense connectivity between layers, promoting enhanced feature reuse and model compactness.
+Definition: MobileNet is a convolutional neural network designed for efficiency, particularly suitable for mobile and embedded vision applications.
+Application: Mobile and embedded vision applications.
+Key Features: Lightweight architecture using depthwise separable convolutions.
+Layers: Depthwise Separable Convolution, Pointwise Convolution, Fully Connected.
+Architecture: Input -> Depthwise Separable Convolution -> Pointwise Convolution -> Depthwise Separable Convolution -> Pointwise Convolution -> Fully Connected.
+DenseNet:
+Definition: DenseNet is a convolutional neural network architecture characterized by dense connectivity between layers, promoting enhanced feature reuse and model compactness.
+Application: Image classification.
+Key Features: Dense connectivity between layers for feature reuse.
+Layers: Dense Block, Transition Block, Global Average Pooling, Fully Connected.
+Architecture: Input -> Dense Block x N -> Transition Block -> Global Average Pooling -> Fully Connected.
+Xception:
+Definition: Xception is a convolutional neural network architecture employing depthwise separable convolutions and a modified inception module, emphasizing efficiency and improved feature learning.
+Application: Image classification.
+Key Features: Depthwise separable convolutions with a modified inception module.
+Layers: Depthwise Separable Convolution, Fully Connected.
+Architecture: Input -> Depthwise Separable Convolution -> Depthwise Separable Convolution -> Depthwise Separable Convolution -> Fully Connected.
+EfficientNet:
+Definition: EfficientNet is a convolutional neural network architecture designed for efficiency, balancing model depth, width, and resolution to achieve optimal performance.
+Application: Image classification.
+Key Features: Balances model depth, width, and resolution for efficiency.
+Layers: Convolutional, Squeeze-and-Excitation, Fully Connected.
+Architecture: Input -> Convolution -> Squeeze-and-Excitation -> Convolution -> Squeeze-and-Excitation -> Convolution -> Fully Connected.
+Yolo (You Only Look Once):
+Definition: Yolo, or You Only Look Once, is a convolutional neural network architecture designed for real-time object detection, utilizing a unified approach to predict bounding boxes and class probabilities directly.
+Application: Object detection.
+Key Features: Unified detection approach, predicts bounding boxes and class probabilities directly.
+Layers: Convolutional, Fully Connected.
+Architecture: Input -> Convolution -> Convolution -> Convolution -> Fully Connected.
+SSD (Single Shot Multibox Detector):
+Definition: SSD, or Single Shot Multibox Detector, is a convolutional neural network architecture designed for object detection, incorporating multiscale feature maps for improved detection accuracy.
+Application: Object detection.
+Key Features: Multiscale feature maps for object detection at multiple resolutions.
+Layers: Convolutional, Multibox Layer.
+Architecture: Input -> Convolution -> Convolution -> Multibox Layer.
+Capsule Networks (CapsNets):
+Definition: Capsule Networks, or CapsNets, is a convolutional neural network architecture introducing capsules to capture hierarchical relationships between parts of an object, enhancing recognition capabilities.
+Application: Image recognition.
+Key Features: Introduces capsules to represent hierarchical relationships between parts of an object.
+Layers: Primary Capsules, Routing by Agreement, Fully Connected.
+Architecture: Input -> Primary Capsules -> Routing by Agreement -> Fully Connected.
+
+Types of Pooling in Convolutional Neural Networks:
+Pooling is a down-sampling operation commonly used in convolutional neural networks (CNNs) to reduce the spatial dimensions of the input feature maps. There are three main types of pooling:
+Max Pooling:
+Operation: Selects the maximum value from a group of neighboring pixels.
+Advantages:
+Preserves the most prominent features in the input.
+Introduces translation invariance by focusing on the most activated features.
+Disadvantages:
+Ignores the contribution of less activated features.
+Min Pooling:
+Operation: Selects the minimum value from a group of neighboring pixels.
+Advantages:
+Highlights the least intense features in the input.
+May be useful for certain types of noise reduction.
+Disadvantages:
+May be sensitive to outliers and less robust compared to max pooling.
+Average Pooling:
+Operation: Computes the average value from a group of neighboring pixels.
+Advantages:
+Provides a smoothed representation of the input, reducing sensitivity to specific features.
+Helps reduce overfitting by considering a broader context.
+Disadvantages:
+May dilute the impact of highly activated features.
+
+Importance of Convolutional Operation in a CNN:
+A convolutional operation, often referred to as convolution, is a fundamental mathematical operation in the field of signal processing and, in the context of deep learning, specifically in Convolutional Neural Networks (CNNs). Convolutional operations are used to extract features from input data, such as images or sequences.
+Feature Extraction:
+Description: Convolutional layers use filters to extract important features from input data.
+Importance: Enables the network to automatically learn hierarchical representations of patterns and features.
+Translation Invariance:
+Description: Convolution introduces translation-invariant properties, allowing the network to recognize patterns regardless of their position in the input.
+Importance: Enhances the model's ability to generalize and detect features robustly.
+Parameter Sharing:
+Description: Convolutional filters share weights across the input space, reducing the number of parameters compared to fully connected layers.
+Importance: Reduces the risk of overfitting, enhances model efficiency, and accelerates training.
+Spatial Hierarchy:
+Description: Multiple convolutional layers capture spatial hierarchies of features, learning from local to global patterns.
+Importance: Enables the model to recognize intricate structures in data, crucial for tasks like image and pattern recognition.
+Local Connectivity:
+Description: Convolutional layers are locally connected, focusing on specific regions of the input.
+Importance: Facilitates the extraction of local features, making the network more adept at capturing spatial relationships.
+Downsampling (Pooling):
+Description: Convolutional layers often incorporate pooling operations to downsample feature maps.
+Importance: Reduces dimensionality, retains essential features, and increases the model's translation invariance.
+Edge Detection and Pattern Recognition:
+Description: Convolutional filters function as effective edge detectors and pattern recognizers.
+Importance: Enables the network to automatically learn and emphasize important patterns in the input data.
+Efficient Architecture for Grid-like Data:
+Description: CNNs are designed to efficiently process grid-like data such as images.
+Importance: Provides an effective and scalable architecture for tasks involving spatially structured data.
+Adaptability to Variability:
+Description: Convolutional layers adapt to variations in scale, orientation, and position of features in the input.
+Importance: Enhances the model's robustness, making it effective across diverse inputs.
+Effective Parameter Learning:
+Description: Convolutional layers leverage shared weights to learn and adapt filters during training.
+Importance: Facilitates effective parameter learning, ensuring the model captures relevant features without excessive computational demands.
+
+Stride:
+In a convolutional neural network (CNN), stride is a fundamental hyperparameter that affects the model's performance and efficiency. It controls how the convolutional filters interact with the input data and affects the size of the output feature maps. 
+Stride is the number of pixels that shift over the input matrix. For example, if the stride is 1, then the filters move 1 pixel at a time. If the stride is 2, then the filters move 2 pixels at a time. 
+Stride also controls the size of the receptive field. The receptive field is the area of the input feature map that is used in calculation. Stride helps control the level of abstraction at which the CNN learns features. 
+By default, stride is one. To maintain the dimension of output as in input, padding can be used. Padding is a process of adding zeros to the input matrix symmetrically
+Difference between stride 1 and 2:
+A stride of 1 moves the filter one pixel at a time, while a stride of 2 moves it two pixels. A larger stride will produce a smaller output dimension, effectively downsampling the image.
 
 Artificial Neural Network (ANN) vs. Convolutional Neural Network (CNN):
 Architecture:
@@ -603,38 +800,6 @@ Rectified linear:This function overcomes the vanishing gradient problem, allowin
 Exponential Linear Unit (ELU):This function speeds up the learning in neural networks and leads to higher classification accuracies.
 Leaky ReLU: This function is an extension of the ReLU activation function. It multiplies negative inputs by a small, user-defined value between 0 and 1.
 
-Importance of Convolutional Operation in a CNN:
-Feature Extraction:
-Description: Convolutional layers use filters to extract important features from input data.
-Importance: Enables the network to automatically learn hierarchical representations of patterns and features.
-Translation Invariance:
-Description: Convolution introduces translation-invariant properties, allowing the network to recognize patterns regardless of their position in the input.
-Importance: Enhances the model's ability to generalize and detect features robustly.
-Parameter Sharing:
-Description: Convolutional filters share weights across the input space, reducing the number of parameters compared to fully connected layers.
-Importance: Reduces the risk of overfitting, enhances model efficiency, and accelerates training.
-Spatial Hierarchy:
-Description: Multiple convolutional layers capture spatial hierarchies of features, learning from local to global patterns.
-Importance: Enables the model to recognize intricate structures in data, crucial for tasks like image and pattern recognition.
-Local Connectivity:
-Description: Convolutional layers are locally connected, focusing on specific regions of the input.
-Importance: Facilitates the extraction of local features, making the network more adept at capturing spatial relationships.
-Downsampling (Pooling):
-Description: Convolutional layers often incorporate pooling operations to downsample feature maps.
-Importance: Reduces dimensionality, retains essential features, and increases the model's translation invariance.
-Edge Detection and Pattern Recognition:
-Description: Convolutional filters function as effective edge detectors and pattern recognizers.
-Importance: Enables the network to automatically learn and emphasize important patterns in the input data.
-Efficient Architecture for Grid-like Data:
-Description: CNNs are designed to efficiently process grid-like data such as images.
-Importance: Provides an effective and scalable architecture for tasks involving spatially structured data.
-Adaptability to Variability:
-Description: Convolutional layers adapt to variations in scale, orientation, and position of features in the input.
-Importance: Enhances the model's robustness, making it effective across diverse inputs.
-Effective Parameter Learning:
-Description: Convolutional layers leverage shared weights to learn and adapt filters during training.
-Importance: Facilitates effective parameter learning, ensuring the model captures relevant features without excessive computational demands.
-
 
 Roles of Activation Function:
 Activation functions play crucial roles in artificial neural networks, contributing to the network's ability to learn and model complex relationships within the data. Here are the key roles of activation functions:
@@ -711,6 +876,8 @@ No Guarantee of Global Optimum: While good at global search, genetic algorithms 
 Problem-Specific Parameters: The performance of genetic algorithms depends on the choice of parameters, such as crossover and mutation rates, which may need tuning for different problems.
 Limited Handling of Constraints: Handling constraints in optimization problems can be challenging, and genetic algorithms may require additional mechanisms to deal with constraints effectively.
 
+
+
 Two Types of Crossover in Genetic Algorithms:
 Genetic algorithms use crossover (also known as recombination) as a genetic operation to combine genetic material from parent solutions to create new offspring. There are two main types of crossover: single-point crossover and multiple-point crossover.
 1.Single-Point Crossover:
@@ -744,6 +911,9 @@ Different types of Classification Algorithms:
 -Regression:
 Description: Predicts a continuous target variable based on input features by finding the best-fitting linear relationship.
 Application: Commonly used for predicting numerical outcomes, such as house prices.
+Regression can be used to perform classification using two different approaches:
+1. Division: The data are divided into regions based on class.
+2. Prediction: Formulas are generated to predict the output class value.
 -Bayesian Classification:
 Description: Applies Bayes' theorem to calculate the probability of a hypothesis given the data.
 Application: Widely used for spam filtering, document classification, and medical diagnosis.
