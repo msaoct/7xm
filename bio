@@ -89,6 +89,7 @@ Most surprisingly the anatomy of the camera has more similarities to a biologica
 11.The eye is highly sensitive to the dust and foreign particles that settle on the outer film. In a camera there is no such issues as any dust can simply be wiped off the lens.
 
 Brownian motion with examples:
+Brownian motion is named after the Scottish Botanist Robert Brown, who first observed that pollen grains move in random directions when placed in water.
 Brownian motion is the random, movement of particles that cannot be controlled in a fluid as they constantly collide with other molecules (Mitchell and Kagura, 2006). Brownian motion is thus a part responsible of the ability of movement in bacteria that do not encode or express motility movements, such as Streptococcus and Klebsiella species. Brownian motion can also affect “deliberate” movement exhibited by naturally motile bacteria that harbour pili or flagella. For example, an Escherichia coli cell that is swimming toward an area of higher oxygen concentration may fall “off-track” if it physically encounters a particle moving by Brownian motion or if such a particle(s) obstructs the bacterial cell’s path of motion. This form of “interference” adds to the stochasticity with which bacterial direction can change.
 Brownian motion takes its name from the Scottish botanist Robert Brown, who observed pollen grains moving randomly in water. He described the motion in 1827 but was unable to explain it. While pedesis takes its name from Brown, he was not the first person to describe it. The Roman poet Lucretius describes the motion of dust particles around the year 60 B.C., which he used as evidence of atoms.
 Examples include:
@@ -98,6 +99,17 @@ Examples include:
 -Diffusion of calcium through bones
 -Movement of "holes" of electrical charge in semiconductors
 
+Causes of Brownian Motion:
+Brownian motion describes randomness and chaos. It is one of the simplest models of randomness.
+The size of the particles is inversely proportional to the speed of the motion, i.e. Small particles exhibit faster movements.
+This is because the transfer of momentum is inversely proportional to the mass of the particles. Lighter particles obtain greater speeds from collisions.
+The speed of the Brownian motion is inversely proportional to the viscosity of the fluid. The lower the viscosity of the fluid, the faster the Brownian movement.
+Viscosity is a quantity that expresses the magnitude of the internal friction in a liquid. It is the measure of the fluid’s resistance to flow.
+
+Effects of Brownian Motion:
+Brownian movement causes the particles in a fluid to be in constant motion.
+This prevents particles from settling down, leading to the stability of colloidal solutions.
+A true solution can be distinguished from a colloid with the help of this motion.
 
 Cells:
 “A cell is defined as the smallest, basic unit of life that is responsible for all of life’s processes.” Cells are the structural, functional, and biological units of all living beings. A cell can replicate itself independently. Hence, they are known as the building blocks of life. 
@@ -438,6 +450,14 @@ This is how the camera aperture can be compared with human eyes:
 3) Both Eye and the camera focus on single objects and on large images and capture large scapes.
 
 Model Organisms for the study of Biology:
+A model organism is a species that has been widely studied, usually because it is easy to maintain and breed in a laboratory setting and has particular experimental advantages.
+Model organisms are non-human species that are used in the laboratory to help scientists understand biological processes.
+They are usually organisms that are easy to maintain and breed in a laboratory setting.
+For example, they may have particularly robust embryos that are easily studied and manipulated in the lab, this is useful for scientists studying development.
+Or they may occupy a pivotal position in the evolutionary tree, this is useful for scientists studying evolution.
+Examples of model organisms used to study genetics
+Yeast (Saccharomyces cerevisiae), Fruit fly (Drosophila melanogaster), Nematode worm (Caenorhabditis elegans), Western clawed frog (Xenopus tropicalis), Mouse (Mus musculus), Zebrafish (Danio rerio).
+Examples:
 (a) E. coli: E. coli, (Escherichia coli) is a rod-shaped (bacillus) Gram-negative bacterium that is frequently used as a model organism.  Its striking features such as its ability to grow fast using cheap growth media and availability of molecular tools to perform genetic manipulations are favourable for using E. coli as a model organism in molecular genetics and molecular biology.
 Several key discoveries in the field of molecular biology, including molecular genetics, were achieved using E. coli as a model organism. This includes an understanding of the genetic code, the mechanisms of DNA replication, the discovery of the genetic operon systems, and the creation of a genetically modified organism.
 (b) Saccharomyces cerevisiae (is a species of yeast). The species is extensively used in fermentation industry. Saccharomyces has been instrumental in winemaking, baking, and brewing since ancient times. It is believed to have been originally isolated from the skin of grapes (it can be seen that yeast is present as a component of the thin white film on the skins of some dark-coloured fruits such as plums;
@@ -546,7 +566,7 @@ Enzymes (/ˈɛnzaɪmz/) are proteins that act as biological catalysts by acceler
 Like all catalysts, enzymes increase the reaction rate by lowering its activation energy. Some enzymes can make their conversion of substrate to product occur many millions of times faster. An extreme example is orotidine 5'-phosphate decarboxylase, which allows a reaction that would otherwise take millions of years to occur in milliseconds.[5][6] Chemically, enzymes are like any catalyst and are not consumed in chemical reactions, nor do they alter the equilibrium of a reaction. Enzymes differ from most other catalysts by being much more specific. Enzyme activity can be affected by other molecules: inhibitors are molecules that decrease enzyme activity, and activators are molecules that increase activity. Many therapeutic drugs and poisons are enzyme inhibitors. An enzyme's activity decreases markedly outside its optimal temperature and pH, and many enzymes are (permanently) denatured when exposed to excessive heat, losing their structure and catalytic properties.
 Some enzymes are used commercially, for example, in the synthesis of antibiotics. Some household products use enzymes to speed up chemical reactions: enzymes in biological washing powders break down protein, starch or fat stains on clothes.
 
-Examples of Enzymes
+Examples of Enzymes:
 Following are some of the examples of enzymes:
 Beverages: Alcoholic beverages generated by fermentation vary a lot based on many factors. Based on the type of the plant’s product, which is to be used and the type of enzyme applied, the fermented product varies. For example, grapes, honey, hops, wheat, cassava roots, and potatoes depending upon the materials available. Beer, wines and other drinks are produced from plant fermentation.
 Food Products: Bread can be considered as the finest example of fermentation in our everyday life. A small proportion of yeast and sugar is mixed with the batter for making bread. Then one can observe that the bread gets puffed up as a result of fermentation of the sugar by the enzyme action in yeast, which leads to the formation of carbon dioxide gas. This process gives the texture to the bread, which would be missing in the absence of the fermentation process.
@@ -635,8 +655,8 @@ Step 2: The detachment of complex molecules gives the product and enzyme.
 The entire catalyst reaction of enzymes can be expressed as:
 E  +  S  —>  (ES)  —>   E  +  P
 
-Advantages of Induced Fit Model over Lock and Key Model
--This hypothesis provides the following two hypotheses:
+Advantages of Induced Fit Model over Lock and Key Model:
+This hypothesis provides the following two hypotheses-
 -It illustrates the wide specificity of enzymes. For example, a variety of lipids can bind to lipase enzymes. for substrates.
 -It outlines the possible causes of catalysis, i.e., the bonds in the substrate are stressed by the conformational change, boosting reactivity.
 
@@ -1027,5 +1047,246 @@ Media Compositions:
 Media compositions vary based on the nutritional requirements of specific microorganisms.
 Selective media, differential media, and enrichment media are designed to isolate and differentiate microorganisms based on their characteristics.
 
+True Breeding:
+True breeding is a type of breeding where parents produce offspring with the same phenotype. True breeding organisms are homozygous for genes, meaning both alleles are the same. For example, PP or TT are homozygous, while Pp or Tt are not.
+True breeding in genetics refers to organisms that are homozygous for genes. This means that both alleles are the same, so PP or TT as opposed to Pp or Tt. When true breeding organisms are crossed, all progeny will have the same phenotype as the parents.
+True-breeding plants and organisms may express phenotypes that are either homozygous dominant or homozygous recessive.
 
+Reasons why mice are commonly used as model organisms: 
+The house mouse (Mus musculus) is a commonly used model organism in scientific research because of its similarities to humans.
+-Similarities to humans: Mice and humans share 85% of similarly coded genes. The mouse genome is also similar to the human genome in size and pathophysiology of disease.
+-Ease of maintenance: Mice are relatively easy to care for, breed, and study. They are also cost-effective and efficient tools for drug testing and research.
+-Reproductive biology: Mice have short generation times, with gestation lasting about three weeks. They are sexually mature at six to eight weeks of age, with generation times in the lab between nine and 11 weeks.
+-Historical laboratory strains: The historical laboratory strains of mice stem from the Mus musculus species.
+-Mice are commonly used to study human biology and disease, including how genetic mutations impact brain development. They are also commonly used to study Mendelian inheritance.
 
+Process of Reproduction in Yeast:
+Yeast reproduces asexually through a process called budding.
+Here are the steps of budding: 
+A small outgrowth called a bud forms on the parent cell.
+The nucleus of the parent cell divides into two.
+One of the nuclei moves to the new cell.
+The bud grows and eventually breaks off from the parent cell.
+The bud forms a new yeast cell that is genetically identical to the parent cell.
+The new yeast cell matures and produces more yeast cells.
+The budding process happens quickly, and the buds often form a chain. This can produce a large number of yeast cells in a short time. 
+
+Arabidopsis thaliana:
+Arabidopsis thaliana, also known as rockcress or thale cress, is a small flowering plant that is a popular model organism for plant studies. 
+It has many characteristics that make it a good organism for molecular genetics experiments, including: 
+Size: A. thaliana is a small plant that grows to a height of 6–12 inches.
+Life cycle: A. thaliana has a short life cycle of 5–6 weeks.
+Genome: A. thaliana has a small genome of around 135 megabase pairs, and its genome contains much less repetitive DNA than other plants. 
+Seeds: A. thaliana produces a large number of seeds per plant, around 10,000. 
+Growth: A. thaliana is a photosynthetic organism that can grow in a greenhouse or indoor growth chamber with limited space and light. 
+Structure: A. thaliana has a simple structure with four whorls: four sepals, four petals, six stamens, and two carpels. 
+Leaves: A. thaliana has basal leaves that are green to slightly purplish in color, and stem leaves that are smaller and unstalked. 
+Flowering: A. thaliana has highly synchronized flowering, with each plant producing a large number of seed pods that contain a higher number of smaller seeds.
+
+Reasons why A.Thaliana is used as a model organism:
+Arabidopsis thaliana is a small plant in the mustard family that is used as a model organism for studying plant genetics and development. It has many advantages as a model system, including: 
+Small size: Arabidopsis is small and doesn't require a large greenhouse to grow.
+Short generation time: Arabidopsis has a rapid life cycle, taking about six weeks from germination to mature seed.
+Self-fertilization: Arabidopsis can self-fertilize and cross-fertilize, which is useful for studying inheritance patterns and genetic diversity.
+Small genome; Arabidopsis has a relatively small genome that is easily manipulated with genetic engineering techniques.
+High transformation efficiency: Arabidopsis has a completely sequenced genome and powerful reverse and forward genetics.
+High sensitivity: Arabidopsis is highly sensitive and low noise, making it useful for experiments that require low light conditions and long exposures.
+
+Advantages of selecting pea plant :
+Gregor Mendel chose pea plants for his experiments because they have many advantages, including: 
+Easy to grow: Pea plants are easy to cultivate, economical, and require little space.
+Short life cycle: Pea plants are annual plants with a short life cycle, so multiple generations can be studied in a short period of time.
+Easy to cross-pollinate: Pea plants are self-pollinating, but it's easy to perform self and cross-pollination.
+Easy to study: Pea plants have visible contrasting characteristics, like seed color, texture, plant height, and flower color.
+Easy to maintain: Pea plants are easy to raise, maintain, and handle.
+Prolific seed production: Pea plants produce a large number of seeds in one generation.
+Easy to detect: Pea plants have many easily detectable contrasting characters.
+
+Reasons why Mendel chose garden peas: 
+Self-pollinating: Pea plants are self-pollinating, so it's easy to perform self and cross-pollination.
+Bisexual flowers: Pea flowers contain both male and female parts.
+Short life cycle: Pea plants have a short life cycle, so several generations can be studied within a short period.
+Small size: Pea plants are small and easy to grow.
+Many offspring: Pea plants produce many offspring in one cross.
+Easy to manipulate pollination: It's easy to manipulate pollination (cross pollination).
+Closed flower type: Pea flowers are closed-typed, so pollination is limited to self.
+Small herbaceous plant: Pea plants are small herbaceous plants, so Mendel could grow a large number of plants.
+
+Roles of heterotroph and autotroph in food chain:
+Roles of Heterotrophs:
+Consumers: Obtain energy by consuming other organisms.
+Energy Transfer: Act as intermediaries in transferring energy through the food chain.
+Population Regulation: Help regulate population sizes by consuming different organisms.
+Decomposition: Decompose dead organic matter, recycling nutrients in the ecosystem.
+Roles of Autotrophs:
+Primary Producers: Convert sunlight into chemical energy, forming the base of the food chain.
+Energy Source: Provide energy to heterotrophs through consumption of their organic compounds.
+Oxygen Production: Release oxygen during photosynthesis, contributing to atmospheric oxygen.
+Carbon Fixation: Convert carbon dioxide into organic molecules, influencing the carbon cycle.
+
+Genetics:
+Genetics is a branch of biology concerned with the study of genetic variation, genes, and heredity in organisms. Though heredity had been observed for millennia, a scientist and Gregor Mendel and Augustinian Friar working in the 19th century, were the first people to study genetics scientifically. Mendel studied the concept of "trait inheritance", patterns in the way traits (characteristic features) are carried down from parents to offspring. He noticed during his research that organisms (pea plants) inherit traits by way of discrete "units of inheritance". This term, still prevalent today, is an ambiguous definition of what is referred to as a gene.
+Trait inheritance and inheritance mechanisms Molecular of genes are still primary principles of genetics in the 21st century, but modern genetics has expanded beyond inheritance to studying the function and behaviour of genes.  The Gene structure and function, distribution and variation are studied within the context of the cell, the organism (e.g. dominance), and within the context of a population. Genetics has given rise to a number of subfields, including Molecular Genetics epigenetics and population genetics.
+Gregor Johann Mendel is known as the father of genetics. Genetics is the study that deals with heredity, variation, and genes in an organism. He discovered the fundamental law of inheritance.
+
+Mendel’s Laws:
+In modern times, the first of Mendel’s laws (law of Segregation) states that genes are transferred as separate and distinct units called as gene that are carried from one generation to the next. The two members (alleles) of a gene pair, one gene on each of paired chromosomes, separate during the formation of sex cells from a parent organism. One-half of the sex cells will have one form of the gene, one-half of the sex cells are obtained from the other form; the offspring that result from these sex cells will reflect those proportions.
+A modern formulation of the second law, the law of independent assortment, is that the alleles of a gene pair present on one pair of chromosomes are inherited independently of the alleles of a gene pair located on another  pair chromosome that the sex cells containing various assortments of these genes fuse at random with the sex cells produced by the other parent.
+Mendel also developed the law of dominance, in which one allele exerts greater influence or is dominant than the other on the same inherited character. Mendel developed the concept of dominance from his experiments with plants, based on the concept that each plant carried two trait units, one of which dominated the other. For example, if a pea plant with the alleles T and t (T = tallness, t = shortness) is equal in height to a TT individual, the T allele (with the trait of tallness) is completely dominant. If the T t individual is shorter than the T T but still taller than the t t individual, T is partially or incompletely dominant—i.e., it has a greater influence than t but does not completely mask the presence of t, which is recessive.
+
+Concept of Segregation and Independent Assortment:
+According to the law of segregation, two alleles of a gene controlling each character stay together in the individual, but during gamete or spore formation by meiosis, the alleles of a pair segregate from each other so that a gamete or spore carries only one allele of a character.
+According to the law of segregation, and the observations done by Mendel, only one of the two gene copies present in an organism is distributed to each gamete (egg or sperm cell) that it creates, and the position of these gene copies is said to be random. When an egg and a sperm join together in fertilization, they produce a new organism, their genotype consists of the alleles contained in the gametes egg or sperm.
+According to the Law of Independent Assortment, the alleles of two pairs of traits separate independently from each other during gamete formation, and get randomly rearranged in the offspring at the time of fertilization, producing both parental and new combinations of traits. A suitable example of the law of independent assortment. The observations indicate that when two pure-breeding pea plants are crossed: one with yellow, round seeds (YYRR) and one with green, wrinkled seeds (yyrr). as each parent is homozygous, according to law of segregation the gametes formed by the wrinkled, green plant all are ry, and the gametes formed by the round, yellow plant are all RY. That produces an offspring where are all RrYy.
+The allele or gene that specifies the yellow seed colour is more dominant compared to the allele that specifies green seed colour, subsequently the allele that specifies round shape shows a dominant character to the allele that specifies wrinkled shape, as shown by the capital and lower-case letters. This observation culminates that plants that have character that are yellow and round are dominant, because they are heterozygous for two genes, called dihybrids (di- = two, -hybrid = heterozygous).
+A cross between two dihybrids (self-fertilization of a dihybrid) is known as a dihybrid cross. When Mendel did this cross between the dihybrids, he found that the resulting offspring, were found to be of four different categories of pea seeds: yellow and round, yellow and wrinkled, green and round, and green and wrinkled. These phenotypic categories (categories that are specified on observation of traits) appeared in a ratio of approximately 9:3:3:1 9:3:3:1 the resulting offspring, were found to be of four different categories o pea seeds: yellow and round, yellow and wrinkled, green and round, and green and wrinkled. The genotypic categories (categories that are specified on observation of traits) appeared in a ratio 9:3:3:1 9:3:3:1.
+
+Gene Interaction:
+1.Mendelian genetics does not explain all kinds of inheritance found in different generations for which the phenotypic ratios in some cases are different from Mendelian ratios (3:1 for monohybrid, 9:3:3:1 for di-hybrid in F2 generation). The presence of lethal alleles or more than two alleles exist which makes the particular allele dominant or partially dominant.
+2.These kinds of genetic interactions between the alleles of a single gene are referred to as allelic or intra- allelic interactions. Interactions known as Non-allelic or inter-allelic interactions also occur during the development of single character is due to two or more genes affecting the expression of each other in various ways.
+3.Thus, the expression of gene is not inde­pendent of each other and dependent on the presence or absence of other gene or genes.
+4.Gene interactions can result in the suppression or alteration of a phenotype. This occurs when an organism inherits two different dominant genes, for example, resulting in incomplete dominance. This is commonly seen in flowers, where breeding two flowers that pass down dominant genes can result in a flower of an unusual colour caused by incomplete dominance. If red and white are dominant, for example, the offspring might be pinkish or striped in colour as the result of a gene interaction.
+5.Sometimes, genetic traits are entirely suppressed.  For e.g. People having albinism (absence of Melanin pigment) may carry genes for traits that are not expressed in their phenotypes because the albinism acts to turn those genes off. This is also seen in coloration patterns in animals such as tortoise shell and cats, these animals appear with unusual hair colour is the result of selective gene interactions, that occurs with genes being turned off at some locations and turned on in other positions.
+6.The fruit fly is more flexible and is extensively studied in genetics and gene interactions are well understood working with the fruit fly in lab environments. During genetic experiments on organisms like humans, the observation is however unethical, this has led to a major problem for geneticists as they are forced to rely on data from the existing population to learn about recessive and dominant and traits and observe how groups of genetic traits can interact.
+7.A gene interaction can be defined as the result of inheriting genes that are conflicted in some way, thus making it impossible for all of them to express as coded information, or of inheriting a set of interrelated genes that interact with each other thus resulting in expressing a phenotype.
+
+Law of Dominance:
+Mendel’s law of dominance states that:
+“When parents with pure, contrasting traits are crossed together, only one form of trait appears in the next generation. The hybrid offsprings will exhibit only the dominant trait in the phenotype.”
+Law of dominance is known as the first law of inheritance. In this law, each character is controlled by distinct units called factors, which occur in pairs. If the pairs are heterozygous, one will always dominate the other.
+Law of dominance explains that in a monohybrid cross between a pair of contrasting traits, only one parental character will be expressed in the F1 generation and both parental characters will be expressed in the F2 generation in the ratio 3:1.
+The one which is expressed in the F1 generation is called the dominant trait and the one which is suppressed is called a recessive trait. In simple words, the law of dominance states that recessive traits are always dominated or masked by the dominant trait. This law can be described by Mendel’s experiment.
+A monohybrid cross is a cross between the two monohybrid traits (TT and tt). Here plants which have the same characters, but differ in only one character were crossed.
+For monohybrid cross, Mendel began with a pair of pea plants with two contrasting traits, i.e., one tall and another dwarf. The cross-pollination of tall and dwarf plants resulted in tall plants and the offspring were called F1 progeny. The trait which is expressed in the phenotype is called the dominant trait while the one that is not is called the recessive trait.
+He then continued his experiment with self-pollination of F1 progeny plants. This resulted in both tall and short plants in the ratio of 3:1 which gave rise to the law of segregation.
+
+Law of Segregation:
+Mendel’s law of segregation states that:
+“During the formation of gamete, each gene separates from each other so that each gamete carries only one allele for each gene.”
+Law of segregation is the second law of inheritance. This law explains that the pair of alleles segregate from each other during meiosis cell division (gamete formation) so that only one allele will be present in each gamete.
+In a monohybrid cross, both the alleles are expressed in the F2 generation without any blending. Thus, the law of segregation is based on the fact that each gamete contains only one allele.
+This law is based on four basic concepts:
+-A gene exists in more than one form of an allele.
+-When gametes are produced by meiosis, the allelic pairs separate, leaving each gamete with a single allele.
+-Every organism inherits two alleles for each trait.
+-The two alleles of a pair are different, i.e., one is dominant and one is recessive.
+
+Single gene disorders in humans:
+When a certain gene is found to cause a disease, we refer to it as a single gene disorder or a Mendelian disorder.  Infect single gene disorders are not very common. For example, only one in 2,500 people are born with cystic fibrosis. There are a number of inheritance patterns of single gene disorders that are predictable it is figured out.
+Single Mutated genes holds to around 4000 human diseases that are subsequently passed on to further generations, the genes that are passed on can be dominant or recessive genes. in such cases either the sperm or the egg may be carriers of the disorder and makes it difficult to screen both the partners.
+Some examples of single-gene disorders include: Cystic fibrosis, alpha- and beta-thalassemia’s, Fragile X syndrome, Marfan syndrome, Sickle cell Anaemia, Huntington's disease, and hemochromatosis.
+Complementation using human genetics: In genetics, complementation occurs when two strains of an organism with different homozygous recessive mutations when crossed produce the same mutant phenotype (for example, a change in wing structure in flies) when these strains are crossed their offspring with the wild-type phenotype are observed. Complementation will occur only if the mutations are in different genes. If several genes join together to support a certain function (for example, to form a structure), cell crossings (somatic cell hybridization) may be used to determine the number of genes involved. Two cells, upon crossing, typically complement each other's defect if their mutations are in different genes, however the defect persists if the mutations are present in the same gene. Special mouse cell lines have been developed that harbour single human chromosomes, which can be introduced into a human cell line by microcell-mediated chromosome transfer. This technique features the identification of the chromosome that harbours a complementing gene.
+
+Concept of matching Phenotype to Genes:
+The genotype–phenotype distinction is drawn in genetics. "Genotype” is an organism's full information about heredity. "Phenotype" is an organism's properties that are actually observed, such as development, morphology or behaviour. This distinction is fundamental in the study of inheritance of traits and their evolution.
+The chances of survival and reproductive output are determined by the organism physical properties, but the inheritance of physical properties is dependent on the inheritance of genes. Therefore, understanding the theory of evolution through natural selection, requires a deep understanding of the genotype–phenotype distinction.
+The genes contribute to a trait, and the phenotype is the observable expression of the genes (and therefore the genotype that affects the trait). For e.g. If a white mouse had recessive genes that caused the genes responsible for colour to be inactive, its genotype would be responsible for its phenotype (the white colour).
+The mapping of a set of genotypes to a set of phenotypes is sometimes referred to as the genotype–phenotype an organism's genotype has a great influence (the largest by far for morphology) in the formation of its phenotype, but this is not the only case. Even two organisms with identical genotypes show differences in their phenotypes.
+One of the experiences in everyday life with identical twins (monozygous) Identical twins share the same genotype, since their genomes are identical; but they show the same phenotype, although their phenotypes may look similar. This is apparent that their mothers and close friends can spot minute differences, even though others might not be able to see the subtle differences. Further, identical twins can be distinguished by their fingerprints, which are never completely identical.
+
+Concept of recessiveness and dominance:
+Everyone inherits two copies of each gene from their parents, and the copies can either be different or the same. If the copies are different, then one is going to mask the effects of the other. The gene that trumps over the other is usually known as the dominant gene, and the weaker gene is known as recessive. In the presence of a dominant gene, a recessive gene will not manifest its traits. When two recessive genes are paired however, their traits will be manifested.
+Dominant genes are also the ones whose traits are manifested in the offspring. For recessive traits to be manifested, both parents have to carry that recessive gene singly or in a pair. The principle determines the presence of similar and differences among family members. There are traits which will definitely appear in the child, whenever present these are known as dominant traits, other traits will be recessive only in the absence of a dominant traits.
+
+Mitosis and Meiosis:
+Mitosis is the process that occurs when somatic cell divides to form two daughter cells.  It is an important process in normal organism development, Mitosis requires a set of specialized cell structures.  Chromosomes are the most important part for mitosis because they are separated during the process and evenly distributed into two daughter cells. The spindle is formed around a cytosolic structure called centrosome, which is main driving force for chromosome separation.
+Meiosis is the type of cell division by which germ cells (eggs and sperm) are produced. Meiosis involves a reduction in the amount of genetic material, during meiosis, chromosomes are also duplicated, cell division occurs twice consecutively, leading the half of the chromosome number in 4 daughter cells.  This process is used for generating germ line cells, the gametes.  
+
+Epistasis: The interaction that occurs between nonallelic genes at two or more loci resulting in one gene masking the phenotypic expression of another gene, Epistasis is defined as the interaction between genes that influences a phenotype. Genes can either mask each other so that one is considered “dominant” or they can combine to form a new trait. It is the conditional relationship between two genes that can determine a single phenotype of some traits. At each locus there are two alleles that decide phenotypes. They can affect one another in such a way that, regardless of the allele of one gene, it is recessive gene to one dominant allele of the other.
+
+Gene mapping:
+Gene mapping refers to one of the two different ways of positioning the gene on a chromosome. The first type of gene mapping was also called genetic mapping. Genetic mapping   determines how two genes on a chromosome relate in their positions, with the use of linkage analysis. Physical mapping, which is the other type of gene mapping, locates genes by their absolute positions on a chromosome using any available technique. Once a gene is located, its DNA sequence determined, it can be cloned and its molecular product studied.
+Studies show that the first evidence of mapping of a gene was reported by Roger Donahue and associates in 1968, the first observation was done by mapping a gene to an autosome. They were able experiment through linkage analysis and estimated the genetic distance of 2.5 map units between two loci or gene locations on chromosome 1.
+In 1971, techniques such as chromosome banding techniques were developed, which opened the way to be able to identify various types alternations for researchers, which included insertions, deletions, and translocations, as well as mapping to position. In accordance with this, restriction fragment length polymorphism (RFLP) analysis was developed and led by the early 1990s to the identification of a number of genes associated with disease in humans. A complementary technique, fluorescence in situ hybridization, developed about the same time, also contributed to the mapping efforts.
+
+Concept of Allele:
+William Bateson, first coined the term ‘allelomorph’ (alternative form) meaning one of an array of different forms of a gene. Later this term was shortened by others to ‘allele’. So, allele is defined as one of two or more alternative forms that are present in a single gene. Alleles for any given gene occupy the same locus or position on homologous chromosomes.
+A single gene having different alleles have a unique nucleotide sequence, and processes biochemical and developmental are all concerned with their activities, in such cases although their individual phenotypes may be different. For example, the height of the pea plant is determined by allele tall and dwarf traits.
+Alleles may occur in pairs, or there may be multiple alleles affecting the expression (phenotype) of a particular trait. The combination of alleles that an organism carries constitutes of its genotype. If the paired alleles are the same, the organism’s genotype is said to be homozygous for that particular trait; if they are different, the organism’s genotype is heterozygous. A dominant allele will dominate the traits of a recessive allele in a heterozygous pairing. In some traits, however, alleles may be codominant they may be neither dominant or recessive.
+
+Genotype vs. Phenotype:
+1. Definition:
+Genotype: The hereditary information of the organism in the form of genes in the DNA and remains the same throughout life.
+Phenotype: The characteristics of an organism that are visible are known as phenotypes.
+2. Relationship:
+Genotype: The same genotype produces the same phenotype.
+Phenotype: The same phenotype may or may not belong to the same genotype.
+3. Location:
+Genotype: Present inside the body as genetic material.
+Phenotype: Expression of genes as the external appearance.
+4. Inheritance:
+Genotype: Inherited from parent to offspring.
+Phenotype: Not directly inherited from the parent.
+5. Determination:
+Genotype: Determined by scientific methods such as the polymerase chain reaction.
+Phenotype: Determined by observing the organism.
+6. Factors Influencing:
+Genotype: Affected by genes.
+Phenotype: Affected by genotype and environmental conditions.
+7. Examples:
+Genotype: Blood group, eye color, height, and genetic diseases.
+Phenotype: Weight, physique, beak shape of birds.
+
+Dominant Alleles: 
+A dominant allele is an allele that expresses itself even when another allele is present. A dominant allele produces a dominant phenotype in individuals who have one copy of the allele. For example, the brown eyes allele is dominant.
+Dominant traits are always expressed when the connected allele is dominant, even if only one copy exists.
+Masking: They mask the expression of a recessive allele if paired with it. In other words, one copy of a dominant allele is enough for the corresponding trait to be expressed.
+Expression: They always express their associated trait, regardless of whether they are paired with another dominant or recessive allele.
+Representation: Typically symbolized by uppercase letters (e.g., B for brown eye color).
+Examples: Brown eyes, curly hair, tall stature.
+
+Recessive Alleles:
+A recessive allele is an allele that is suppressed by a dominant allele. A recessive allele produces a recessive phenotype in individuals who have two copies of the allele, one from each parent. For example, the blue eyes allele is recessive.
+Masked: They are masked by a dominant allele when paired together. Their associated trait will only be expressed if both alleles in the pair are recessive.
+Expression: Only expressed when present in two copies (homozygous state).
+Representation: Typically symbolized by lowercase letters (e.g., b for blue eye color).
+Examples: Blue eyes, straight hair, short stature.
+
+Monohybrid Cross vs. Dihybrid Cross:
+Monohybrid Cross:
+Definition: Monohybrid cross refers to the genetic cross that involves mating two homozygous individuals consisting of a single character present in a single locus.
+Number of Characters: Only one character is taken into consideration.
+Pair of Genes: One pair of genes is involved.
+Phenotypic Ratio: The anticipated phenotypic ratio is 3:1.
+Law: The Law of Segregation was formulated based on the monohybrid cross.
+Genotypic Ratio: The anticipated genotypic ratio includes 1:2:1.
+Test Cross: Test cross-ratio is 1:1.
+Dihybrid Cross:
+Definition: Dihybrid cross highlights the genetic cross that consists of the mating of two homozygous individuals considering two non-linked characters present in different loci.
+Number of Characters: Two characters of different loci are considered.
+Pair of Genes: Two pairs of genes are involved.
+Phenotypic Ratio: The anticipated phenotypic ratio is 9:3:3:1.
+Law: The Law of Independent Assortment was formulated based on the dihybrid cross.
+Genotypic Ratio: The anticipated genotypic ratio includes 1:2:2:4:1:2:1:2:1.
+Test Cross: Test cross-ratio is 1:1:1:1.
+Example:
+Suppose you are crossing two pea plants—one with yellow seeds (YY) and another with green seeds (yy).
+Monohybrid Cross (Single Trait - Seed Color):
+Y (yellow) x y (green)
+Genotypic Ratio: Yy (heterozygous)
+Phenotypic Ratio: 1 yellow : 1 green
+Dihybrid Cross (Two Traits - Seed Color and Texture):
+YYRR (yellow, round) x yyrr (green, wrinkled)
+Genotypic Ratio: YyRr (heterozygous for both traits)
+Phenotypic Ratio: 9 yellow, round : 3 yellow, wrinkled : 3 green, round : 1 green, wrinkled
+
+Dihybrid Cross Concept:
+A dihybrid cross involves the simultaneous consideration of two different traits (genes) that are located on different loci (positions) of homologous chromosomes. This type of genetic cross helps predict the inheritance patterns of two traits simultaneously. The Law of Independent Assortment, formulated by Gregor Mendel, is applied to dihybrid crosses.
+Example of Dihybrid Cross:
+Let's consider a dihybrid cross involving pea plants. We'll look at the inheritance of seed color (Y = yellow, y = green) and seed shape (R = round, r = wrinkled).
+Parent 1: YYRR (yellow, round)
+Parent 2: yyrr (green, wrinkled)
+Punnett Square for Dihybrid Cross:
+        YR     Yr     yR     yr
+---------------------------------
+YR |   YYRR   YYRr   YyRR   YyRr
+Yr |   YYRr   YYrr   YyRr   Yyrr
+yR |   YyRR   YyRr   yyRR   yyRr
+yr |   YyRr   Yyrr   yyRr   yyrr
+-Phenotypic Ratio:
+Yellow, Round: 9
+Yellow, Wrinkled: 3
+Green, Round: 3
+Green, Wrinkled: 1
+-Genotypic Ratio:
+YYRR : YYRr : YyRR : YyRr : YYRr : YYrr : YyRr : Yyrr : YyRR : YyRr : yyRR : yyRr : YyRr : Yyrr : yyRr : yyrr
